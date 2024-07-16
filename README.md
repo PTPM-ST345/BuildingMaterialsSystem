@@ -1,26 +1,24 @@
 # Thành viên
-<h4>Tên nhóm: Sea  </h4>
+<h4>Tên nhóm: Self  </h4>
 
->>**Thầy  Bùi Công Danh**
-  
 | STT | Họ tên | Chức vụ  |
 |----------------|--------------------|--------------------|
-|  1  |  Trần Ngọc Hiếu Thảo  |   Nhóm trưởng  |
-|  2  |  Nguyễn Đức Phát  |   Thành viên  |
-|  3  |  Dương Thị Phương Thi  |   Thành viên  |
+|  1  |  Nguyễn Nhật Quân  |   Nhóm trưởng  |
+|  2  |  Phạm Nguyên Vũ  |   Thành viên  |
+
 -----------------------------------------------
 ### Sử dụng 
  - .Net Framework version 4.8
- - Visual studio 2022
+ - Visual studio 2013,2022
 -----------------------------------------------
 
 ### Chi tiết
-<img src="https://i.imgur.com/FehXExF.jpg">
+
 
 -----------------------------------------------
 # Dự án
 
-## Hệ thống quản lý sách điện tử
+## Hệ thống quản lý vật liệu xây dựng
 
 <h5>Mô tả dự án: </h5>
 <p>Ebook là một hệ thống ứng dụng đa nền tảng cho phép người dùng đọc sách điện tử (ebook) trực tuyến. Hệ thống này sẽ mở ra khả năng đọc sách trực tuyến qua giao diện web, đồng thời cung cấp một ứng dụng tiện lợi để quản lý sách một cách hiệu quả.</p>
@@ -30,7 +28,7 @@
 </p>
 
 ### Yêu cầu 
-<p>AI: Gợi ý loại sách theo nội dung  </p>
+<p>AI: Xếp Lịch Nhân Viên  </p>
 
 <p>Web: MVC ASP, LinQ</p>
 <p>Ngôn ngữ: Javascript, C# </p>
@@ -40,13 +38,13 @@
 
 | STT | Nghiệp vụ | Phân công  |
 |----------------|--------------------|--------------------|
-|  1  |  Tìm kiếm sách |   Thi  |
-|  2  |  Đăng nhập đăng ký |  Thảo  |
+|  1  |  Tìm kiếm sách |     |
+|  2  |  Đăng nhập đăng ký |    |
 |  3  |  Xem thông tin sách [Trang chủ, trang tin tức, trang giới thiệu, trang xem toàn bộ sách(có bộ lọc),Xem chi tiết sách, đánh giá sách]  |   Thi  |
 |  4  |  Quản lý thông tin tài khoản [Thông tin KH, thông tin tài khoản, thông tin đơn hàng đã mua, sách yêu thích] |  Phát  |
-|  5  |  Mua hàng  |  Phát  |
-|  6 |  Thanh toán |  Phát  |
-|  7 |  Đánh giá |  Phát  |
+|  5  |  Mua hàng  |    |
+|  6 |  Thanh toán |    |
+|  7 |  Đánh giá |    |
 
 
 <p>App: Winform </p>
@@ -54,15 +52,15 @@
 
 | STT | Nghiệp vụ | Phân công  |
 |----------------|--------------------|--------------------|
-|  1  |  Đăng nhập/đăng xuất |   Thảo  |
-|  2  | Phân quyền  |  Thảo |
-|  3  |  Quản lý nhân viên +  chức vụ  |   Thi  |
-|  4  |  Quản lý sách + tác giả + nhà sản xuất + AI|   Thảo  |
-|  5  |  Quản lý khách hàng |  Thi  |
-|  6  |   Quản lý tin tức |  Phát  |
-|  7  |   Thống kê |  Thảo  |
-|  8  |   Báo cáo |  Thảo  |
-|  9  |  Duyệt tin tức|  Thảo  |
+|  1  |  Đăng nhập/đăng xuất |     |
+|  2  | Phân quyền  |   |
+|  3  |  Quản lý nhân viên +  chức vụ  |     |
+|  4  |  Quản lý sách + tác giả + nhà sản xuất + AI|     |
+|  5  |  Quản lý khách hàng |    |
+|  6  |   Quản lý tin tức |    |
+|  7  |   Thống kê |    |
+|  8  |   Báo cáo |    |
+|  9  |  Duyệt tin tức|    |
 
 
 ## Chức năng
