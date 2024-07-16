@@ -20,15 +20,17 @@
 
 ## Hệ thống quản lý vật liệu xây dựng
 
-<h5>Mô tả dự án: </h5>
-<p>Ebook là một hệ thống ứng dụng đa nền tảng cho phép người dùng đọc sách điện tử (ebook) trực tuyến. Hệ thống này sẽ mở ra khả năng đọc sách trực tuyến qua giao diện web, đồng thời cung cấp một ứng dụng tiện lợi để quản lý sách một cách hiệu quả.</p>
+<h5>Mô tả dự án: Ngọc Hà</h5>
+<p>Ngọc Hà là một hệ thống ứng dụng đa nền tảng cho phép người dùng mua vật liệu xây dựng. Hệ thống này sẽ mở ra  khả năng mua vật liệu xây dựng trực tuyến qua giao diện web, đồng thời cung cấp một ứng dụng tiện lợi để quản lý vật liệu xây dựng một cách hiệu quả.</p>
 
-<p>Được truy cập thông qua mạng, người dùng sẽ có cơ hội trải nghiệm không gian đọc sách độc đáo với sự tiện ích và linh hoạt mà chỉ công nghệ có thể mang lại. Không còn cần phải mang theo sách giấy, không gian sách điện tử sẽ tiết kiệm không gian và mang đến trải nghiệm đọc sách linh hoạt hơn bao giờ hết. Từ những trang sách kinh điển cho đến những tác phẩm hiện đại, mọi thứ đều có thể được truy cập và đọc một cách thuận tiện. </p>
-<p>Song song với việc đọc sách trực tuyến, ứng dụng đi kèm cung cấp một giao diện quản lý tiện lợi. Người dùng có thể tổ chức và quản lý tài liệu sách của mình theo cách riêng biệt, từ việc đánh dấu, sắp xếp theo thể loại cho đến tìm kiếm nhanh bằng cách sử dụng các tiện ích tìm kiếm thông minh. Điều này mang lại sự tiện lợi và hiệu quả cho việc tìm kiếm và sử dụng tài liệu sách, từ đó khuyến khích sự học hỏi và nghiên cứu một cách linh hoạt và hiệu quả hơn.
+<p>Được truy cập thông qua mạng online, người dùng sẽ có cơ hội trải nghiệm đặt hàng, xem thông tin trên một giao diện với đầy đủ chức năng website. Không còn cần phải ra cửa hàng một cách thủ công như trước đây, không gian sách điện tử sẽ tiết kiệm không gian và mang đến trải nghiệm linh hoạt hơn bao giờ hết. </p>
+
+<p>Song song với việc mua hàng trực tuyến, ứng dụng đi kèm cung cấp một giao diện quản lý tiện lợi. Người quản lý có thể tổ chức và quản lý vật liệu xây dựng của mình theo cách riêng biệt, từ việc đánh dấu, sắp xếp theo thể loại cho đến tìm kiếm,thống kê, báo cáo, xếp lịch cho nhân viên cửa hàng. Điều này mang lại sự tiện lợi và hiệu quả cho người quản lý, từ đó giúp tiết kiệm thời gian quản lý cho người dùng.
+
 </p>
-
 ### Yêu cầu 
 <p>AI: Xếp Lịch Nhân Viên  </p>
+<p>Chat bot "Nếu có" </p>
 
 <p>Web: MVC ASP, LinQ</p>
 <p>Ngôn ngữ: Javascript, C# </p>
@@ -38,14 +40,14 @@
 
 | STT | Nghiệp vụ | Phân công  |
 |----------------|--------------------|--------------------|
-|  1  |  Tìm kiếm sách |     |
-|  2  |  Đăng nhập đăng ký |    |
-|  3  |  Xem thông tin sách [Trang chủ, trang tin tức, trang giới thiệu, trang xem toàn bộ sách(có bộ lọc),Xem chi tiết sách, đánh giá sách]  |   Thi  |
-|  4  |  Quản lý thông tin tài khoản [Thông tin KH, thông tin tài khoản, thông tin đơn hàng đã mua, sách yêu thích] |  Phát  |
+|  1  |  Tìm kiếm vật liệu xây dựng |     |
+|  2  |  Đăng nhập,đăng ký |    |
+|  3  |  Xem thông tin vật liệu xây dựng [Trang chủ, trang giới thiệu, trang xem sản phẩm VLXD,Xem chi tiết VLXD, bảng Báo Giá, trang tin tức, trang liên hệ]  |   Thi  |
+|  4  |  Quản lý thông tin tài khoản [Thông tin KH, thông tin tài khoản, thông tin đơn hàng đã mua] |  Phát  |
 |  5  |  Mua hàng  |    |
 |  6 |  Thanh toán |    |
 |  7 |  Đánh giá |    |
-
+|  8 |  Chat bot (Nếu có) |    |
 
 <p>App: Winform </p>
 <p>Ngôn ngữ: C# </p>
@@ -53,19 +55,19 @@
 | STT | Nghiệp vụ | Phân công  |
 |----------------|--------------------|--------------------|
 |  1  |  Đăng nhập/đăng xuất |     |
-|  2  | Phân quyền  |   |
+|  2  |  Phân quyền  |   |
 |  3  |  Quản lý nhân viên +  chức vụ  |     |
-|  4  |  Quản lý sách + tác giả + nhà sản xuất + AI|     |
+|  4  |  Quản lý sản phẩm  + nhà sản xuất + AI (Xếp lịch)|     |
 |  5  |  Quản lý khách hàng |    |
-|  6  |   Quản lý tin tức |    |
-|  7  |   Thống kê |    |
-|  8  |   Báo cáo |    |
-|  9  |  Duyệt tin tức|    |
+|  6  |  Quản lý Kho hàng |    |
+|  7  |  Quản lý Hóa Đơn |    |
+|  8  |   Thống kê |    |
+|  0  |   Báo cáo |    |
 
 
 ## Chức năng
 #### WEDSITE
-<p>Tìm kiếm và hiện thi thông tin sách:</p>
+<p>Tìm kiếm và hiện thị thông tin sách:</p>
 <ul>
   <li>Tìm kiếm sách theo tên, tác giả, thể loại, từ khóa, v.v.</li>
   <li>Hiển thị thông tin chi tiết của mỗi cuốn sách, bao gồm mô tả, tác giả, đánh giá, v.v.</li>
