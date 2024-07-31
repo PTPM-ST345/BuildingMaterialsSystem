@@ -1,20 +1,20 @@
-﻿CREATE DATABASE QuanLy_VLXD3;
+﻿CREATE DATABASE QuanLy_VLXD4;
 GO
-USE QuanLy_VLXD3;
+USE QuanLy_VLXD4;
 GO
 
 -- Create QL_NhomNguoiDung table first
 CREATE TABLE QL_NhomNguoiDung (
     MaNhom VARCHAR(20) PRIMARY KEY,
-    TenNhom NVARCHAR(50) NOT NULL,
-    GhiChu NVARCHAR(200) NULL
+    TenNhom NVARCHAR(50) ,
+    GhiChu NVARCHAR(200)
 );
 GO
 
 -- Create DM_ManHinh table
 CREATE TABLE DM_ManHinh (
     MaManHinh NVARCHAR(50) PRIMARY KEY,
-    TenManHinh NVARCHAR(50) NOT NULL
+    TenManHinh NVARCHAR(50)
 );
 GO
 
@@ -22,7 +22,7 @@ GO
 CREATE TABLE QL_PhanQuyen (
     MaNhomNguoiDung VARCHAR(20),
     MaManHinh NVARCHAR(50),
-    CoQuyen BIT NOT NULL,
+    CoQuyen BIT,
     PRIMARY KEY (MaNhomNguoiDung, MaManHinh),
     FOREIGN KEY (MaNhomNguoiDung) REFERENCES QL_NhomNguoiDung(MaNhom),
     FOREIGN KEY (MaManHinh) REFERENCES DM_ManHinh(MaManHinh)
@@ -38,13 +38,13 @@ CREATE TABLE NhanVien (
     SDT NVARCHAR(15),
     ChucVu NVARCHAR(50),
     MatKhau NVARCHAR(30),
-    TenDangNhap NVARCHAR(50) UNIQUE,
+    TenDangNhap NVARCHAR(50) UNIQUE  NOT NULL,
 );
 GO
 
 -- Create QL_NguoiDungNhomNguoiDung table
 CREATE TABLE QL_NguoiDungNhomNguoiDung (
-    TenDangNhap NVARCHAR(50) ,
+    TenDangNhap NVARCHAR(50) NOT NULL ,
     MaNhomNguoiDung VARCHAR(20) ,
     GhiChu NVARCHAR(200),
     PRIMARY KEY (TenDangNhap, MaNhomNguoiDung),
