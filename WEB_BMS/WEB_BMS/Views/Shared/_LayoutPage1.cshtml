@@ -1,13 +1,142 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link href="~/content/bootstrap.css" rel="stylesheet" />
+    <link href="~/assets/themify-icons/themify-icons.css" rel="stylesheet" />    <link href="~/assets/style_layout.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
-<body>
-    <div>
-        @RenderBody()
+<style>
+    
+</style>
+
+    <div id="header-logo">
+        <img width="250" height="55" src="https://vlxdsaigon24h.com/wp-content/uploads/2023/11/logo-ngoc-ha-1.png" class="header_logo header-logo" alt="VLXD NGỌC HÀ" />
+            <div class="form-outline" data-mdb-input-init>
+                <input size="30px" type="search" id="form1" placeholder="Tìm Kiếm...." class="form-control" />
+                <button type="button" class="btn btn-primary" data-mdb-ripple-init> 
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+    
+        <div>
+               <span style="margin-right: 5px; font-weight: bold;"> Hotline : <a style="color: #F92029; font-size: 16px;" href="tel:0918345999">0918.345.999 </a></span>
+               <br>
+               <span> Cửa hàng: 833-835 Hưng Phú, Phường 9, Quận 8 , Hồ Chí Minh <span />
+
+        </div>
     </div>
-</body>
+<div id="header">
+    <!-- start nav  -->
+    <div style="display: flex; justify-content: center">
+        <ul id="nav">
+            <li><a href="/Home/Index">TRANG CHỦ </a></li>
+            <li><a href="/Home/Introduce">GIỚI THIỆU</a></li>
+            <li>
+                <a href="">
+                    SẢN PHẨM VLXD
+                    <i class="nav-arrow ti-angle-down"></i>
+                </a>
+                <ul class="subnav">
+                    <li><a href="">XI MĂNG</a></li>
+                    <li><a href="">CáT XÂY DỰNG</a></li>
+                    <li><a href="">ĐÁ XÂY DỰNG</a></li>
+                    <li><a href="">GẠCH XÂY DỰNG</a></li>
+                    <li><a href="">SẮT XÂY DỰNG</a></li>
+                    <li><a href="">VẬT LIỆU KHÁC</a></li>
+                </ul>
+            </li>
+            <li><a href="#tourdate">BẢNG BÁO GIÁ    </a></li>
+            <li>
+                <a href="">
+                    TIN TỨC
+                    <i class="nav-arrow ti-angle-down"></i>
+                </a>
+                <ul class="subnav">
+                    <li><a href="">TIN NGỌC HÀ</a></li>
+                    <li><a href="">TIN TỨC THỊ TRƯỜNG</a></li>
+
+                </ul>
+            </li>
+            <li><a href="/Home/Contact">LIÊN HỆ</a></li>
+        </ul>
+    </div>
+</div>
+    <body>
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+    <div class="is-divider divider clearfix" style="max-width:1920px;height:5px;background-color:rgb(141, 196, 64);margin: 16px"></div>
+    <div class="footer-information container" id="footer">
+        <div class="footer-column-1 space">
+            <img width="250" height="55" src="https://vlxdsaigon24h.com/wp-content/uploads/2023/11/logo-ngoc-ha-1.png" class="header_logo header-logo" alt="VLXD NGỌC HÀ" />
+
+            <p>
+                © 2017 Công Ty Cổ Phần Ngọc Hà Vật Liệu Xây Dựng 
+                <br>ĐT: <a href="#">028 3995 1703</a>
+                <br>Fax: <a href="#">028 3995 1702</a>
+            </p>
+            <p> 833-835 Hưng Phú, Phường 9, Quận 8 , Hồ Chí Minh</p>
+            <p>
+                Giấy chứng nhận đăng ký doanh nghiệp: 0300521758 <br>
+                do Sở Kế hoạch & Đầu tư TP.HCM cấp lần đầu ngày 02/01/2004.
+            </p>
+            <p>
+                Tổng đài hỗ trợ (08:00-21:00, miễn phí gọi)
+                <br>Gọi mua: <a href="#">1800545457</a>
+                <br>Khiếu nại: <a href="#">1800545457</a>
+            </p>
+            
+        </div>
+
+        <div class="footer-column-2 space">
+            <ul>
+                <a href="#" style="color: #000; font-size: 18px; font-weight: bolder;">Dịch Vụ Khách Hàng</a>
+                <li><a href="#">Hướng dẫn mua hàng, thanh toán</a></li>
+                <li><a href="#">Chính sách hoàn tiền</a></li>
+                <li><a href="#">Chính sách giao hàng</a></li>
+                <li><a href="#">Chính sách bảo hành</a></li>
+                <li><a href="#">Chính sách bảo mật thông tin khách hàng</a></li>
+                <li><a href="#">Câu hỏi thường gặp</a></li>
+            </ul>
+
+        </div>
+
+        <div class="footer-column-3 space">
+            <a href="#" style="color: #000; font-size: 18px; font-weight: bolder;">Kết nối vơí chúng tôi</a><br><br>
+            <a href="#"><img src="~/assets/img/icon-media/facebook.svg"></a>
+            <a href="#"><img src="~/assets/img/icon-media/instagram.svg"></a>
+            <a href="#"><img src="~/assets/img/icon-media/youtube.svg"></a>
+            <a href="#"><img src="~/assets/img/icon-media/email.svg"></a>
+            <br>
+            <a href="#" style="color: #000; font-size: 18px; font-weight: bolder; display: block; margin-top: 20px;">
+                Quan Tâm Zalo
+            </a>
+            <p>Nhận các thông tin khuyến mãi hấp dẫn</p>
+            <a href="#"><img style="width: 100px; height: 35px;" src="~/assets/img/icon-media/zalo.png"></a>
+        </div>
+    </div>
+        
+    <div class="wrap-footer-pay-certificate">
+        <div class="wrap-payment">
+            <a href="#" style="color: #000; font-size: 18px; font-weight: bolder; ">Phương thước Thanh Toán</a><br>
+            <img src="~/assets/img/items-pay/1.png">
+            <img src="~/assets/img/items-pay/images.png">
+            <img src="~/assets/img/items-pay/JCB_logo.svg.png">
+            <img src="~/assets/img/items-pay/Mastercard-logo.svg.png">
+            <img src="~/assets/img/items-pay/MoMo_Logo.png"> 
+        </div>
+        
+
+        <div class="wrap-cerificate">      
+            <a href="#" style="color: #000; font-size: 18px; font-weight: bolder; ">Chứng Nhận</a><br>
+            <img style="width: 115px; height: 40px;" src="~/assets/img/items-pay/op-da-thong-bao-bo-cong-thuong-183x60.png">
+         </div>
+
+    </div>
+    
+    
 </html>
