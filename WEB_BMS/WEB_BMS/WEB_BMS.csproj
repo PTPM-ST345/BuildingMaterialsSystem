@@ -99,6 +99,7 @@
     <Content Include="assets\img\items-pay\MoMo_Logo.png" />
     <Content Include="assets\img\items-pay\op-da-thong-bao-bo-cong-thuong-183x60.png" />
     <Content Include="assets\Style_contact.css" />
+    <Content Include="assets\style_index.css" />
     <Content Include="assets\style_introduce.css" />
     <Content Include="assets\style_layout.css" />
     <Content Include="assets\themify-icons\demo-files\demo.css" />
