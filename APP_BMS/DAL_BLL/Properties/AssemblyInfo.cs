@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("APP_BMS")]
+[assembly: AssemblyTitle("DAL_BLL")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("APP_BMS")]
+[assembly: AssemblyProduct("DAL_BLL")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("971e4cfa-e28b-497f-b0b0-55bd023a491a")]
+[assembly: Guid("995b7f8c-4630-4c4f-b89e-a0cc01d8b8d7")]
 
 // Version information for an assembly consists of the following four values:
 //

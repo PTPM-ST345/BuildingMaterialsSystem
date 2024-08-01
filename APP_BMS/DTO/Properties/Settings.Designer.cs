@@ -26,17 +26,6 @@ namespace DTO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ACERNITRO5;Initial Catalog=QuanLy_VLXD3;Persist Security Info=True;Us" +
-            "er ID=sa;Password=123")]
-        public string QuanLy_VLXD3ConnectionString {
-            get {
-                return ((string)(this["QuanLy_VLXD3ConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ACERNITRO5;Initial Catalog=QuanLy_VLXD4;Persist Security Info=True;Us" +
             "er ID=sa;Password=123")]
         public string QuanLy_VLXD4ConnectionString {

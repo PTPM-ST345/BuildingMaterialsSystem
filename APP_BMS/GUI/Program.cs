@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace APP_BMS
+namespace GUI
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace APP_BMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new DangNhap());
         }
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace APP_BMS.Properties
+namespace GUI.Properties
 {
 
 
