@@ -105,6 +105,7 @@
             this.btnTTTK.TabIndex = 1;
             this.btnTTTK.Text = "Thông tin tài khoản";
             this.btnTTTK.UseVisualStyleBackColor = true;
+            this.btnTTTK.Click += new System.EventHandler(this.btnTTTK_Click);
             // 
             // btnTrangChu
             // 
@@ -319,17 +320,18 @@
             // 
             this.panel1.Location = new System.Drawing.Point(12, 118);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1092, 525);
+            this.panel1.Size = new System.Drawing.Size(1092, 578);
             this.panel1.TabIndex = 1;
             // 
             // frmTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 666);
+            this.ClientSize = new System.Drawing.Size(1110, 727);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmTrangChu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTrangChu";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

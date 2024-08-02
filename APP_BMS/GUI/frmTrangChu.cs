@@ -52,5 +52,15 @@ namespace GUI
             panel1.Controls.Clear();
         }
 
+        private void btnTTTK_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmThongTinTaiKhoan formtttk = new frmThongTinTaiKhoan() { TopLevel = false, TopMost = true };
+            formtttk.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formtttk);
+            formtttk.Show();
+        }
+
     }
 }
