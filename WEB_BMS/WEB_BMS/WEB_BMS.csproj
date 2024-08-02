@@ -104,6 +104,7 @@
     <Content Include="assets\style_introduce.css" />
     <Content Include="assets\style_layout.css" />
     <Content Include="assets\style_new_NH.css" />
+    <Content Include="assets\style_tbprice.css" />
     <Content Include="assets\themify-icons\demo-files\demo.css" />
     <Content Include="assets\themify-icons\fonts\themify.svg" />
     <Content Include="assets\themify-icons\ie7\ie7.css" />
@@ -512,6 +513,7 @@
     <Content Include="Views\Shared\_LayoutPage_New.cshtml" />
     <Content Include="Views\Home\New_NH.cshtml" />
     <Content Include="Views\Home\New_TT.cshtml" />
+    <Content Include="Views\Home\Table_Price.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

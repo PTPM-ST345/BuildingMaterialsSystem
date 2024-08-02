@@ -30,5 +30,9 @@ namespace WEB_BMS.Controllers
         {
             return View();
         }
+        public ActionResult Table_Price()
+        {
+            return View();
+        }
     }
 }

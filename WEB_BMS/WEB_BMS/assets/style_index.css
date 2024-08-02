@@ -10,8 +10,7 @@
 .icon-box {
          flex: 1 1 calc(25% - 20px); /* Chiều rộng của từng cột trừ khoảng cách */
          box-sizing: border-box;
-         text-align: center;
-           
+         text-align: center;   
 }
 .icon-box img {
        max-width: 100%;
