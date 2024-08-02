@@ -22,5 +22,13 @@ namespace WEB_BMS.Controllers
         {
             return View();
         }
-	}
+        public ActionResult New_NH()
+        {
+            return View();
+        }
+        public ActionResult New_TT()
+        {
+            return View();
+        }
+    }
 }

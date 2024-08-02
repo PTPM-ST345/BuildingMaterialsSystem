@@ -64,7 +64,7 @@
 }
 
 #nav li:hover .subnav{
-    display: block;
+    display: block; 
 }
 
 #nav > li:hover > a{

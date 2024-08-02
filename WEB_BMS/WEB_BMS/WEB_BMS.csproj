@@ -83,6 +83,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\img\img_index\cong-trinh-xay-dung.jpg" />
     <Content Include="assets\img\icon-media\email.svg" />
     <Content Include="assets\img\icon-media\facebook.svg" />
     <Content Include="assets\img\icon-media\instagram.svg" />
@@ -102,6 +103,7 @@
     <Content Include="assets\style_index.css" />
     <Content Include="assets\style_introduce.css" />
     <Content Include="assets\style_layout.css" />
+    <Content Include="assets\style_new_NH.css" />
     <Content Include="assets\themify-icons\demo-files\demo.css" />
     <Content Include="assets\themify-icons\fonts\themify.svg" />
     <Content Include="assets\themify-icons\ie7\ie7.css" />
@@ -507,6 +509,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Introduce.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage_New.cshtml" />
+    <Content Include="Views\Home\New_NH.cshtml" />
+    <Content Include="Views\Home\New_TT.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
