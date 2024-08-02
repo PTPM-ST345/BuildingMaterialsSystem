@@ -30,13 +30,13 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnTTNV = new System.Windows.Forms.Button();
             this.btnTTTK = new System.Windows.Forms.Button();
             this.btnTrangChu = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -76,8 +76,8 @@
             // 
             this.tabPage1.Controls.Add(this.btnThoat);
             this.tabPage1.Controls.Add(this.btnDangXuat);
-            this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.btnDoiMatKhau);
+            this.tabPage1.Controls.Add(this.btnTTNV);
             this.tabPage1.Controls.Add(this.btnTTTK);
             this.tabPage1.Controls.Add(this.btnTrangChu);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -85,17 +85,18 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1084, 71);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Hệ Thống";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnTTNV
             // 
-            this.button3.Location = new System.Drawing.Point(333, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 48);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnTTNV.Location = new System.Drawing.Point(333, 6);
+            this.btnTTNV.Name = "btnTTNV";
+            this.btnTTNV.Size = new System.Drawing.Size(140, 48);
+            this.btnTTNV.TabIndex = 2;
+            this.btnTTNV.Text = "Thông tin nhân viên";
+            this.btnTTNV.UseVisualStyleBackColor = true;
+            this.btnTTNV.Click += new System.EventHandler(this.btnTTNV_Click);
             // 
             // btnTTTK
             // 
@@ -129,9 +130,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(951, 71);
+            this.tabPage2.Size = new System.Drawing.Size(1084, 71);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Danh Mục";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
@@ -146,9 +147,9 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(951, 71);
+            this.tabPage3.Size = new System.Drawing.Size(1084, 71);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Báo Cáo - Thống Kê";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
@@ -156,19 +157,20 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(951, 71);
+            this.tabPage4.Size = new System.Drawing.Size(1084, 71);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Hỗ Trợ";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnDoiMatKhau
             // 
-            this.button4.Location = new System.Drawing.Point(479, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 48);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(479, 6);
+            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(140, 48);
+            this.btnDoiMatKhau.TabIndex = 3;
+            this.btnDoiMatKhau.Text = "Đổi mật khẩu";
+            this.btnDoiMatKhau.UseVisualStyleBackColor = true;
+            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
             // 
             // button5
             // 
@@ -320,14 +322,14 @@
             // 
             this.panel1.Location = new System.Drawing.Point(12, 118);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1092, 578);
+            this.panel1.Size = new System.Drawing.Size(1900, 1000);
             this.panel1.TabIndex = 1;
             // 
             // frmTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 727);
+            this.ClientSize = new System.Drawing.Size(1924, 953);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmTrangChu";
@@ -345,7 +347,7 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnTTNV;
         private System.Windows.Forms.Button btnTTTK;
         private System.Windows.Forms.Button btnTrangChu;
         private System.Windows.Forms.TabPage tabPage2;
@@ -353,7 +355,7 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnDangXuat;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDoiMatKhau;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;

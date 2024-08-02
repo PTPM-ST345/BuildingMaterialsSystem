@@ -62,5 +62,22 @@ namespace GUI
             formtttk.Show();
         }
 
+        private void btnTTNV_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmThongTinNhanVien formttnv = new frmThongTinNhanVien() { TopLevel = false, TopMost = true };
+            formttnv.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formttnv);
+            formttnv.Show();
+        }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            panel1.BackgroundImage = null;
+            frmDoiMatKhau formdmk = new frmDoiMatKhau();
+            formdmk.Show();
+        }
+
     }
 }

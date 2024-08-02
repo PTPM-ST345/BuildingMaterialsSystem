@@ -26,5 +26,10 @@ namespace DAL_BLL
         {
             return qlch.HangHoas.Select(hh => hh).ToList<HangHoa>();
         }
+        public List<NhanVien> LoadNhanVien()
+        {
+            return qlch.NhanViens.Select(hh => hh).ToList<NhanVien>();
+        }
+
     }
 }
