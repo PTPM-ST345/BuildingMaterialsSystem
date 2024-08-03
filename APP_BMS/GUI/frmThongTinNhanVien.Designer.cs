@@ -36,12 +36,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -146,12 +142,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox8);
-            this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.textBox7);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.textBox6);
-            this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.dateTimePicker1);
             this.groupBox3.Controls.Add(this.comboBox1);
             this.groupBox3.Controls.Add(this.textBox5);
@@ -173,26 +165,9 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cập Nhật Nhân Viên";
             // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(649, 255);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(283, 22);
-            this.textBox8.TabIndex = 27;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label11.Location = new System.Drawing.Point(505, 259);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 18);
-            this.label11.TabIndex = 26;
-            this.label11.Text = "Trạng Thái";
-            // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(649, 202);
+            this.textBox7.Location = new System.Drawing.Point(649, 156);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(283, 22);
             this.textBox7.TabIndex = 25;
@@ -201,28 +176,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label10.Location = new System.Drawing.Point(505, 204);
+            this.label10.Location = new System.Drawing.Point(505, 158);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 18);
             this.label10.TabIndex = 24;
             this.label10.Text = "Mật Khẩu";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(649, 152);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(283, 22);
-            this.textBox6.TabIndex = 23;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label9.Location = new System.Drawing.Point(505, 154);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 18);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Loại";
             // 
             // dateTimePicker1
             // 
@@ -300,9 +258,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.Location = new System.Drawing.Point(36, 262);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 18);
+            this.label6.Size = new System.Drawing.Size(63, 18);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Địa Chỉ Thành Phố";
+            this.label6.Text = "Địa Chỉ";
             // 
             // label5
             // 
@@ -394,12 +352,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox5;
