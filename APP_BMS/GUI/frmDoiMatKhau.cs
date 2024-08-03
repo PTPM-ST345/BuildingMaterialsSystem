@@ -50,7 +50,7 @@ namespace GUI
                 string matKhauMoi = txt_mkmoi.Text;
                 string nhapLaiMatKhau = txt_retypepass.Text;
 
-                int result = xl.CapNhatMatKhau(maNV, matKhauCu, matKhauMoi, nhapLaiMatKhau);
+                int result = xl.CapNhatMatKhau_1NV(maNV, matKhauCu, matKhauMoi, nhapLaiMatKhau);
                 if (result > 0)
                 {
                     MessageBox.Show("Cập Nhật Mật Khẩu Thành Công", "Thành Công", MessageBoxButtons.OK);

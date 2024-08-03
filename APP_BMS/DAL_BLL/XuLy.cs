@@ -34,7 +34,7 @@ namespace DAL_BLL
             return qlch.NhanViens.FirstOrDefault(nv => nv.MaNV == manv);
         }
 
-        public int CapNhatMatKhau(string maNV, string matKhauCu, string matKhauMoi, string nhapLaiMatKhau)
+        public int CapNhatMatKhau_1NV(string maNV, string matKhauCu, string matKhauMoi, string nhapLaiMatKhau)
         {
             var nhanVien = qlch.NhanViens.FirstOrDefault(nv => nv.MaNV == maNV);
             if (nhanVien != null)
