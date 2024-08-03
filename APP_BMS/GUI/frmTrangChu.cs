@@ -79,5 +79,65 @@ namespace GUI
             formdmk.Show();
         }
 
+        private void btnTTKH_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmThongTinKhachHang formttnv = new frmThongTinKhachHang() { TopLevel = false, TopMost = true };
+            formttnv.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formttnv);
+            formttnv.Show();
+        }
+
+        private void btnNCC_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmThongTinNhaCungCap formncc = new frmThongTinNhaCungCap() { TopLevel = false, TopMost = true };
+            formncc.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formncc);
+            formncc.Show();
+        }
+
+        private void btnLoaiHang_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmThongTinLoaiHang formlh = new frmThongTinLoaiHang() { TopLevel = false, TopMost = true };
+            formlh.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formlh);
+            formlh.Show();
+        }
+
+        private void btnHangHoa_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmThongTinHangHoa formhh = new frmThongTinHangHoa() { TopLevel = false, TopMost = true };
+            formhh.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formhh);
+            formhh.Show();
+        }
+
+        private void btnNhapHang_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmNhapHang formnh = new frmNhapHang() { TopLevel = false, TopMost = true };
+            formnh.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formnh);
+            formnh.Show();
+        }
+
+        private void btnXuatHang_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmXuatHang formxh = new frmXuatHang() { TopLevel = false, TopMost = true };
+            formxh.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formxh);
+            formxh.Show();
+        }
+
     }
 }

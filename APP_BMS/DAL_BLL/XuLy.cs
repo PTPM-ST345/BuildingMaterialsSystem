@@ -22,14 +22,39 @@ namespace DAL_BLL
             return nhanVien != null ? 1 : 0;
         }
 
+        public List<NhanVien> LoadNhanVien()
+        {
+            return qlch.NhanViens.Select(nv => nv).ToList<NhanVien>();
+        }
+
+        public List<KhachHang> LoadKhachHang()
+        {
+            return qlch.KhachHangs.Select(kh => kh).ToList<KhachHang>();
+        }
+
+        public List<NhaCungCap> LoadNhaCungCap()
+        {
+            return qlch.NhaCungCaps.Select(ncc => ncc).ToList<NhaCungCap>();
+        }
+
+        public List<DanhMucSanPham> LoadLoaiHang()
+        {
+            return qlch.DanhMucSanPhams.Select(dmsp => dmsp).ToList<DanhMucSanPham>();
+        }
+
         public List<HangHoa> LoadHangHoa()
         {
             return qlch.HangHoas.Select(hh => hh).ToList<HangHoa>();
         }
-        public List<NhanVien> LoadNhanVien()
+
+        public List<DonNhapHang> LoadDonNhapHang()
         {
-            return qlch.NhanViens.Select(hh => hh).ToList<NhanVien>();
+            return qlch.DonNhapHangs.Select(dnh => dnh).ToList<DonNhapHang>();
         }
 
+        public List<DonBanHang> LoadDonBanHang()
+        {
+            return qlch.DonBanHangs.Select(dnh => dnh).ToList<DonBanHang>();
+        }
     }
 }
