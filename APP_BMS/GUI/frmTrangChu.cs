@@ -76,7 +76,7 @@ namespace GUI
         {
             panel1.BackgroundImage = null;
             frmDoiMatKhau formdmk = new frmDoiMatKhau();
-            formdmk.Show();
+            formdmk.ShowDialog();
         }
 
         private void btnTTKH_Click(object sender, EventArgs e)

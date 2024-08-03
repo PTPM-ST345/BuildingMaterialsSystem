@@ -32,9 +32,7 @@
             this.lb_ns = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lb_sdth = new System.Windows.Forms.Label();
-            this.lb_trangthai = new System.Windows.Forms.Label();
             this.lb_chucvu = new System.Windows.Forms.Label();
-            this.lb_loai = new System.Windows.Forms.Label();
             this.lb_diachi = new System.Windows.Forms.Label();
             this.lb_gioitinh = new System.Windows.Forms.Label();
             this.lb_ten = new System.Windows.Forms.Label();
@@ -47,8 +45,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,9 +53,7 @@
             this.groupBox1.Controls.Add(this.lb_ns);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.lb_sdth);
-            this.groupBox1.Controls.Add(this.lb_trangthai);
             this.groupBox1.Controls.Add(this.lb_chucvu);
-            this.groupBox1.Controls.Add(this.lb_loai);
             this.groupBox1.Controls.Add(this.lb_diachi);
             this.groupBox1.Controls.Add(this.lb_gioitinh);
             this.groupBox1.Controls.Add(this.lb_ten);
@@ -72,8 +66,6 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(30, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(944, 595);
@@ -85,7 +77,7 @@
             this.lb_ns.AutoSize = true;
             this.lb_ns.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_ns.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lb_ns.Location = new System.Drawing.Point(281, 444);
+            this.lb_ns.Location = new System.Drawing.Point(281, 404);
             this.lb_ns.Name = "lb_ns";
             this.lb_ns.Size = new System.Drawing.Size(75, 25);
             this.lb_ns.TabIndex = 36;
@@ -96,7 +88,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label11.ForeColor = System.Drawing.Color.Firebrick;
-            this.label11.Location = new System.Drawing.Point(63, 439);
+            this.label11.Location = new System.Drawing.Point(63, 404);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(119, 25);
             this.label11.TabIndex = 35;
@@ -107,51 +99,29 @@
             this.lb_sdth.AutoSize = true;
             this.lb_sdth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_sdth.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lb_sdth.Location = new System.Drawing.Point(645, 378);
+            this.lb_sdth.Location = new System.Drawing.Point(645, 203);
             this.lb_sdth.Name = "lb_sdth";
             this.lb_sdth.Size = new System.Drawing.Size(75, 25);
             this.lb_sdth.TabIndex = 34;
             this.lb_sdth.Text = "label14";
-            // 
-            // lb_trangthai
-            // 
-            this.lb_trangthai.AutoSize = true;
-            this.lb_trangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_trangthai.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lb_trangthai.Location = new System.Drawing.Point(645, 281);
-            this.lb_trangthai.Name = "lb_trangthai";
-            this.lb_trangthai.Size = new System.Drawing.Size(75, 25);
-            this.lb_trangthai.TabIndex = 33;
-            this.lb_trangthai.Text = "label15";
             // 
             // lb_chucvu
             // 
             this.lb_chucvu.AutoSize = true;
             this.lb_chucvu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_chucvu.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lb_chucvu.Location = new System.Drawing.Point(645, 206);
+            this.lb_chucvu.Location = new System.Drawing.Point(645, 136);
             this.lb_chucvu.Name = "lb_chucvu";
             this.lb_chucvu.Size = new System.Drawing.Size(75, 25);
             this.lb_chucvu.TabIndex = 32;
             this.lb_chucvu.Text = "label16";
-            // 
-            // lb_loai
-            // 
-            this.lb_loai.AutoSize = true;
-            this.lb_loai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_loai.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lb_loai.Location = new System.Drawing.Point(645, 136);
-            this.lb_loai.Name = "lb_loai";
-            this.lb_loai.Size = new System.Drawing.Size(75, 25);
-            this.lb_loai.TabIndex = 31;
-            this.lb_loai.Text = "label17";
             // 
             // lb_diachi
             // 
             this.lb_diachi.AutoSize = true;
             this.lb_diachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_diachi.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lb_diachi.Location = new System.Drawing.Point(281, 378);
+            this.lb_diachi.Location = new System.Drawing.Point(281, 337);
             this.lb_diachi.Name = "lb_diachi";
             this.lb_diachi.Size = new System.Drawing.Size(75, 25);
             this.lb_diachi.TabIndex = 30;
@@ -162,7 +132,7 @@
             this.lb_gioitinh.AutoSize = true;
             this.lb_gioitinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_gioitinh.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lb_gioitinh.Location = new System.Drawing.Point(281, 281);
+            this.lb_gioitinh.Location = new System.Drawing.Point(281, 270);
             this.lb_gioitinh.Name = "lb_gioitinh";
             this.lb_gioitinh.Size = new System.Drawing.Size(75, 25);
             this.lb_gioitinh.TabIndex = 29;
@@ -173,7 +143,7 @@
             this.lb_ten.AutoSize = true;
             this.lb_ten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_ten.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lb_ten.Location = new System.Drawing.Point(281, 206);
+            this.lb_ten.Location = new System.Drawing.Point(281, 203);
             this.lb_ten.Name = "lb_ten";
             this.lb_ten.Size = new System.Drawing.Size(75, 25);
             this.lb_ten.TabIndex = 28;
@@ -184,7 +154,7 @@
             this.lb_manv.AutoSize = true;
             this.lb_manv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_manv.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lb_manv.Location = new System.Drawing.Point(281, 132);
+            this.lb_manv.Location = new System.Drawing.Point(281, 136);
             this.lb_manv.Name = "lb_manv";
             this.lb_manv.Size = new System.Drawing.Size(75, 25);
             this.lb_manv.TabIndex = 27;
@@ -206,7 +176,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.Firebrick;
-            this.label3.Location = new System.Drawing.Point(63, 210);
+            this.label3.Location = new System.Drawing.Point(63, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(164, 25);
             this.label3.TabIndex = 2;
@@ -217,7 +187,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label9.ForeColor = System.Drawing.Color.Firebrick;
-            this.label9.Location = new System.Drawing.Point(456, 210);
+            this.label9.Location = new System.Drawing.Point(456, 136);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(103, 25);
             this.label9.TabIndex = 26;
@@ -228,7 +198,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label8.ForeColor = System.Drawing.Color.Firebrick;
-            this.label8.Location = new System.Drawing.Point(63, 373);
+            this.label8.Location = new System.Drawing.Point(63, 337);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(90, 25);
             this.label8.TabIndex = 23;
@@ -239,7 +209,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.ForeColor = System.Drawing.Color.Firebrick;
-            this.label7.Location = new System.Drawing.Point(456, 373);
+            this.label7.Location = new System.Drawing.Point(456, 203);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(157, 25);
             this.label7.TabIndex = 21;
@@ -250,7 +220,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.Firebrick;
-            this.label4.Location = new System.Drawing.Point(63, 285);
+            this.label4.Location = new System.Drawing.Point(63, 270);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 25);
             this.label4.TabIndex = 19;
@@ -278,28 +248,7 @@
             this.button1.TabIndex = 18;
             this.button1.Text = "Đổi Mật Khẩu";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.ForeColor = System.Drawing.Color.Firebrick;
-            this.label6.Location = new System.Drawing.Point(456, 285);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 25);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Trạng Thái:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.ForeColor = System.Drawing.Color.Firebrick;
-            this.label5.Location = new System.Drawing.Point(456, 136);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 25);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Loại Người Dùng:";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmThongTinTaiKhoan
             // 
@@ -321,9 +270,7 @@
         private System.Windows.Forms.Label lb_ns;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lb_sdth;
-        private System.Windows.Forms.Label lb_trangthai;
         private System.Windows.Forms.Label lb_chucvu;
-        private System.Windows.Forms.Label lb_loai;
         private System.Windows.Forms.Label lb_diachi;
         private System.Windows.Forms.Label lb_gioitinh;
         private System.Windows.Forms.Label lb_ten;
@@ -336,7 +283,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
     }
 }

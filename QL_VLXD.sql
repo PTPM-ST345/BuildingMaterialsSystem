@@ -1,6 +1,6 @@
-﻿CREATE DATABASE QuanLy_VLXD4;
+﻿CREATE DATABASE QuanLy_VLXD;
 GO
-USE QuanLy_VLXD4;
+USE QuanLy_VLXD;
 GO
 
 -- Create QL_NhomNguoiDung table first
@@ -30,7 +30,7 @@ CREATE TABLE QL_PhanQuyen (
 GO
 -- Create NhanVien table
 CREATE TABLE NhanVien (
-    MaNV VARCHAR(10) PRIMARY KEY,
+    MaNV VARCHAR(10) PRIMARY KEY ,
     TenNV NVARCHAR(50),
     GioiTinh NVARCHAR(5),
     NgaySinh DATETIME,
@@ -38,17 +38,16 @@ CREATE TABLE NhanVien (
     SDT NVARCHAR(15),
     ChucVu NVARCHAR(50),
     MatKhau NVARCHAR(30),
-    TenDangNhap NVARCHAR(50) UNIQUE  NOT NULL,
 );
 GO
 
 -- Create QL_NguoiDungNhomNguoiDung table
 CREATE TABLE QL_NguoiDungNhomNguoiDung (
-    TenDangNhap NVARCHAR(50) NOT NULL ,
+    MaNV VARCHAR(10) NOT NULL ,
     MaNhomNguoiDung VARCHAR(20) ,
     GhiChu NVARCHAR(200),
-    PRIMARY KEY (TenDangNhap, MaNhomNguoiDung),
-    FOREIGN KEY (TenDangNhap) REFERENCES NhanVien(TenDangNhap),
+    PRIMARY KEY (MaNV, MaNhomNguoiDung),
+    FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV),
     FOREIGN KEY (MaNhomNguoiDung) REFERENCES QL_NhomNguoiDung(MaNhom)
 );
 GO
@@ -76,25 +75,23 @@ CREATE TABLE NhaCungCap (
 );
 GO
 
--- Create DanhMucSanPham table
-CREATE TABLE DanhMucSanPham (
+-- Create Loai table
+CREATE TABLE Loai (
     MaLoai VARCHAR(10) PRIMARY KEY,
     TenLoai NVARCHAR(50),
     ThongTin TEXT,
-    XuatXu NVARCHAR(50),
-    TrangThai INT
 );
 GO
 
 -- Create HangHoa table
 CREATE TABLE HangHoa (
     MaHH VARCHAR(10) PRIMARY KEY,
-    TenHangHoa NVARCHAR(50),
+    TenHangHoa NVARCHAR(60),
     DonVi NVARCHAR(50),
 	SoLuongTon INT,
     HinhAnh NVARCHAR(255),
     GiaBan INT,
-    MaLoai VARCHAR(10) FOREIGN KEY REFERENCES DanhMucSanPham(MaLoai),
+    MaLoai VARCHAR(10) FOREIGN KEY REFERENCES Loai(MaLoai),
     MaNCC VARCHAR(10) FOREIGN KEY REFERENCES NhaCungCap(MaNCC)
 
 );
@@ -173,24 +170,24 @@ INSERT INTO QL_PhanQuyen (MaNhomNguoiDung, MaManHinh, CoQuyen) VALUES
 ('ND7', 'MH5', 1);
 GO
 -- Insert into NhanVien
-INSERT INTO NhanVien (MaNV, TenNV, GioiTinh, NgaySinh, DiaChi, SDT, ChucVu, MatKhau, TenDangNhap) VALUES
-('NV001', 'Nguyen Van A', 'Nam', '1990-01-01', '123 Le Loi', '0123456789', 'Admin', 'pass1', 'nguyenvana'),
-('NV002', 'Tran Thi B', 'Nu', '1992-02-02', '456 Hai Ba Trung', '0987654321', 'Sales', 'pass2', 'tranthib'),
-('NV003', 'Le Van C', 'Nam', '1985-03-03', '789 Nguyen Trai', '0912345678', 'Manager', 'pass3', 'levanc'),
-('NV004', 'Pham Thi D', 'Nu', '1988-04-04', '1011 Tran Hung Dao', '0908765432', 'Warehouse', 'pass4', 'phamthid'),
-('NV005', 'Hoang Van E', 'Nam', '1980-05-05', '1213 Vo Thi Sau', '0934567890', 'Supplier', 'pass5', 'hoangvane'),
-('NV006', 'Nguyen Thi F', 'Nu', '1995-06-06', '1415 Ly Thuong Kiet', '0945678901', 'CustomerService', 'pass6', 'nguyenthif'),
-('NV007', 'Le Thi G', 'Nu', '1982-07-07', '1617 Ba Trieu', '0956789012', 'Finance', 'pass7', 'lethig');
+INSERT INTO NhanVien (MaNV, TenNV, GioiTinh, NgaySinh, DiaChi, SDT, ChucVu, MatKhau) VALUES
+('NV001', 'Nguyen Van A', 'Nam', '1990-01-01', '123 Le Loi', '0123456789', 'Admin', 'pass1'),
+('NV002', 'Tran Thi B', 'Nu', '1992-02-02', '456 Hai Ba Trung', '0987654321', 'Sales', 'pass2'),
+('NV003', 'Le Van C', 'Nam', '1985-03-03', '789 Nguyen Trai', '0912345678', 'Manager', 'pass3'),
+('NV004', 'Pham Thi D', 'Nu', '1988-04-04', '1011 Tran Hung Dao', '0908765432', 'Warehouse', 'pass4'),
+('NV005', 'Hoang Van E', 'Nam', '1980-05-05', '1213 Vo Thi Sau', '0934567890', 'Supplier', 'pass5'),
+('NV006', 'Nguyen Thi F', 'Nu', '1995-06-06', '1415 Ly Thuong Kiet', '0945678901', 'CustomerService', 'pass6'),
+('NV007', 'Le Thi G', 'Nu', '1982-07-07', '1617 Ba Trieu', '0956789012', 'Finance', 'pass7');
 GO
 -- Insert into QL_NguoiDungNhomNguoiDung
-INSERT INTO QL_NguoiDungNhomNguoiDung (TenDangNhap, MaNhomNguoiDung, GhiChu) VALUES
-('nguyenvana', 'ND1', 'Quản trị hệ thống'),
-('tranthib', 'ND2', 'Nhân viên bán hàng'),
-('levanc', 'ND3', 'Quản lý'),
-('phamthid', 'ND4', 'Nhân viên kho'),
-('hoangvane', 'ND5', 'Nhà cung cấp'),
-('nguyenthif', 'ND6', 'Dịch vụ khách hàng'),
-('lethig', 'ND7', 'Tài chính');
+INSERT INTO QL_NguoiDungNhomNguoiDung (MaNV, MaNhomNguoiDung, GhiChu) VALUES
+('NV001', 'ND1', 'Quản trị hệ thống'),
+('NV002', 'ND2', 'Nhân viên bán hàng'),
+('NV003', 'ND3', 'Quản lý'),
+('NV004', 'ND4', 'Nhân viên kho'),
+('NV005', 'ND5', 'Nhà cung cấp'),
+('NV006', 'ND6', 'Dịch vụ khách hàng'),
+('NV007', 'ND7', 'Tài chính');
 GO
 -- Insert into KhachHang
 INSERT INTO KhachHang (MaKH, HoTen, NgaySinh, GioiTinh, DienThoai, TaiKhoan, MatKhau, Email, DiaChi) VALUES
@@ -213,14 +210,14 @@ INSERT INTO NhaCungCap (MaNCC, TenNCC, Diachi, SDT) VALUES
 ('NCC007', 'Cty Vat Lieu Xay Dung G', '1617 Nam Ky Khoi Nghia', '0907788990');
 GO
 -- Insert into DanhMucSanPham
-INSERT INTO DanhMucSanPham (MaLoai, TenLoai, ThongTin, XuatXu, TrangThai) VALUES
-('DM001', 'Gạch', 'Gạch xây dựng chất lượng cao', 'Vietnam', 1),
-('DM002', 'Xi măng', 'Xi măng Portland', 'Vietnam', 1),
-('DM003', 'Cát', 'Cát xây dựng', 'Vietnam', 1),
-('DM004', 'Đá', 'Đá xây dựng', 'Vietnam', 1),
-('DM005', 'Thép', 'Thép cường lực', 'Vietnam', 1),
-('DM006', 'Sơn', 'Sơn tường chất lượng', 'Vietnam', 1),
-('DM007', 'Kính', 'Kính chịu lực', 'Vietnam', 1);
+INSERT INTO Loai(MaLoai, TenLoai, ThongTin) VALUES
+('DM001', 'Gạch', 'Gạch xây dựng chất lượng cao' ),
+('DM002', 'Xi măng', 'Xi măng Portland'),
+('DM003', 'Cát', 'Cát xây dựng'),
+('DM004', 'Đá', 'Đá xây dựng'),
+('DM005', 'Thép', 'Thép cường lực'),
+('DM006', 'Sơn', 'Sơn tường chất lượng'),
+('DM007', 'Kính', 'Kính chịu lực');
 GO
 -- Insert into HangHoa
 INSERT INTO HangHoa (MaHH, TenHangHoa, DonVi, SoLuongTon, HinhAnh, GiaBan, MaLoai, MaNCC) VALUES

@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.txt_retypepass = new System.Windows.Forms.TextBox();
             this.txt_mkmoi = new System.Windows.Forms.TextBox();
             this.txt_mkcu = new System.Windows.Forms.TextBox();
-            this.txt_manv = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_manv = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lbl_manv);
             this.groupBox1.Controls.Add(this.btn_logout);
             this.groupBox1.Controls.Add(this.btn_save);
             this.groupBox1.Controls.Add(this.txt_retypepass);
             this.groupBox1.Controls.Add(this.txt_mkmoi);
             this.groupBox1.Controls.Add(this.txt_mkcu);
-            this.groupBox1.Controls.Add(this.txt_manv);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -62,22 +62,11 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(108, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 38);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Cập Nhật Mật Khẩu";
-            // 
             // btn_logout
             // 
             this.btn_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_logout.Location = new System.Drawing.Point(392, 310);
+            this.btn_logout.Location = new System.Drawing.Point(392, 334);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(153, 51);
             this.btn_logout.TabIndex = 16;
@@ -89,12 +78,13 @@
             // 
             this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save.Location = new System.Drawing.Point(112, 309);
+            this.btn_save.Location = new System.Drawing.Point(102, 333);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(148, 52);
             this.btn_save.TabIndex = 15;
             this.btn_save.Text = "Lưu";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // txt_retypepass
             // 
@@ -116,13 +106,6 @@
             this.txt_mkcu.Name = "txt_mkcu";
             this.txt_mkcu.Size = new System.Drawing.Size(274, 22);
             this.txt_mkcu.TabIndex = 12;
-            // 
-            // txt_manv
-            // 
-            this.txt_manv.Location = new System.Drawing.Point(271, 102);
-            this.txt_manv.Name = "txt_manv";
-            this.txt_manv.Size = new System.Drawing.Size(274, 22);
-            this.txt_manv.TabIndex = 11;
             // 
             // label5
             // 
@@ -164,6 +147,27 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Mã Nhân Viên";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(108, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(320, 38);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Cập Nhật Mật Khẩu";
+            // 
+            // lbl_manv
+            // 
+            this.lbl_manv.AutoSize = true;
+            this.lbl_manv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_manv.Location = new System.Drawing.Point(271, 102);
+            this.lbl_manv.Name = "lbl_manv";
+            this.lbl_manv.Size = new System.Drawing.Size(71, 25);
+            this.lbl_manv.TabIndex = 21;
+            this.lbl_manv.Text = "MANV";
+            // 
             // frmDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -187,11 +191,11 @@
         private System.Windows.Forms.TextBox txt_retypepass;
         private System.Windows.Forms.TextBox txt_mkmoi;
         private System.Windows.Forms.TextBox txt_mkcu;
-        private System.Windows.Forms.TextBox txt_manv;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_manv;
     }
 }

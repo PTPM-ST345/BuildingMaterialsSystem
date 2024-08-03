@@ -33,5 +33,16 @@ namespace DTO.Properties {
                 return ((string)(this["QuanLy_VLXD4ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ACERNITRO5;Initial Catalog=QuanLy_VLXD;Persist Security Info=True;Use" +
+            "r ID=sa;Password=123")]
+        public string QuanLy_VLXDConnectionString {
+            get {
+                return ((string)(this["QuanLy_VLXDConnectionString"]));
+            }
+        }
     }
 }

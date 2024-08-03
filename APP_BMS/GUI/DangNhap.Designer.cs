@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtTenDN = new System.Windows.Forms.TextBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -37,12 +37,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtTenDN
+            // txtMaNV
             // 
-            this.txtTenDN.Location = new System.Drawing.Point(197, 89);
-            this.txtTenDN.Name = "txtTenDN";
-            this.txtTenDN.Size = new System.Drawing.Size(221, 22);
-            this.txtTenDN.TabIndex = 0;
+            this.txtMaNV.Location = new System.Drawing.Point(197, 89);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(221, 22);
+            this.txtMaNV.TabIndex = 0;
             // 
             // txtMatKhau
             // 
@@ -59,6 +59,7 @@
             this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            
             // 
             // btnThoat
             // 
@@ -84,9 +85,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(67, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 17);
+            this.label2.Size = new System.Drawing.Size(93, 17);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Tên đăng nhập";
+            this.label2.Text = "Mã nhân viên";
             // 
             // label3
             // 
@@ -108,7 +109,7 @@
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtMatKhau);
-            this.Controls.Add(this.txtTenDN);
+            this.Controls.Add(this.txtMaNV);
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DangNhap";
@@ -119,7 +120,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtTenDN;
+        private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnThoat;

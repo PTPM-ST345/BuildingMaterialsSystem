@@ -20,7 +20,10 @@ namespace GUI
             this.btnDangNhap.Click += btnDangNhap_Click;
             this.FormClosing += DangNhap_FormClosing;
             this.Load += DangNhap_Load;
-            this.txtTenDN.TextChanged += txtTenDN_TextChanged;
+            this.txtMaNV.TextChanged += txtTenDN_TextChanged;
+
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmThongTinTaiKhoan_KeyDown);
         }
 
         void txtTenDN_TextChanged(object sender, EventArgs e)
@@ -30,9 +33,14 @@ namespace GUI
 
         void DangNhap_Load(object sender, EventArgs e)
         {
-            txtTenDN.Focus();
-            txtTenDN.Clear();
+            txtMaNV.Focus();
+            txtMaNV.Clear();
             txtMatKhau.Clear();
+
+            txtMaNV.Text = Properties.Settings.Default.username;
+            txtMatKhau.Text = Properties.Settings.Default.password;
+
+
         }
 
         void DangNhap_FormClosing(object sender, FormClosingEventArgs e)
@@ -47,8 +55,13 @@ namespace GUI
 
         void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if(xl.DangNhap(txtTenDN.Text, txtMatKhau.Text) == 1)
+            if(xl.DangNhap(txtMaNV.Text, txtMatKhau.Text) == 1)
             {
+                string manv = txtMaNV.Text;
+                string pwd = txtMatKhau.Text;
+
+                Properties.Settings.Default.username = manv;
+                Properties.Settings.Default.password = pwd;
                 this.Hide();
                 frmTrangChu formtrangchu = new frmTrangChu();
                 formtrangchu.Show();
@@ -63,6 +76,15 @@ namespace GUI
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmThongTinTaiKhoan_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnDangNhap_Click(sender, e);
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }
