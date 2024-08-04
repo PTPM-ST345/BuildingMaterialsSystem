@@ -74,7 +74,8 @@ namespace DAL_BLL
         {
             return qlch.KhachHangs.Select(kh => kh).ToList<KhachHang>();
         }
-//###########---NhaCungCap---###########
+
+//NhaCungCap---###########
         public List<NhaCungCap> LoadNhaCungCap()
         {
             return qlch.NhaCungCaps.Select(ncc => ncc).ToList<NhaCungCap>();
@@ -223,19 +224,33 @@ namespace DAL_BLL
             return true;
         }
 
-        
 
-//###########---HangHoa---###########
+//HangHoa---###########
         public List<HangHoa> LoadHangHoa()
         {
             return qlch.HangHoas.Select(hh => hh).ToList<HangHoa>();
         }
 
+        public List<HangHoa> TimKiemHangHoa(string keyword, bool timKiemTheoMaHH)
+        {
+            if (timKiemTheoMaHH)
+            {
+                return qlch.HangHoas.Where(l => l.MaHH.Contains(keyword)).ToList();
+            }
+            else
+            {
+                return qlch.HangHoas.Where(l => l.TenHangHoa.Contains(keyword)).ToList();
+            }
+        }
+
+
+//DonNhapHang---###########
         public List<DonNhapHang> LoadDonNhapHang()
         {
             return qlch.DonNhapHangs.Select(dnh => dnh).ToList<DonNhapHang>();
         }
 
+//DonBanHang---###########
         public List<DonBanHang> LoadDonBanHang()
         {
             return qlch.DonBanHangs.Select(dnh => dnh).ToList<DonBanHang>();
