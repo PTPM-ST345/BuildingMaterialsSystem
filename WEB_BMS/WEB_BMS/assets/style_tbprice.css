@@ -104,3 +104,10 @@
             font-size: 1.2em;
             font-weight: bold;
         }
+
+.title{
+    text-align:center;
+}
+.title a {
+    color: red;
+}

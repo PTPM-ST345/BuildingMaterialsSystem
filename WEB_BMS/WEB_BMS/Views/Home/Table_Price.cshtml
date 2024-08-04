@@ -2,8 +2,7 @@
     ViewBag.Title = "Table_Price";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
-
-<link href="~/assets/style_tbprice.css" rel="stylesheet" />
+<link href="~/assets/style_tbprice.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
 <br />
 <div class="container">
     <h5 style="font-size:25px" class="uppercase">BẢNG BÁO GIÁ</h5>
@@ -49,8 +48,72 @@
         </p>
     </div>
 </div>
-<h6 style=" text-align: center;" class="uppercase">BẢNG BÁO GIÁ VẬT LIỆU XÂY DỰNG CẬP NHẬT LIÊN TỤC</h6>
+<h6 style="text-align: center;font-size:18px" class="uppercase">BẢNG BÁO GIÁ VẬT LIỆU XÂY DỰNG CẬP NHẬT LIÊN TỤC</h6>
 
+<style>
+    .table td,
+    .table th {
+        padding: 5px 150px 5px 150px; /* Tăng padding để tạo khoảng cách lớn hơn */
+        color: #001981;
+        border: 2px solid #001981;
+    }
+
+    .table th {
+        background-color: #001981;
+        color: #fff;
+    }
+    .title {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+        .title a {
+            padding: 10px; 
+            color: #001981;
+            border: 1px solid #001981;
+            border-radius: 3px;
+        }
+</style>
+
+<div class="container mt-4">
+    <div class="title">
+        <a href="">Gạch</a>
+        <a href="">Xi Măng</a>
+        <a href="">Đá</a>
+        <a href="">Cát</a>
+    </div>
+    <div class="table-responsive">
+
+        <table class="table table-bordered">
+            <thead>
+                <tr class="table-info text-center">
+                    <th scope="col">CÁC LOẠI XI MĂNG</th>
+                    <th scope="col">ĐƠN VỊ TÍNH</th>
+                    <th scope="col">ĐƠN GIÁ (VNĐ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Xi măng loại A</td>
+                    <td>Bao</td>
+                    <td>100,000</td>
+                </tr>
+                <tr>
+                    <td>Xi măng loại B</td>
+                    <td>Bao</td>
+                    <td>120,000</td>
+                </tr>
+                <tr>
+                    <td>Xi măng loại C</td>
+                    <td>Bao</td>
+                    <td>110,000</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+<br />
 <div class="container contact-info">
     <div class="left">
         <h2>Liên hệ nhận ngay báo giá</h2>
