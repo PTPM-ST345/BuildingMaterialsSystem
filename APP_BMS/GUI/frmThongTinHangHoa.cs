@@ -83,6 +83,15 @@ namespace GUI
         {
             dgvHangHoa.DataSource = xl.LoadHangHoa();
 
+            dgvHangHoa.Columns["MaHH"].HeaderText = "Mã hàng hóa";
+            dgvHangHoa.Columns["TenHangHoa"].HeaderText = "Tên hàng hóa";
+            dgvHangHoa.Columns["DonVi"].HeaderText = "Đơn vị";
+            dgvHangHoa.Columns["SoLuongTon"].HeaderText = "Số lượng tồn";
+            dgvHangHoa.Columns["MaLoai"].HeaderText = "Mã loại";
+            dgvHangHoa.Columns["MaNCC"].HeaderText = "Mã nhà cung cấp";
+            dgvHangHoa.Columns["GiaBan"].HeaderText = "Giá bán";
+            dgvHangHoa.Columns["HinhAnh"].HeaderText = "Hình ảnh";
+
             dgvHangHoa.Columns["Loai"].Visible = false;
             dgvHangHoa.Columns["NhaCungCap"].Visible = false;
 
@@ -92,6 +101,8 @@ namespace GUI
             cboNCC.DataSource = xl.LoadNhaCungCap();
             cboNCC.DisplayMember = "TenNCC";
             cboNCC.ValueMember = "MaNCC";
+            cboLoai.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboNCC.DropDownStyle = ComboBoxStyle.DropDownList;
 
             txtMaHH.Enabled = false;
             txtTenHH.Enabled = false;
@@ -109,31 +120,178 @@ namespace GUI
         //Them
         private void button1_Click(object sender, EventArgs e)
         {
-
+            txtMaHH.Enabled = true; 
+            txtTenHH.Enabled = true; 
+            txtDonViTinh.Enabled = true; 
+            txtSoLuongTon.Enabled = true; 
+            cboLoai.Enabled = true; 
+            cboNCC.Enabled = true; 
+            txtGiaBan.Enabled = true; 
+            txtHinhAnh.Enabled = true; 
+            txtMaHH.Text = "";
+            txtTenHH.Text = "";
+            txtDonViTinh.Text = "";
+            txtSoLuongTon.Text = "";
+            cboLoai.Text = "";
+            cboNCC.Text = "";
+            txtGiaBan.Text = "";
+            txtHinhAnh.Text = "";
+            txtMaHH.Focus();
+            button5.Enabled = true;
+            isAddingNew = true;
         }
 
         //Xoa
         private void button3_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtMaHH.Text))
+            {
+                MessageBox.Show("Vui lòng chọn một dòng để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
+            string maHHToDelete = txtMaHH.Text;
+            string tenHH = txtTenHH.Text;
+
+            int count = xl.DemSoDonHangTheoMaHH(maHHToDelete);
+
+            if (count > 0)
+            {
+                MessageBox.Show("Hàng hóa này đang thuộc đơn hàng nhập hoặc xuất. Không thể xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin của hàng hóa là " + tenHH + " không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        xl.XoaHangHoa(maHHToDelete);
+                        MessageBox.Show("Xóa thành công !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        txtMaHH.Text = "";
+                        txtTenHH.Text = "";
+                        txtDonViTinh.Text = "";
+                        txtSoLuongTon.Text = "";
+                        cboLoai.Text = "";
+                        cboNCC.Text = "";
+                        txtGiaBan.Text = "";
+                        txtHinhAnh.Text = "";
+                        dgvHangHoa.DataSource = xl.LoadHangHoa();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Xóa không được !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
 
         //Sua
         private void button4_Click(object sender, EventArgs e)
         {
+            txtMaHH.Enabled = true;
+            txtTenHH.Enabled = true;
+            txtDonViTinh.Enabled = true;
+            txtSoLuongTon.Enabled = true;
+            cboLoai.Enabled = true;
+            cboNCC.Enabled = true;
+            txtGiaBan.Enabled = true;
+            txtHinhAnh.Enabled = true;
 
+            txtMaHH.Focus();
+            button5.Enabled = true;
+
+            isAddingNew = false;
         }
 
         //LamMoi
         private void button11_Click(object sender, EventArgs e)
         {
-
+            dgvHangHoa.DataSource = xl.LoadHangHoa();
+            txtMaHH.Text = "";
+            txtTenHH.Text = "";
+            txtDonViTinh.Text = "";
+            txtSoLuongTon.Text = "";
+            cboLoai.Text = "";
+            cboNCC.Text = "";
+            txtGiaBan.Text = "";
+            txtHinhAnh.Text = "";
+            txtMaHH.Focus();
         }
 
         //Luu
         private void button5_Click(object sender, EventArgs e)
         {
+            if (txtMaHH.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập mã hàng hóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMaHH.Focus();
+                return;
+            }
+            if (txtTenHH.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập tên hàng hóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenHH.Focus();
+                return;
+            }
+            if (txtDonViTinh.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập đơn vị tính hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDonViTinh.Focus();
+                return;
+            }
+            if (txtSoLuongTon.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập số lượng tồn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtSoLuongTon.Focus();
+                return;
+            }
+            if (txtGiaBan.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập giá bán cho hàng hóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtGiaBan.Focus();
+                return;
+            }
+            bool isSuccessful = false;
 
+            if (isAddingNew)
+            {
+                if (xl.IsMaHHDuplicated(txtMaHH.Text))
+                {
+                    MessageBox.Show("Mã hàng hóa đã tồn tại!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtMaHH.Text = "";
+                    txtMaHH.Focus();
+                    return;
+                }
+                isSuccessful = xl.ThemHangHoa(txtMaHH.Text, txtTenHH.Text, txtDonViTinh.Text,Convert.ToInt32(txtSoLuongTon.Text), cboLoai.SelectedValue.ToString(),cboNCC.SelectedValue.ToString(),Convert.ToInt32(txtGiaBan.Text),txtHinhAnh.Text);
+            }
+            else
+            {
+                isSuccessful = xl.CapNhatHangHoa(txtMaHH.Text, txtTenHH.Text, txtDonViTinh.Text, Convert.ToInt32(txtSoLuongTon.Text), cboLoai.SelectedValue.ToString(), cboNCC.SelectedValue.ToString(), Convert.ToInt32(txtGiaBan.Text), txtHinhAnh.Text);
+            }
+
+            if (isSuccessful)
+            {
+                MessageBox.Show(isAddingNew ? "Thêm thành công !!!" : "Sửa thành công !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                button5.Enabled = false;
+                txtMaHH.Enabled = false;
+                txtTenHH.Enabled = false;
+                txtDonViTinh.Enabled = false;
+                txtSoLuongTon.Enabled = false;
+                cboLoai.Enabled = false;
+                cboNCC.Enabled = false;
+                txtGiaBan.Enabled = false;
+                txtHinhAnh.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show(isAddingNew ? "Thêm không được !!!" : "Mã loại không tồn tại !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            isAddingNew = false;
+
+            dgvHangHoa.DataSource = xl.LoadHangHoa();
         }
     }
 }

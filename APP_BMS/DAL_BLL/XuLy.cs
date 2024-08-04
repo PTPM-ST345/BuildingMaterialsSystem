@@ -75,7 +75,7 @@ namespace DAL_BLL
             return qlch.KhachHangs.Select(kh => kh).ToList<KhachHang>();
         }
 
-//NhaCungCap---###########
+//NhaCungCap
         public List<NhaCungCap> LoadNhaCungCap()
         {
             return qlch.NhaCungCaps.Select(ncc => ncc).ToList<NhaCungCap>();
@@ -225,7 +225,7 @@ namespace DAL_BLL
         }
 
 
-//HangHoa---###########
+//HangHoa
         public List<HangHoa> LoadHangHoa()
         {
             return qlch.HangHoas.Select(hh => hh).ToList<HangHoa>();
@@ -243,6 +243,74 @@ namespace DAL_BLL
             }
         }
 
+        public void XoaHangHoa(string pMaHH)
+        {
+            HangHoa hh = qlch.HangHoas.Where(l => l.MaHH == pMaHH).FirstOrDefault();
+            if (hh != null)
+            {
+                qlch.HangHoas.DeleteOnSubmit(hh);
+                qlch.SubmitChanges();
+            }
+        }
+
+        public int DemSoDonHangTheoMaHH(string pMaHH)
+        {
+            int countBanHang = qlch.ChiTietDonBanHangs.Count(h => h.MaHH == pMaHH);
+            int countNhapHang = qlch.ChiTietDonNhapHangs.Count(h => h.MaHH == pMaHH);
+            return countBanHang + countNhapHang;
+        }
+
+        public bool IsMaHHDuplicated(string maHH)
+        {
+            return qlch.HangHoas.Any(l => l.MaHH == maHH);
+        }
+
+        public bool ThemHangHoa(string maHH, string tenHH, string donVi, int soLuongTon, string maLoai, string maNCC, int giaBan, string hinhAnh)
+        {
+            if (IsMaHHDuplicated(maHH))
+            {
+                return false;
+            }
+
+            HangHoa hh = new HangHoa
+            {
+                MaHH = maHH,
+                TenHangHoa = tenHH,
+                DonVi = donVi,
+                SoLuongTon = soLuongTon,
+                MaLoai = maLoai,
+                MaNCC = maNCC,
+                GiaBan = giaBan,
+                HinhAnh = hinhAnh
+                
+            };
+
+            qlch.HangHoas.InsertOnSubmit(hh);
+            qlch.SubmitChanges();
+
+            return true;
+        }
+
+        public bool CapNhatHangHoa(string maHH, string tenHH, string donVi, int soLuongTon, string maLoai, string maNCC, int giaBan, string hinhAnh)
+        {
+            HangHoa hh = qlch.HangHoas.Where(l => l.MaHH == maHH).FirstOrDefault();
+            if (maHH == null)
+            {
+                return false;
+            }
+
+                hh.TenHangHoa = tenHH;
+                hh.DonVi = donVi;
+                hh.SoLuongTon = soLuongTon;
+                hh.MaLoai = maLoai;
+                hh.MaNCC = maNCC;
+                hh.GiaBan = giaBan;
+                hh.HinhAnh = hinhAnh;
+
+            qlch.SubmitChanges();
+
+            return true;
+        }
 
 //DonNhapHang---###########
         public List<DonNhapHang> LoadDonNhapHang()
