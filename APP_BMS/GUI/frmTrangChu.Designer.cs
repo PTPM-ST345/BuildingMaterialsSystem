@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnTTKH = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnDoiMatKhau = new System.Windows.Forms.Button();
@@ -52,7 +53,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnTTKH = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -64,6 +65,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
@@ -88,6 +90,16 @@
             this.tabPage1.Text = "Hệ Thống";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnTTKH
+            // 
+            this.btnTTKH.Location = new System.Drawing.Point(434, 6);
+            this.btnTTKH.Name = "btnTTKH";
+            this.btnTTKH.Size = new System.Drawing.Size(140, 48);
+            this.btnTTKH.TabIndex = 6;
+            this.btnTTKH.Text = "Thông tin khách hàng";
+            this.btnTTKH.UseVisualStyleBackColor = true;
+            this.btnTTKH.Click += new System.EventHandler(this.btnTTKH_Click);
+            // 
             // btnThoat
             // 
             this.btnThoat.Location = new System.Drawing.Point(938, 6);
@@ -110,7 +122,7 @@
             // 
             // btnDoiMatKhau
             // 
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(637, 6);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(580, 6);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.Size = new System.Drawing.Size(140, 48);
             this.btnDoiMatKhau.TabIndex = 3;
@@ -165,7 +177,7 @@
             // 
             // btnXuatHang
             // 
-            this.btnXuatHang.Location = new System.Drawing.Point(609, 6);
+            this.btnXuatHang.Location = new System.Drawing.Point(890, 6);
             this.btnXuatHang.Name = "btnXuatHang";
             this.btnXuatHang.Size = new System.Drawing.Size(140, 48);
             this.btnXuatHang.TabIndex = 9;
@@ -175,7 +187,7 @@
             // 
             // btnNhapHang
             // 
-            this.btnNhapHang.Location = new System.Drawing.Point(412, 6);
+            this.btnNhapHang.Location = new System.Drawing.Point(713, 6);
             this.btnNhapHang.Name = "btnNhapHang";
             this.btnNhapHang.Size = new System.Drawing.Size(158, 48);
             this.btnNhapHang.TabIndex = 8;
@@ -185,7 +197,7 @@
             // 
             // btnHangHoa
             // 
-            this.btnHangHoa.Location = new System.Drawing.Point(295, 6);
+            this.btnHangHoa.Location = new System.Drawing.Point(65, 6);
             this.btnHangHoa.Name = "btnHangHoa";
             this.btnHangHoa.Size = new System.Drawing.Size(81, 48);
             this.btnHangHoa.TabIndex = 7;
@@ -195,7 +207,7 @@
             // 
             // btnLoaiHang
             // 
-            this.btnLoaiHang.Location = new System.Drawing.Point(194, 6);
+            this.btnLoaiHang.Location = new System.Drawing.Point(289, 6);
             this.btnLoaiHang.Name = "btnLoaiHang";
             this.btnLoaiHang.Size = new System.Drawing.Size(81, 48);
             this.btnLoaiHang.TabIndex = 6;
@@ -205,7 +217,7 @@
             // 
             // btnNCC
             // 
-            this.btnNCC.Location = new System.Drawing.Point(15, 6);
+            this.btnNCC.Location = new System.Drawing.Point(376, 6);
             this.btnNCC.Name = "btnNCC";
             this.btnNCC.Size = new System.Drawing.Size(145, 48);
             this.btnNCC.TabIndex = 5;
@@ -310,15 +322,15 @@
             this.panel1.Size = new System.Drawing.Size(1900, 1000);
             this.panel1.TabIndex = 1;
             // 
-            // btnTTKH
+            // tabPage5
             // 
-            this.btnTTKH.Location = new System.Drawing.Point(434, 6);
-            this.btnTTKH.Name = "btnTTKH";
-            this.btnTTKH.Size = new System.Drawing.Size(140, 48);
-            this.btnTTKH.TabIndex = 6;
-            this.btnTTKH.Text = "Thông tin khách hàng";
-            this.btnTTKH.UseVisualStyleBackColor = true;
-            this.btnTTKH.Click += new System.EventHandler(this.btnTTKH_Click);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1084, 71);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Phân Quyền";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // frmTrangChu
             // 
@@ -365,5 +377,6 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnTTKH;
+        private System.Windows.Forms.TabPage tabPage5;
     }
 }
