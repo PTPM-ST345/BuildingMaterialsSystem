@@ -318,6 +318,19 @@ namespace DAL_BLL
             return qlch.DonNhapHangs.Select(dnh => dnh).ToList<DonNhapHang>();
         }
 
+        public List<DonNhapHang> TimKiemDonNhapHang(string keyword, bool timKiemTheoMaDNH)
+        {
+            if (timKiemTheoMaDNH)
+            {
+                return qlch.DonNhapHangs.Where(l => l.MaDonNhapHang.Contains(keyword)).ToList();
+            }
+            else
+            {
+                return qlch.DonNhapHangs.Where(l => l.MaNV.Contains(keyword)).ToList();
+            }
+        }
+
+
 //DonBanHang---###########
         public List<DonBanHang> LoadDonBanHang()
         {

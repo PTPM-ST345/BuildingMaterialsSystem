@@ -90,6 +90,12 @@
     <Compile Include="frmBaoCaoKho.Designer.cs">
       <DependentUpon>frmBaoCaoKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChiTietDonNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietDonNhapHang.Designer.cs">
+      <DependentUpon>frmChiTietDonNhapHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBaoCaoKho.resx">
       <DependentUpon>frmBaoCaoKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChiTietDonNhapHang.resx">
+      <DependentUpon>frmChiTietDonNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
