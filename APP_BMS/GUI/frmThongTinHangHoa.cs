@@ -92,6 +92,7 @@ namespace GUI
             dgvHangHoa.Columns["GiaBan"].HeaderText = "Giá bán";
             dgvHangHoa.Columns["HinhAnh"].HeaderText = "Hình ảnh";
 
+            dgvHangHoa.Columns["STT"].Visible = false;
             dgvHangHoa.Columns["Loai"].Visible = false;
             dgvHangHoa.Columns["NhaCungCap"].Visible = false;
 
