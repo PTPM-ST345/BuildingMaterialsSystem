@@ -144,7 +144,7 @@
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.button13);
-            this.groupBox2.Location = new System.Drawing.Point(954, -8);
+            this.groupBox2.Location = new System.Drawing.Point(954, 10);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(178, 401);
             this.groupBox2.TabIndex = 33;
@@ -341,7 +341,7 @@
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(51, -8);
+            this.groupBox1.Location = new System.Drawing.Point(51, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(863, 401);
             this.groupBox1.TabIndex = 31;
@@ -350,10 +350,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(51, 412);
+            this.dataGridView1.Location = new System.Drawing.Point(51, 417);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(985, 241);
+            this.dataGridView1.Size = new System.Drawing.Size(985, 236);
             this.dataGridView1.TabIndex = 34;
             // 
             // frmChiTietDonNhapHang

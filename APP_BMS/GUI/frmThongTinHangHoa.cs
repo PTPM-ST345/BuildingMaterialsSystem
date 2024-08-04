@@ -82,7 +82,6 @@ namespace GUI
         void frmThongTinHangHoa_Load(object sender, EventArgs e)
         {
             dgvHangHoa.DataSource = xl.LoadHangHoa();
-
             dgvHangHoa.Columns["MaHH"].HeaderText = "Mã hàng hóa";
             dgvHangHoa.Columns["TenHangHoa"].HeaderText = "Tên hàng hóa";
             dgvHangHoa.Columns["DonVi"].HeaderText = "Đơn vị";

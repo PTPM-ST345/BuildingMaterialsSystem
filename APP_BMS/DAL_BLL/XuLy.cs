@@ -312,7 +312,7 @@ namespace DAL_BLL
             return true;
         }
 
-//DonNhapHang---###########
+//DonNhapHang
         public List<DonNhapHang> LoadDonNhapHang()
         {
             return qlch.DonNhapHangs.Select(dnh => dnh).ToList<DonNhapHang>();
@@ -330,6 +330,62 @@ namespace DAL_BLL
             }
         }
 
+        public void XoaDNH(string pMaDNHToDelete)
+        {
+            DonNhapHang dnh = qlch.DonNhapHangs.Where(l => l.MaDonNhapHang == pMaDNHToDelete).FirstOrDefault();
+            if (dnh != null)
+            {
+                qlch.DonNhapHangs.DeleteOnSubmit(dnh);
+                qlch.SubmitChanges();
+            }
+        }
+
+        public int DemSoCTDNHTheoMaDNH(string pMaDNHToDelete)
+        {
+            int countCTDNH = qlch.ChiTietDonNhapHangs.Count(h => h.MaDonNhapHang == pMaDNHToDelete);
+            return countCTDNH;
+        }
+
+        public bool IsMaDNHDuplicated(string maDNH)
+        {
+            return qlch.DonNhapHangs.Any(l => l.MaDonNhapHang == maDNH);
+        }
+
+        public bool ThemDNH(string maDNH, DateTime ngayNhap, string maNV)
+        {
+            if (IsMaDNHDuplicated(maDNH))
+            {
+                return false;
+            }
+
+            DonNhapHang dnh = new DonNhapHang
+            {
+                MaDonNhapHang = maDNH,
+                NgayNhap = ngayNhap,
+                MaNV = maNV
+            };
+
+            qlch.DonNhapHangs.InsertOnSubmit(dnh);
+            qlch.SubmitChanges();
+
+            return true;
+        }
+
+        public bool CapNhatDNH(string maDNH, DateTime ngayNhap, string maNV)
+        {
+            DonNhapHang dnh = qlch.DonNhapHangs.Where(l => l.MaDonNhapHang == maDNH).FirstOrDefault();
+            if (maDNH == null)
+            {
+                return false;
+            }
+
+            dnh.MaDonNhapHang = maDNH;
+            dnh.NgayNhap = ngayNhap;
+            dnh.MaNV = maNV;
+         
+            qlch.SubmitChanges();
+            return true;
+        }
 
 //DonBanHang---###########
         public List<DonBanHang> LoadDonBanHang()

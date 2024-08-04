@@ -136,7 +136,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(192, 107);
+            this.dateTimePicker1.Location = new System.Drawing.Point(218, 107);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(257, 22);
             this.dateTimePicker1.TabIndex = 24;
@@ -145,7 +145,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(493, 49);
+            this.label5.Location = new System.Drawing.Point(525, 49);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 18);
             this.label5.TabIndex = 22;
@@ -163,7 +163,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(192, 45);
+            this.textBox1.Location = new System.Drawing.Point(218, 45);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(257, 22);
             this.textBox1.TabIndex = 15;
@@ -199,7 +199,7 @@
             this.groupBox4.Controls.Add(this.button12);
             this.groupBox4.Location = new System.Drawing.Point(1056, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(178, 396);
+            this.groupBox4.Size = new System.Drawing.Size(178, 426);
             this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Chức Năng";
@@ -210,9 +210,9 @@
             this.button7.ForeColor = System.Drawing.Color.Firebrick;
             this.button7.Location = new System.Drawing.Point(26, 340);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(133, 41);
+            this.button7.Size = new System.Drawing.Size(133, 61);
             this.button7.TabIndex = 5;
-            this.button7.Text = "Nhập Hàng";
+            this.button7.Text = "Xem Chi Tiết ";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
