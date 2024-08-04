@@ -20,10 +20,12 @@ namespace GUI
         {
             InitializeComponent();
             this.Load += frmThongTinLoaiHang_Load;
+
             dgvLoaiHang.CellClick += dgvLoaiHang_CellClick;
             textBox5.TextChanged += textBox5_TextChanged;
         }
 
+        //TimKiem
         void textBox5_TextChanged(object sender, EventArgs e)
         {
             string keyword = textBox5.Text;
@@ -47,6 +49,7 @@ namespace GUI
             dgvLoaiHang.DataSource = dt;
         }
 
+        //Databinding
         void dgvLoaiHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -59,16 +62,21 @@ namespace GUI
             }
         }
 
+        //Loadform
         void frmThongTinLoaiHang_Load(object sender, EventArgs e)
         {
             dgvLoaiHang.DataSource = xl.LoadLoaiHang();
+            dgvLoaiHang.Columns["MaLoai"].HeaderText = "Mã loại";
+            dgvLoaiHang.Columns["TenLoai"].HeaderText = "Tên loại";
+            dgvLoaiHang.Columns["ThongTin"].HeaderText = "Thông tin";
 
             textBox1.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
             radioButton1.Checked = true;
-            button7.Enabled = false;
+            button7.Enabled = false;   
         }
+        
         //btnThem
         private void button11_Click(object sender, EventArgs e)
         {

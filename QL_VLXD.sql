@@ -79,7 +79,7 @@ GO
 CREATE TABLE Loai (
     MaLoai VARCHAR(10) PRIMARY KEY,
     TenLoai NVARCHAR(50),
-    ThongTin TEXT,
+    ThongTin NVARCHAR(100),
 );
 GO
 
@@ -141,23 +141,23 @@ GO
 
 -- Insert into QL_NhomNguoiDung
 INSERT INTO QL_NhomNguoiDung (MaNhom, TenNhom, GhiChu) VALUES
-('ND1', 'Admin', 'Quản trị hệ thống'),
-('ND2', 'Sales', 'Nhân viên bán hàng'),
-('ND3', 'Manager', 'Quản lý'),
-('ND4', 'Warehouse', 'Nhân viên kho'),
-('ND5', 'Supplier', 'Nhà cung cấp'),
-('ND6', 'CustomerService', 'Dịch vụ khách hàng'),
-('ND7', 'Finance', 'Tài chính');
+('ND1', 'Admin', N'Quản trị hệ thống'),
+('ND2', 'Sales', N'Nhân viên bán hàng'),
+('ND3', 'Manager', N'Quản lý'),
+('ND4', 'Warehouse', N'Nhân viên kho'),
+('ND5', 'Supplier', N'Nhà cung cấp'),
+('ND6', 'CustomerService', N'Dịch vụ khách hàng'),
+('ND7', 'Finance', N'Tài chính');
 GO
 -- Insert into DM_ManHinh
 INSERT INTO DM_ManHinh (MaManHinh, TenManHinh) VALUES
-('MH1', 'Trang Chủ'),
-('MH2', 'Quản Lý Người Dùng'),
-('MH3', 'Quản Lý Sản Phẩm'),
-('MH4', 'Quản Lý Đơn Hàng'),
-('MH5', 'Báo Cáo Tài Chính'),
-('MH6', 'Quản Lý Kho'),
-('MH7', 'Hỗ Trợ Khách Hàng');
+('MH1', N'Trang Chủ'),
+('MH2', N'Quản Lý Người Dùng'),
+('MH3', N'Quản Lý Sản Phẩm'),
+('MH4', N'Quản Lý Đơn Hàng'),
+('MH5', N'Báo Cáo Tài Chính'),
+('MH6', N'Quản Lý Kho'),
+('MH7', N'Hỗ Trợ Khách Hàng');
 GO
 -- Insert into QL_PhanQuyen
 INSERT INTO QL_PhanQuyen (MaNhomNguoiDung, MaManHinh, CoQuyen) VALUES
@@ -181,13 +181,13 @@ INSERT INTO NhanVien (MaNV, TenNV, GioiTinh, NgaySinh, DiaChi, SDT, ChucVu, MatK
 GO
 -- Insert into QL_NguoiDungNhomNguoiDung
 INSERT INTO QL_NguoiDungNhomNguoiDung (MaNV, MaNhomNguoiDung, GhiChu) VALUES
-('NV001', 'ND1', 'Quản trị hệ thống'),
-('NV002', 'ND2', 'Nhân viên bán hàng'),
-('NV003', 'ND3', 'Quản lý'),
-('NV004', 'ND4', 'Nhân viên kho'),
-('NV005', 'ND5', 'Nhà cung cấp'),
-('NV006', 'ND6', 'Dịch vụ khách hàng'),
-('NV007', 'ND7', 'Tài chính');
+('NV001', 'ND1', N'Quản trị hệ thống'),
+('NV002', 'ND2', N'Nhân viên bán hàng'),
+('NV003', 'ND3', N'Quản lý'),
+('NV004', 'ND4', N'Nhân viên kho'),
+('NV005', 'ND5', N'Nhà cung cấp'),
+('NV006', 'ND6', N'Dịch vụ khách hàng'),
+('NV007', 'ND7', N'Tài chính');
 GO
 -- Insert into KhachHang
 INSERT INTO KhachHang (MaKH, HoTen, NgaySinh, GioiTinh, DienThoai, TaiKhoan, MatKhau, Email, DiaChi) VALUES
@@ -211,23 +211,23 @@ INSERT INTO NhaCungCap (MaNCC, TenNCC, Diachi, SDT) VALUES
 GO
 -- Insert into DanhMucSanPham
 INSERT INTO Loai(MaLoai, TenLoai, ThongTin) VALUES
-('DM001', 'Gạch', 'Gạch xây dựng chất lượng cao' ),
-('DM002', 'Xi măng', 'Xi măng Portland'),
-('DM003', 'Cát', 'Cát xây dựng'),
-('DM004', 'Đá', 'Đá xây dựng'),
-('DM005', 'Thép', 'Thép cường lực'),
-('DM006', 'Sơn', 'Sơn tường chất lượng'),
-('DM007', 'Kính', 'Kính chịu lực');
+('DM001', N'Gạch', N'Gạch xây dựng chất lượng cao' ),
+('DM002', N'Xi măng', N'Xi măng Portland'),
+('DM003', N'Cát', N'Cát xây dựng'),
+('DM004', N'Đá', N'Đá xây dựng'),
+('DM005', N'Thép', N'Thép cường lực'),
+('DM006', N'Sơn', N'Sơn tường chất lượng'),
+('DM007', N'Kính', N'Kính chịu lực');
 GO
 -- Insert into HangHoa
 INSERT INTO HangHoa (MaHH, TenHangHoa, DonVi, SoLuongTon, HinhAnh, GiaBan, MaLoai, MaNCC) VALUES
-('HH001', 'Gạch A', 'Viên', 1000, 'gach_a.jpg', 5000, 'DM001', 'NCC001'),
-('HH002', 'Xi măng B', 'Bao', 500, 'ximang_b.jpg', 80000, 'DM002', 'NCC002'),
-('HH003', 'Cát C', 'Tấn', 300, 'cat_c.jpg', 100000, 'DM003', 'NCC003'),
-('HH004', 'Đá D', 'Khối', 200, 'da_d.jpg', 150000, 'DM004', 'NCC004'),
-('HH005', 'Thép E', 'Cây', 100, 'thep_e.jpg', 200000, 'DM005', 'NCC005'),
-('HH006', 'Sơn F', 'Thùng', 50, 'son_f.jpg', 400000, 'DM006', 'NCC006'),
-('HH007', 'Kính G', 'Tấm', 30, 'kinh_g.jpg', 1000000, 'DM007', 'NCC007');
+('HH001', N'Gạch A', N'Viên', 1000, 'gach_a.jpg', 5000, 'DM001', 'NCC001'),
+('HH002', N'Xi măng B', N'Bao', 500, 'ximang_b.jpg', 80000, 'DM002', 'NCC002'),
+('HH003', N'Cát C', N'Tấn', 300, 'cat_c.jpg', 100000, 'DM003', 'NCC003'),
+('HH004', N'Đá D', N'Khối', 200, 'da_d.jpg', 150000, 'DM004', 'NCC004'),
+('HH005', N'Thép E', N'Cây', 100, 'thep_e.jpg', 200000, 'DM005', 'NCC005'),
+('HH006', N'Sơn F', N'Thùng', 50, 'son_f.jpg', 400000, 'DM006', 'NCC006'),
+('HH007', N'Kính G', N'Tấm', 30, 'kinh_g.jpg', 1000000, 'DM007', 'NCC007');
 GO
 -- Insert into DonBanHang
 INSERT INTO DonBanHang (MaDonBanHang, NgayGiao, NgayDat, NgayThanhToan, MaKH) VALUES
