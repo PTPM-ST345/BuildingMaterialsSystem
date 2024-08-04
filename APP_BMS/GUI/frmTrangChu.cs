@@ -139,5 +139,37 @@ namespace GUI
             formxh.Show();
         }
 
+        private void btnBaoCaoKho_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmBaoCaoKho formkho = new frmBaoCaoKho() { TopLevel = false, TopMost = true };
+            formkho.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formkho);
+            formkho.Show();
+        }
+
+        private void btnBaoCaoLoaiSanPham_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmDSLoaiHang formlh = new frmDSLoaiHang() { TopLevel = false, TopMost = true };
+            formlh.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formlh);
+            formlh.Show();
+        }
+
+        private void btnBaoCaoNCC_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmDSNhaCungCap formdsncc = new frmDSNhaCungCap() { TopLevel = false, TopMost = true };
+            formdsncc.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formdsncc);
+            formdsncc.Show();
+        }
+
+
+
     }
 }
