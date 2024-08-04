@@ -221,8 +221,7 @@ namespace GUI
                 string tenNhanVien = comboBox1.Text;
                 DateTime ngayNhap = dateTimePicker1.Value;
 
-                frmChiTietDonNhapHang ctForm = new frmChiTietDonNhapHang();
-
+                frmChiTietDonNhapHang ctForm = new frmChiTietDonNhapHang(maDonNhapHang, tenNhanVien, ngayNhap);
                 // Hiển thị form CT_HoaDonNhap
                 ctForm.Show();
             }

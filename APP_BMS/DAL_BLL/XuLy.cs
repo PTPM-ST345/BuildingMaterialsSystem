@@ -386,7 +386,63 @@ namespace DAL_BLL
             qlch.SubmitChanges();
             return true;
         }
+//CT_DonNhapHang
+        public List<ChiTietDonNhapHang> LoadCT_DonNhapHang(string maDNH)
+        {
+            return qlch.ChiTietDonNhapHangs.Where(dnh => dnh.MaDonNhapHang == maDNH).ToList<ChiTietDonNhapHang>();
+        }
 
+        public void XoaCTDNH(string pMaDNHToDelete, string pMaHHToDelete)
+        {
+            ChiTietDonNhapHang ctdnh = qlch.ChiTietDonNhapHangs.Where(l => l.MaDonNhapHang == pMaDNHToDelete && l.MaHH == pMaHHToDelete).FirstOrDefault();
+            if (ctdnh != null)
+            {
+                qlch.ChiTietDonNhapHangs.DeleteOnSubmit(ctdnh);
+                qlch.SubmitChanges();
+            }
+        }
+
+        public bool IsCTDNHDuplicated(string maDNH, string maHH)
+        {
+            return qlch.ChiTietDonNhapHangs.Any(l => l.MaDonNhapHang == maDNH && l.MaHH == maHH);
+        }
+
+        public bool ThemCT_DNH(string maDNH, string maHH, int soLuong, double donGia)
+        {
+            if (IsCTDNHDuplicated(maDNH, maHH))
+            {
+                return false;
+            }
+
+            ChiTietDonNhapHang ctdnh = new ChiTietDonNhapHang
+            {
+                MaDonNhapHang = maDNH,
+                MaHH = maHH,
+                SoLuong = soLuong,
+                DonGia = donGia
+            };
+
+            qlch.ChiTietDonNhapHangs.InsertOnSubmit(ctdnh);
+            qlch.SubmitChanges();
+
+            return true;
+        }
+
+        public bool CapNhatCT_DNH(string maDNH, string maHH, int soLuong, double donGia)
+        {
+            ChiTietDonNhapHang ctdnh = qlch.ChiTietDonNhapHangs.Where(l => l.MaDonNhapHang == maDNH && l.MaHH == maHH).FirstOrDefault();
+            if (maDNH == null || maHH == null)
+            {
+                return false;
+            }
+
+            ctdnh.MaDonNhapHang = maDNH;
+            ctdnh.MaHH = maHH;
+            ctdnh.SoLuong = soLuong;
+            ctdnh.DonGia = donGia;
+            qlch.SubmitChanges();
+            return true;
+        }
 //DonBanHang---###########
         public List<DonBanHang> LoadDonBanHang()
         {
