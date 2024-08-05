@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WEB_BMS.Models;
 
 namespace WEB_BMS.Controllers
 {
@@ -10,6 +11,7 @@ namespace WEB_BMS.Controllers
     {
         //
         // GET: /Home/
+        QuanLyVatLieuXayDungDataContext data = new QuanLyVatLieuXayDungDataContext();
         public ActionResult Index()
         {
             return View();
