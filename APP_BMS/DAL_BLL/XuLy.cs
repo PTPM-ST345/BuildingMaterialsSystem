@@ -494,6 +494,7 @@ namespace DAL_BLL
         {
             return qlch.QL_NguoiDungNhomNguoiDungs.Select(dnh => dnh).ToList<QL_NguoiDungNhomNguoiDung>();
         }
+
         public List<QL_NguoiDungNhomNguoiDung> LoadNDNhomNDTheoMaNhom(string maNhom)
         {
             return qlch.QL_NguoiDungNhomNguoiDungs.Where(nd => nd.MaNhomNguoiDung == maNhom).ToList();
@@ -525,6 +526,24 @@ namespace DAL_BLL
                 qlch.QL_NguoiDungNhomNguoiDungs.DeleteOnSubmit(nguoiDungNhomNguoiDung);
                 qlch.SubmitChanges();
             }
+        }
+
+        //PhanQuyen
+        public List<PhanQuyenDTO> loadPhanQuyen(string maNhomNguoiDung)
+        {
+            var query = from mh in qlch.DM_ManHinhs
+                        join pq in qlch.QL_PhanQuyens
+                        on new { mh.MaManHinh, MaNhomNguoiDung = maNhomNguoiDung } equals new { pq.MaManHinh, pq.MaNhomNguoiDung } into gj
+                        from subpq in gj.DefaultIfEmpty()
+                        select new PhanQuyenDTO
+                        {
+                            MaManHinh = mh.MaManHinh,
+                            TenManHinh = mh.TenManHinh,
+                            MaNhomNguoiDung = subpq.MaNhomNguoiDung ?? maNhomNguoiDung,
+                            CoQuyen = subpq.CoQuyen
+                        };
+
+            return query.ToList();
         }
     }
 }

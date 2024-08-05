@@ -54,6 +54,7 @@
             this.qL_NhomNguoiDungDataGridView.RowHeadersWidth = 51;
             this.qL_NhomNguoiDungDataGridView.Size = new System.Drawing.Size(324, 383);
             this.qL_NhomNguoiDungDataGridView.TabIndex = 5;
+            this.qL_NhomNguoiDungDataGridView.SelectionChanged += new System.EventHandler(this.qL_NhomNguoiDungDataGridView_SelectionChanged);
             // 
             // btnLuu
             // 
