@@ -339,6 +339,7 @@
             this.btnPhanQuyen.TabIndex = 9;
             this.btnPhanQuyen.Text = "Phân quyền";
             this.btnPhanQuyen.UseVisualStyleBackColor = true;
+            this.btnPhanQuyen.Click += new System.EventHandler(this.btnPhanQuyen_Click);
             // 
             // btnThemNguoiDungVaoNhom
             // 
@@ -348,6 +349,7 @@
             this.btnThemNguoiDungVaoNhom.TabIndex = 8;
             this.btnThemNguoiDungVaoNhom.Text = "Thêm người dùng vào nhóm";
             this.btnThemNguoiDungVaoNhom.UseVisualStyleBackColor = true;
+            this.btnThemNguoiDungVaoNhom.Click += new System.EventHandler(this.btnThemNguoiDungVaoNhom_Click);
             // 
             // btnManHinhChucNang
             // 
@@ -357,6 +359,7 @@
             this.btnManHinhChucNang.TabIndex = 7;
             this.btnManHinhChucNang.Text = "Màn hình chức năng";
             this.btnManHinhChucNang.UseVisualStyleBackColor = true;
+            this.btnManHinhChucNang.Click += new System.EventHandler(this.btnManHinhChucNang_Click);
             // 
             // btnNhomNguoiDung
             // 
@@ -366,6 +369,7 @@
             this.btnNhomNguoiDung.TabIndex = 6;
             this.btnNhomNguoiDung.Text = "Nhóm người dùng";
             this.btnNhomNguoiDung.UseVisualStyleBackColor = true;
+            this.btnNhomNguoiDung.Click += new System.EventHandler(this.btnNhomNguoiDung_Click);
             // 
             // tabPage4
             // 

@@ -476,5 +476,55 @@ namespace DAL_BLL
         {
             return qlch.DonBanHangs.Select(dnh => dnh).ToList<DonBanHang>();
         }
+
+//Nhom Nguoi Dung
+        public List<QL_NhomNguoiDung> LoadNhomNguoiDung()
+        {
+            return qlch.QL_NhomNguoiDungs.Select(dnh => dnh).ToList<QL_NhomNguoiDung>();
+        }
+
+//Man Hinh
+        public List<DM_ManHinh> LoadDanhMucManHinh()
+        {
+            return qlch.DM_ManHinhs.Select(dnh => dnh).ToList<DM_ManHinh>();
+        }
+
+//Nguoi dung nhom nguoi dung
+        public List<QL_NguoiDungNhomNguoiDung> LoadNDNhomND()
+        {
+            return qlch.QL_NguoiDungNhomNguoiDungs.Select(dnh => dnh).ToList<QL_NguoiDungNhomNguoiDung>();
+        }
+        public List<QL_NguoiDungNhomNguoiDung> LoadNDNhomNDTheoMaNhom(string maNhom)
+        {
+            return qlch.QL_NguoiDungNhomNguoiDungs.Where(nd => nd.MaNhomNguoiDung == maNhom).ToList();
+        }
+
+        public bool KiemTraTrungKhoaChinh(string maNV, string maNhomND)
+        {
+            int? kt = qlch.QL_NguoiDungNhomNguoiDungs.Count(nd => nd.MaNV == maNV && nd.MaNhomNguoiDung == maNhomND);
+            return kt > 0;
+        }
+
+        public void ThemNguoiDungNhomNguoiDung(string maNV, string maNhomND, string ghiChu)
+        {
+            QL_NguoiDungNhomNguoiDung nguoiDungNhomNguoiDung = new QL_NguoiDungNhomNguoiDung
+            {
+                MaNV = maNV,
+                MaNhomNguoiDung = maNhomND,
+                GhiChu = ghiChu
+            };
+            qlch.QL_NguoiDungNhomNguoiDungs.InsertOnSubmit(nguoiDungNhomNguoiDung);
+            qlch.SubmitChanges();
+        }
+
+        public void XoaNguoiDungNhomNguoiDung(string maNV, string maNhomND)
+        {
+            var nguoiDungNhomNguoiDung = qlch.QL_NguoiDungNhomNguoiDungs.SingleOrDefault(nd => nd.MaNV == maNV && nd.MaNhomNguoiDung == maNhomND);
+            if (nguoiDungNhomNguoiDung != null)
+            {
+                qlch.QL_NguoiDungNhomNguoiDungs.DeleteOnSubmit(nguoiDungNhomNguoiDung);
+                qlch.SubmitChanges();
+            }
+        }
     }
 }

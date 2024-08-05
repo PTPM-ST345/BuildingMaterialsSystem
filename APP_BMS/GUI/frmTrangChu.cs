@@ -169,6 +169,46 @@ namespace GUI
             formdsncc.Show();
         }
 
+        private void btnNhomNguoiDung_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmNhomNguoiDung formnnd = new frmNhomNguoiDung() { TopLevel = false, TopMost = true };
+            formnnd.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formnnd);
+            formnnd.Show();
+        }
+
+        private void btnManHinhChucNang_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmDanhMucManHinh formdmmh = new frmDanhMucManHinh() { TopLevel = false, TopMost = true };
+            formdmmh.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formdmmh);
+            formdmmh.Show();
+        }
+
+        private void btnThemNguoiDungVaoNhom_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmThemNDVaoNhom formdmmh = new frmThemNDVaoNhom() { TopLevel = false, TopMost = true };
+            formdmmh.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formdmmh);
+            formdmmh.Show();
+        }
+
+        private void btnPhanQuyen_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmPhanQuyen formdmmh = new frmPhanQuyen() { TopLevel = false, TopMost = true };
+            formdmmh.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formdmmh);
+            formdmmh.Show();
+        }
+
 
 
     }
