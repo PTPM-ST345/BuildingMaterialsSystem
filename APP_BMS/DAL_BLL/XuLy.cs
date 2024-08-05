@@ -397,6 +397,14 @@ namespace DAL_BLL
             ChiTietDonNhapHang ctdnh = qlch.ChiTietDonNhapHangs.Where(l => l.MaDonNhapHang == pMaDNHToDelete && l.MaHH == pMaHHToDelete).FirstOrDefault();
             if (ctdnh != null)
             {
+                int? soLuongXoa = ctdnh.SoLuong;
+
+                HangHoa hangHoa = qlch.HangHoas.Where(h => h.MaHH == pMaHHToDelete).FirstOrDefault();
+                if (hangHoa != null)
+                {
+                    hangHoa.SoLuongTon -= soLuongXoa;
+                }
+
                 qlch.ChiTietDonNhapHangs.DeleteOnSubmit(ctdnh);
                 qlch.SubmitChanges();
             }
@@ -425,6 +433,7 @@ namespace DAL_BLL
             qlch.ChiTietDonNhapHangs.InsertOnSubmit(ctdnh);
             qlch.SubmitChanges();
 
+            CapNhatSoLuongTrongKho(maHH, LaySoLuongTrongKho(maHH) + soLuong);
             return true;
         }
 
@@ -436,12 +445,31 @@ namespace DAL_BLL
                 return false;
             }
 
-            ctdnh.MaDonNhapHang = maDNH;
-            ctdnh.MaHH = maHH;
+            int? soLuongHienTai = ctdnh.SoLuong;
+            int? chenhLechSoLuong = soLuong - soLuongHienTai;
+
             ctdnh.SoLuong = soLuong;
             ctdnh.DonGia = donGia;
             qlch.SubmitChanges();
+
+            CapNhatSoLuongTrongKho(maHH, LaySoLuongTrongKho(maHH) + chenhLechSoLuong);
             return true;
+        }
+
+        public int? LaySoLuongTrongKho(string maHangHoa)
+        {
+            var hangHoa = qlch.HangHoas.Where(k => k.MaHH == maHangHoa).FirstOrDefault();
+            return hangHoa != null ? hangHoa.SoLuongTon : 0;
+        }
+
+        public void CapNhatSoLuongTrongKho(string maHangHoa, int? soLuongMoi)
+        {
+            var hangHoa = qlch.HangHoas.Where(k => k.MaHH == maHangHoa).FirstOrDefault();
+            if (hangHoa != null)
+            {
+                hangHoa.SoLuongTon = soLuongMoi;
+                qlch.SubmitChanges();
+            }
         }
 //DonBanHang---###########
         public List<DonBanHang> LoadDonBanHang()
