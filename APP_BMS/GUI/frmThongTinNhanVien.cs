@@ -182,6 +182,7 @@ namespace GUI
             dateTimePicker1.Enabled = true;
             comboBox1.Enabled = true;
             textBox1.Focus();
+
             button5.Enabled = true;
             isAddingNew = false;
         }

@@ -157,11 +157,99 @@ namespace DAL_BLL
         }
 
 //KhachHang
+        public List<string> LoadGioiTinh_KH()
+        {
+            return qlch.KhachHangs
+                       .Select(nv => nv.GioiTinh)
+                       .Distinct()
+                       .ToList();
+        }
+
+        //
         public List<KhachHang> LoadKhachHang()
         {
             return qlch.KhachHangs.Select(kh => kh).ToList<KhachHang>();
         }
 
+        public List<KhachHang> TimKiemKH(string keyword, bool timKiemTheoMaKH)
+        {
+            if (timKiemTheoMaKH)
+            {
+                return qlch.KhachHangs.Where(l => l.MaKH.Contains(keyword)).ToList();
+            }
+            else
+            {
+                return qlch.KhachHangs.Where(l => l.HoTen.Contains(keyword)).ToList();
+            }
+        }
+
+        public void XoaKhachHang(string pMaKH)
+        {
+            KhachHang kh = qlch.KhachHangs.Where(l => l.MaKH == pMaKH).FirstOrDefault();
+            if (kh != null)
+            {
+                qlch.KhachHangs.DeleteOnSubmit(kh);
+                qlch.SubmitChanges();
+            }
+        }
+
+        public int DemSoDonBanHangTheoMaKH(string pMaKH)
+        {
+            int countKH = qlch.DonBanHangs.Count(h => h.MaKH == pMaKH);
+            return countKH;
+        }
+
+        public bool IsMaKHDuplicated(string maKH)
+        {
+            return qlch.KhachHangs.Any(l => l.MaKH == maKH);
+        }
+
+        public bool ThemKhachHang(string maKH, string tenKH, DateTime ngaySinh, string gioiTinh,  string soDT, string taiKhoan,string matKhau, string email, string diaChi)
+        {
+            if (IsMaKHDuplicated(maKH))
+            {
+                return false;
+            }
+
+            KhachHang kh = new KhachHang
+            {
+                MaKH = maKH,
+                HoTen = tenKH,
+                NgaySinh = ngaySinh,
+                GioiTinh = gioiTinh,
+                DienThoai = soDT,
+                TaiKhoan = taiKhoan,
+                MatKhau = matKhau,
+                Email = email,
+                DiaChi = diaChi
+            };
+
+            qlch.KhachHangs.InsertOnSubmit(kh);
+            qlch.SubmitChanges();
+
+            return true;
+        }
+
+        public bool CapNhatKhachHang(string maKH, string tenKH, DateTime ngaySinh, string gioiTinh, string soDT, string taiKhoan, string matKhau, string email, string diaChi)
+        {
+            KhachHang kh = qlch.KhachHangs.Where(l => l.MaKH == maKH).FirstOrDefault();
+            if (maKH == null)
+            {
+                return false;
+            }
+
+            kh.HoTen = tenKH;
+            kh.NgaySinh = ngaySinh;
+            kh.GioiTinh = gioiTinh;
+            kh.DienThoai = soDT;
+            kh.TaiKhoan = taiKhoan;
+            kh.MatKhau = matKhau;
+            kh.Email = email;
+            kh.DiaChi = diaChi;
+            qlch.SubmitChanges();
+
+            return true;
+        }
 //NhaCungCap
         public List<NhaCungCap> LoadNhaCungCap()
         {
