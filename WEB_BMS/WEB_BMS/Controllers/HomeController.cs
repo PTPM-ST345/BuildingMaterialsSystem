@@ -14,7 +14,8 @@ namespace WEB_BMS.Controllers
         QuanLyVatLieuXayDungDataContext data = new QuanLyVatLieuXayDungDataContext();
         public ActionResult Index()
         {
-            return View();
+            List<HangHoa> dshh = data.HangHoas.ToList();
+            return View(dshh);
         }
         public ActionResult Introduce()
         {

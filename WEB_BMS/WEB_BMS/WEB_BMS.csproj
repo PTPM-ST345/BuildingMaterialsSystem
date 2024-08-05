@@ -95,6 +95,26 @@
     <Content Include="assets\img\img_intro\gach.jpg" />
     <Content Include="assets\img\img_intro\vlxd-ngoc-ha.jpg" />
     <Content Include="assets\img\img_intro\ximang_introduce.jpg" />
+    <Content Include="assets\img\img_product\cat_11.jpg" />
+    <Content Include="assets\img\img_product\cat_12.jpg" />
+    <Content Include="assets\img\img_product\da_16.jpg" />
+    <Content Include="assets\img\img_product\da_17.jpg" />
+    <Content Include="assets\img\img_product\da_18.jpg" />
+    <Content Include="assets\img\img_product\gach_10.jpg" />
+    <Content Include="assets\img\img_product\gach_8.jpg" />
+    <Content Include="assets\img\img_product\gach_9.jpg" />
+    <Content Include="assets\img\img_product\kinh_23.jpg" />
+    <Content Include="assets\img\img_product\son_21.jpg" />
+    <Content Include="assets\img\img_product\son_22.jpg" />
+    <Content Include="assets\img\img_product\thep_19.jpg" />
+    <Content Include="assets\img\img_product\thep_20.jpg" />
+    <Content Include="assets\img\img_product\ximang_1.jpg" />
+    <Content Include="assets\img\img_product\ximang_2.jpg" />
+    <Content Include="assets\img\img_product\ximang_3.jpg" />
+    <Content Include="assets\img\img_product\ximang_4.jpg" />
+    <Content Include="assets\img\img_product\ximang_5.jpg" />
+    <Content Include="assets\img\img_product\ximang_6.jpg" />
+    <Content Include="assets\img\img_product\ximang_7.jpg" />
     <Content Include="assets\img\items-pay\1.png" />
     <Content Include="assets\img\items-pay\images.png" />
     <Content Include="assets\img\items-pay\JCB_logo.svg.png" />
@@ -485,6 +505,9 @@
       <LastGenOutput>QuanLyVatLieuXayDung.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="assets\img\img_product\cat_13.jpg" />
+    <Content Include="assets\img\img_product\cat_14.jpg" />
+    <Content Include="assets\img\img_product\da_15.jpg" />
     <None Include="Models\QuanLyVatLieuXayDung.dbml.layout">
       <DependentUpon>QuanLyVatLieuXayDung.dbml</DependentUpon>
     </None>
