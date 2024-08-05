@@ -476,5 +476,110 @@ namespace DAL_BLL
         {
             return qlch.DonBanHangs.Select(dnh => dnh).ToList<DonBanHang>();
         }
+
+//Nhom Nguoi Dung
+        public List<QL_NhomNguoiDung> LoadNhomNguoiDung()
+        {
+            return qlch.QL_NhomNguoiDungs.Select(dnh => dnh).ToList<QL_NhomNguoiDung>();
+        }
+
+//Man Hinh
+        public List<DM_ManHinh> LoadDanhMucManHinh()
+        {
+            return qlch.DM_ManHinhs.Select(dnh => dnh).ToList<DM_ManHinh>();
+        }
+
+//Nguoi dung nhom nguoi dung
+        public List<QL_NguoiDungNhomNguoiDung> LoadNDNhomND()
+        {
+            return qlch.QL_NguoiDungNhomNguoiDungs.Select(dnh => dnh).ToList<QL_NguoiDungNhomNguoiDung>();
+        }
+
+        public List<QL_NguoiDungNhomNguoiDung> LoadNDNhomNDTheoMaNhom(string maNhom)
+        {
+            return qlch.QL_NguoiDungNhomNguoiDungs.Where(nd => nd.MaNhomNguoiDung == maNhom).ToList();
+        }
+
+        public bool KiemTraTrungKhoaChinh(string maNV, string maNhomND)
+        {
+            int? kt = qlch.QL_NguoiDungNhomNguoiDungs.Count(nd => nd.MaNV == maNV && nd.MaNhomNguoiDung == maNhomND);
+            return kt > 0;
+        }
+
+        public void ThemNguoiDungNhomNguoiDung(string maNV, string maNhomND, string ghiChu)
+        {
+            QL_NguoiDungNhomNguoiDung nguoiDungNhomNguoiDung = new QL_NguoiDungNhomNguoiDung
+            {
+                MaNV = maNV,
+                MaNhomNguoiDung = maNhomND,
+                GhiChu = ghiChu
+            };
+            qlch.QL_NguoiDungNhomNguoiDungs.InsertOnSubmit(nguoiDungNhomNguoiDung);
+            qlch.SubmitChanges();
+        }
+
+        public void XoaNguoiDungNhomNguoiDung(string maNV, string maNhomND)
+        {
+            var nguoiDungNhomNguoiDung = qlch.QL_NguoiDungNhomNguoiDungs.SingleOrDefault(nd => nd.MaNV == maNV && nd.MaNhomNguoiDung == maNhomND);
+            if (nguoiDungNhomNguoiDung != null)
+            {
+                qlch.QL_NguoiDungNhomNguoiDungs.DeleteOnSubmit(nguoiDungNhomNguoiDung);
+                qlch.SubmitChanges();
+            }
+        }
+
+        //PhanQuyen
+        public List<PhanQuyenDTO> loadPhanQuyen(string maNhomNguoiDung)
+        {
+            var query = from mh in qlch.DM_ManHinhs
+                        join pq in qlch.QL_PhanQuyens
+                        on new { mh.MaManHinh, MaNhomNguoiDung = maNhomNguoiDung } equals new { pq.MaManHinh, pq.MaNhomNguoiDung } into gj
+                        from subpq in gj.DefaultIfEmpty()
+                        select new PhanQuyenDTO
+                        {
+                            MaManHinh = mh.MaManHinh,
+                            TenManHinh = mh.TenManHinh,
+                            MaNhomNguoiDung = subpq.MaNhomNguoiDung ?? maNhomNguoiDung,
+                            CoQuyen = subpq.CoQuyen
+                        };
+
+            return query.ToList();
+        }
+
+        public List<QL_PhanQuyen> LoadQLPhanQuyen()
+        {
+            return qlch.QL_PhanQuyens.Select(dnh => dnh).ToList<QL_PhanQuyen>();
+        }
+
+        public bool CheckIfExists(string maNhomNguoiDung, string maManHinh)
+        {
+            return qlch.QL_PhanQuyens.Any(pq => pq.MaNhomNguoiDung == maNhomNguoiDung && pq.MaManHinh == maManHinh);
+        }
+
+        public void UpdatePhanQuyen(string maNhomNguoiDung, string maManHinh, bool coQuyen)
+        {
+            var phanQuyen = qlch.QL_PhanQuyens
+                .FirstOrDefault(pq => pq.MaNhomNguoiDung == maNhomNguoiDung && pq.MaManHinh == maManHinh);
+
+            if (phanQuyen != null)
+            {
+                phanQuyen.CoQuyen = coQuyen;
+                qlch.SubmitChanges();
+            }
+        }
+
+        public void AddPhanQuyen(string maNhomNguoiDung, string maManHinh, bool coQuyen)
+        {
+            QL_PhanQuyen phanQuyen = new QL_PhanQuyen
+            {
+                MaNhomNguoiDung = maNhomNguoiDung,
+                MaManHinh = maManHinh,
+                CoQuyen = coQuyen
+            };
+
+            qlch.QL_PhanQuyens.InsertOnSubmit(phanQuyen);
+            qlch.SubmitChanges();
+        }
+
     }
 }
