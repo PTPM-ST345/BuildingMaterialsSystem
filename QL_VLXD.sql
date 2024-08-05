@@ -221,13 +221,29 @@ INSERT INTO Loai(MaLoai, TenLoai, ThongTin) VALUES
 GO
 -- Insert into HangHoa
 INSERT INTO HangHoa (MaHH, TenHangHoa, DonVi, SoLuongTon, HinhAnh, GiaBan, MaLoai, MaNCC) VALUES
-('HH001', N'Gạch A', N'Viên', 1000, 'gach_a.jpg', 5000, 'DM001', 'NCC001'),
-('HH002', N'Xi măng B', N'Bao', 500, 'ximang_b.jpg', 80000, 'DM002', 'NCC002'),
-('HH003', N'Cát C', N'Tấn', 300, 'cat_c.jpg', 100000, 'DM003', 'NCC003'),
-('HH004', N'Đá D', N'Khối', 200, 'da_d.jpg', 150000, 'DM004', 'NCC004'),
-('HH005', N'Thép E', N'Cây', 100, 'thep_e.jpg', 200000, 'DM005', 'NCC005'),
-('HH006', N'Sơn F', N'Thùng', 50, 'son_f.jpg', 400000, 'DM006', 'NCC006'),
-('HH007', N'Kính G', N'Tấm', 30, 'kinh_g.jpg', 1000000, 'DM007', 'NCC007');
+('HH001', N'Xi Măng Xây Tô', N'Bao', 200, 'ximang_1.jpg', 85000, 'DM002', 'NCC002'),
+('HH002', N'Xi Măng Fico', N'Bao', 300, 'ximang_2.jpg', 90000, 'DM002', 'NCC002'),
+('HH003', N'Xi Măng Thăng Long', N'Bao', 400, 'ximang_3.jpg', 50000, 'DM002', 'NCC002'),
+('HH004', N'Xi Măng Insee Đa Dụng', N'Bao', 200, 'ximang_4.jpg', 45000, 'DM002', 'NCC002'),
+('HH005', N'Xi Măng Hà Tiên 1', N'Bao', 300, 'ximang_5.jpg', 80000, 'DM002', 'NCC002'),
+('HH006', N'Xi Măng Hà TIên Miền Nam', N'Bao', 400, 'ximang_6.jpg', 750000, 'DM002', 'NCC002'),
+('HH007', N'Xi Măng Xây Tô Hà Tiên 1', N'Bao', 100, 'ximang_7.jpg', 70000, 'DM002', 'NCC002'),
+('HH008', N'Gạch Phước Thành', N'Viên', 200, 'gach_8.jpg', 50000, 'DM001', 'NCC001'),
+('HH009', N'Gạch Thành Tâm', N'Viên', 300, 'gach_9.jpg', 70000, 'DM001', 'NCC001'),
+('HH0010', N'Gạch Tám Quỳnh', N'Viên', 400, 'gach_10.jpg', 73000, 'DM001', 'NCC001'),
+('HH0011', N'Cát bê tông hạt to ', N'M3', 310000, 'cat_11.jpg', 320000, 'DM003', 'NCC003'),
+('HH0012', N'Cát bê tông trộn', N'M3', 326000, 'cat_12.jpg', 210000, 'DM003', 'NCC003'),
+('HH0013', N'Cát san lấp', N'M3', 223000, 'cat_13.jpg', 140000, 'DM003', 'NCC003'),
+('HH0014', N'Cát xây tô', N'M3', 143900, 'cat_14.jpg', 170000, 'DM003', 'NCC003'),
+('HH0015', N'Đá 0 X 4 Xanh', N'M3', 200, 'da_15.jpg', 280000, 'DM004', 'NCC004'),
+('HH0016', N'Đá 0 X 4 Xám Đen', N'M3', 200, 'da_16.jpg', 210000, 'DM004', 'NCC004'),
+('HH0017', N'Đá 1 X 2 Xanh', N'M3', 200, 'da_17.jpg', 350000, 'DM004', 'NCC004'),
+('HH0018', N'Đá 4 X 6 Xanh', N'M3', 200, 'da_18.jpg', 300000, 'DM004', 'NCC004'),
+('HH0019', N'Thép Tấm', N'Cây', 100, 'thep_19.jpg', 200000, 'DM005', 'NCC005'),
+('HH0020', N'Thép Hình', N'Cây', 100, 'thep_20.jpg', 200000, 'DM005', 'NCC005'),
+('HH0021', N'Sơn Chống Thâm', N'Thùng', 250, 'son_21.jpg', 430000, 'DM006', 'NCC006'),
+('HH0022', N'Sơn Tường MyColor', N'Thùng', 350, 'son_22.jpg', 230000, 'DM006', 'NCC006'),
+('HH0023', N'Kính G', N'Tấm', 130, 'kinh_23.jpg', 111000, 'DM007', 'NCC007');
 GO
 -- Insert into DonBanHang
 INSERT INTO DonBanHang (MaDonBanHang, NgayGiao, NgayDat, NgayThanhToan, MaKH) VALUES
