@@ -24,9 +24,12 @@ namespace DAL_BLL
         }
 
 //NhanVien
-        public List<NhanVien> LoadNhanVien()
+        public List<string> LoadGioiTinh()
         {
-            return qlch.NhanViens.Select(nv => nv).ToList<NhanVien>();
+            return qlch.NhanViens
+                       .Select(nv => nv.GioiTinh)
+                       .Distinct()
+                       .ToList();
         }
 
         public NhanVien ChiTietNhanVien(string manv)
@@ -68,6 +71,90 @@ namespace DAL_BLL
             }
         }
 
+        //
+        public List<NhanVien> LoadNhanVien()
+        {
+            return qlch.NhanViens.Select(nv => nv).ToList<NhanVien>();
+        }
+
+        public List<NhanVien> TimKiemNhanVien(string keyword, bool timKiemTheoMaNV)
+        {
+            if (timKiemTheoMaNV)
+            {
+                return qlch.NhanViens.Where(l => l.MaNV.Contains(keyword)).ToList();
+            }
+            else
+            {
+                return qlch.NhanViens.Where(l => l.TenNV.Contains(keyword)).ToList();
+            }
+        }
+
+        public void XoaNhanVien(string pMaNV)
+        {
+            NhanVien nv = qlch.NhanViens.Where(l => l.MaNV == pMaNV).FirstOrDefault();
+            if (nv != null)
+            {
+                qlch.NhanViens.DeleteOnSubmit(nv);
+                qlch.SubmitChanges();
+            }
+        }
+
+        public int DemSoDonNhapHangTheoMaNV(string pMaNV)
+        {
+            int countNV = qlch.DonNhapHangs.Count(h => h.MaNV == pMaNV);
+            return countNV;
+        }
+
+        public bool IsMaNVDuplicated(string maNV)
+        {
+            return qlch.NhanViens.Any(l => l.MaNV == maNV);
+        }
+
+        public bool ThemNhanVien(string maNV, string tenNV, string gioiTinh, DateTime ngaySinh, string diaChi, string soDT, string chucVu, string matKhau)
+        {
+            if (IsMaNVDuplicated(maNV))
+            {
+                return false;
+            }
+
+            NhanVien nv = new NhanVien
+            {
+                MaNV = maNV,
+                TenNV = tenNV,
+                GioiTinh = gioiTinh,
+                NgaySinh = ngaySinh,
+                DiaChi = diaChi,
+                SDT = soDT,
+                ChucVu = chucVu,
+                MatKhau = matKhau
+            };
+
+            qlch.NhanViens.InsertOnSubmit(nv);
+            qlch.SubmitChanges();
+
+            return true;
+        }
+
+        public bool CapNhatNhanVien(string maNV, string tenNV, string gioiTinh, DateTime ngaySinh, string diaChi, string soDT, string chucVu, string matKhau)
+        {
+            NhanVien nv = qlch.NhanViens.Where(l => l.MaNV == maNV).FirstOrDefault();
+            if (maNV == null)
+            {
+                return false;
+            }
+
+            nv.TenNV = tenNV;
+            nv.GioiTinh = gioiTinh;
+            nv.NgaySinh = ngaySinh;
+            nv.DiaChi = diaChi;
+            nv.SDT = soDT;
+            nv.ChucVu = chucVu;
+            nv.MatKhau = matKhau;
+
+            qlch.SubmitChanges();
+
+            return true;
+        }
 
 //KhachHang
         public List<KhachHang> LoadKhachHang()
@@ -528,7 +615,7 @@ namespace DAL_BLL
             }
         }
 
-        //PhanQuyen
+//PhanQuyen
         public List<PhanQuyenDTO> loadPhanQuyen(string maNhomNguoiDung)
         {
             var query = from mh in qlch.DM_ManHinhs

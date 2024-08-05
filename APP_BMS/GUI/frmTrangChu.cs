@@ -62,31 +62,11 @@ namespace GUI
             formtttk.Show();
         }
 
-        private void btnTTNV_Click(object sender, EventArgs e)
-        {
-            panel1.Controls.Clear();
-            panel1.BackgroundImage = null;
-            frmThongTinNhanVien formttnv = new frmThongTinNhanVien() { TopLevel = false, TopMost = true };
-            formttnv.FormBorderStyle = FormBorderStyle.None;
-            panel1.Controls.Add(formttnv);
-            formttnv.Show();
-        }
-
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
             panel1.BackgroundImage = null;
             frmDoiMatKhau formdmk = new frmDoiMatKhau();
             formdmk.ShowDialog();
-        }
-
-        private void btnTTKH_Click(object sender, EventArgs e)
-        {
-            panel1.Controls.Clear();
-            panel1.BackgroundImage = null;
-            frmThongTinKhachHang formttnv = new frmThongTinKhachHang() { TopLevel = false, TopMost = true };
-            formttnv.FormBorderStyle = FormBorderStyle.None;
-            panel1.Controls.Add(formttnv);
-            formttnv.Show();
         }
 
         private void btnNCC_Click(object sender, EventArgs e)
@@ -117,26 +97,6 @@ namespace GUI
             formhh.FormBorderStyle = FormBorderStyle.None;
             panel1.Controls.Add(formhh);
             formhh.Show();
-        }
-
-        private void btnNhapHang_Click(object sender, EventArgs e)
-        {
-            panel1.Controls.Clear();
-            panel1.BackgroundImage = null;
-            frmNhapHang formnh = new frmNhapHang() { TopLevel = false, TopMost = true };
-            formnh.FormBorderStyle = FormBorderStyle.None;
-            panel1.Controls.Add(formnh);
-            formnh.Show();
-        }
-
-        private void btnXuatHang_Click(object sender, EventArgs e)
-        {
-            panel1.Controls.Clear();
-            panel1.BackgroundImage = null;
-            frmXuatHang formxh = new frmXuatHang() { TopLevel = false, TopMost = true };
-            formxh.FormBorderStyle = FormBorderStyle.None;
-            panel1.Controls.Add(formxh);
-            formxh.Show();
         }
 
         private void btnBaoCaoKho_Click(object sender, EventArgs e)
@@ -207,6 +167,46 @@ namespace GUI
             formdmmh.FormBorderStyle = FormBorderStyle.None;
             panel1.Controls.Add(formdmmh);
             formdmmh.Show();
+        }
+
+        private void btnTTNV_Click_1(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmThongTinNhanVien formttnv = new frmThongTinNhanVien() { TopLevel = false, TopMost = true };
+            formttnv.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formttnv);
+            formttnv.Show();
+        }
+
+        private void btnTTKH_Click_1(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmThongTinKhachHang formttnv = new frmThongTinKhachHang() { TopLevel = false, TopMost = true };
+            formttnv.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formttnv);
+            formttnv.Show();
+        }
+
+        private void btnNhapHang_Click_1(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmNhapHang formnh = new frmNhapHang() { TopLevel = false, TopMost = true };
+            formnh.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formnh);
+            formnh.Show();
+        }
+
+        private void btnXuatHang_Click_1(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmXuatHang formxh = new frmXuatHang() { TopLevel = false, TopMost = true };
+            formxh.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formxh);
+            formxh.Show();
         }
 
 
