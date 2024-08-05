@@ -2,6 +2,8 @@
     ViewBag.Title = "Table_Price";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
+@using WEB_BMS.Models;
+@model List<HangHoa>
 <link href="~/assets/style_tbprice.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
 <br />
 <div class="container">
@@ -50,66 +52,134 @@
 </div>
 <h6 style="text-align: center;font-size:18px" class="uppercase">BẢNG BÁO GIÁ VẬT LIỆU XÂY DỰNG CẬP NHẬT LIÊN TỤC</h6>
 
-<style>
-    .table td,
-    .table th {
-        padding: 5px 150px 5px 150px; /* Tăng padding để tạo khoảng cách lớn hơn */
-        color: #001981;
-        border: 2px solid #001981;
-    }
 
-    .table th {
-        background-color: #001981;
-        color: #fff;
-    }
-    .title {
-        text-align: center;
-        margin-bottom: 15px;
-    }
 
-        .title a {
-            padding: 10px; 
-            color: #001981;
-            border: 1px solid #001981;
-            border-radius: 3px;
-        }
-</style>
-
-<div class="container mt-4">
+<div class="container mt-4 box" style="height: 250px; ">
     <div class="title">
-        <a href="">Gạch</a>
-        <a href="">Xi Măng</a>
-        <a href="">Đá</a>
-        <a href="">Cát</a>
+        <a style="cursor:pointer" id="gach-button" >Gạch</a>
+        <a style="cursor:pointer" id="ximang-button" >Xi Măng</a>
+        <a style="cursor:pointer" id="da-button">Đá</a>
+        <a style="cursor:pointer" id="cat-button">Cát</a>
     </div>
-    <div class="table-responsive">
+    <div class="table-responsive" style="position: relative">
 
-        <table class="table table-bordered">
-            <thead>
-                <tr class="table-info text-center">
-                    <th scope="col">CÁC LOẠI XI MĂNG</th>
-                    <th scope="col">ĐƠN VỊ TÍNH</th>
-                    <th scope="col">ĐƠN GIÁ (VNĐ)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Xi măng loại A</td>
-                    <td>Bao</td>
-                    <td>100,000</td>
-                </tr>
-                <tr>
-                    <td>Xi măng loại B</td>
-                    <td>Bao</td>
-                    <td>120,000</td>
-                </tr>
-                <tr>
-                    <td>Xi măng loại C</td>
-                    <td>Bao</td>
-                    <td>110,000</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="ximang"style="visibility:hidden;position:absolute; top:0">
+            @if (Model != null)
+            {
+                <table class="table table-bordered" >
+                    <thead>
+                        <tr class="table-info text-center">
+                            <th scope="col">CÁC LOẠI XI MĂNG</th>
+                            <th scope="col">ĐƠN VỊ TÍNH</th>
+                            <th scope="col">ĐƠN GIÁ (VNĐ)</th>
+                        </tr>
+                    </thead>
+                    @foreach (var s in Model)
+                    {
+                        if (s.MaLoai == "DM002")
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>@s.TenHangHoa</td>
+                                    <td>@s.DonVi</td>
+                                    <td>@s.GiaBan</td>
+                                </tr>
+                            </tbody>
+
+                        }
+
+                    }
+                </table>
+            }
+        </div>
+
+        <div class="gach">
+            @if (Model != null)
+            {
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="table-info text-center">
+                            <th scope="col">CÁC LOẠI GẠCH</th>
+                            <th scope="col">ĐƠN VỊ TÍNH</th>
+                            <th scope="col">ĐƠN GIÁ (VNĐ)</th>
+                        </tr>
+                    </thead>
+                    @foreach (var s in Model)
+                    {
+                        if (s.MaLoai == "DM001")
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>@s.TenHangHoa</td>
+                                    <td>@s.DonVi</td>
+                                    <td>@s.GiaBan</td>
+                                </tr>
+                            </tbody>
+
+                        }
+
+                    }
+                </table>
+            }
+        </div>
+        <div class="da" style="visibility: hidden; position: absolute; top: 0 ">
+            @if (Model != null)
+            {
+                <table class="table table-bordered"  >
+                    <thead>
+                        <tr class="table-info text-center">
+                            <th scope="col">CÁC LOẠI ĐÁ</th>
+                            <th scope="col">ĐƠN VỊ TÍNH</th>
+                            <th scope="col">ĐƠN GIÁ (VNĐ)</th>
+                        </tr>
+                    </thead>
+                    @foreach (var s in Model)
+                    {
+                        if (s.MaLoai == "DM004")
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>@s.TenHangHoa</td>
+                                    <td>@s.DonVi</td>
+                                    <td>@s.GiaBan</td>
+                                </tr>
+                            </tbody>
+
+                        }
+
+                    }
+                </table>
+            }
+        </div>
+        <div class="cat" style="visibility: hidden; position: absolute; top: 0">
+            @if (Model != null)
+            {
+                <table class="table table-bordered" >
+                    <thead>
+                        <tr class="table-info text-center">
+                            <th scope="col">CÁC LOẠI CÁT</th>
+                            <th scope="col">ĐƠN VỊ TÍNH</th>
+                            <th scope="col">ĐƠN GIÁ (VNĐ)</th>
+                        </tr>
+                    </thead>
+                    @foreach (var s in Model)
+                    {
+                        if (s.MaLoai == "DM003")
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>@s.TenHangHoa</td>
+                                    <td>@s.DonVi</td>
+                                    <td>@s.GiaBan</td>
+                                </tr>
+                            </tbody>
+
+                        }
+
+                    }
+                </table>
+            }
+        </div>
 
     </div>
 </div>
@@ -126,4 +196,4 @@
         </div>
     </div>
 </div>
-
+<script src="~/assets/js-tbprice.js"></script>

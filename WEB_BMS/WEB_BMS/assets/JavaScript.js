@@ -18,3 +18,5 @@ danhgiabutton.onclick = function () {
     danhgia.style.visibility = 'visible';
     luotdanhgia.style.visibility = 'hidden';
 }
+
+

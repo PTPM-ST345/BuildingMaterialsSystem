@@ -1,6 +1,6 @@
 ﻿.table td,
 .table th {
-    padding: 5px 100px 5px 100x; /* Tăng padding để tạo khoảng cách lớn hơn */
+    padding: 5px 140px 5px 140px; /* Tăng padding để tạo khoảng cách lớn hơn */
     color: #001981;
     border: 2px solid #001981;
 }

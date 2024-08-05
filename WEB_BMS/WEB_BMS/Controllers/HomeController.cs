@@ -35,7 +35,8 @@ namespace WEB_BMS.Controllers
         }
         public ActionResult Table_Price()
         {
-            return View();
+            List<HangHoa> dshh = data.HangHoas.ToList();
+            return View(dshh);
         }
         public ActionResult Product_Index()
         {

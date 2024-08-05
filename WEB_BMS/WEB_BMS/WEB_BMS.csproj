@@ -122,6 +122,7 @@
     <Content Include="assets\img\items-pay\MoMo_Logo.png" />
     <Content Include="assets\img\items-pay\op-da-thong-bao-bo-cong-thuong-183x60.png" />
     <Content Include="assets\JavaScript.js" />
+    <Content Include="assets\js-tbprice.js" />
     <Content Include="assets\product_detail.css" />
     <Content Include="assets\Style_contact.css" />
     <Content Include="assets\style_index.css" />

@@ -111,3 +111,27 @@
 .title a {
     color: red;
 }
+.table td,
+.table th {
+    padding: 5px 140px 5px 140px; /* Tăng padding để tạo khoảng cách lớn hơn */
+    color: #001981;
+    border: 2px solid #001981;
+}
+
+.table th {
+    background-color: #001981;
+    color: #fff;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+    .title a {
+        padding: 10px;
+        color: #001981;
+        border: 1px solid #001981;
+        border-radius: 3px;
+    }
+ 
