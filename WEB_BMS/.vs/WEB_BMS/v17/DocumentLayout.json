@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\table_price.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\table_price.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\product_index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\product_index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\style_tbprice.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\style_tbprice.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\style_product_index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\style_product_index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|c:\\users\\phamn\\onedrive\\m\u00E1y t\u00EDnh\\h\u1ECDc k\u1EF3 h\u00E8\\da\\buildingmaterialssystem\\web_bms\\web_bms\\assets\\js-tbprice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\js-tbprice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\javascript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\javascript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\style_index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\style_index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\style_tbprice.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\style_tbprice.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\introduce.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\introduce.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\new_tt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\new_tt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\shared\\_layoutpage1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -35,20 +47,16 @@
       "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\shared\\_layoutpage_new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|c:\\users\\phamn\\onedrive\\m\u00E1y t\u00EDnh\\h\u1ECDc k\u1EF3 h\u00E8\\da\\buildingmaterialssystem\\web_bms\\web_bms\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|c:\\users\\phamn\\onedrive\\m\u00E1y t\u00EDnh\\h\u1ECDc k\u1EF3 h\u00E8\\da\\buildingmaterialssystem\\web_bms\\web_bms\\views\\home\\table_price.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\table_price.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\style_index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\style_index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\js-tbprice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\js-tbprice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\introduce.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\introduce.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\javascript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\javascript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\new_nh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -67,20 +75,12 @@
       "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\models\\quanlyvatlieuxaydung.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\product_detail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\product_detail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\style_introduce.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\style_introduce.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\new_tt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\new_tt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\style_contact.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -98,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,33 +114,150 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "js-tbprice.js",
-              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\js-tbprice.js",
-              "RelativeDocumentMoniker": "WEB_BMS\\assets\\js-tbprice.js",
-              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\js-tbprice.js",
-              "RelativeToolTip": "WEB_BMS\\assets\\js-tbprice.js",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACMAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-08-05T16:17:13.88Z",
+              "DocumentIndex": 6,
+              "Title": "Introduce.cshtml",
+              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Introduce.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Introduce.cshtml",
+              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Introduce.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\Home\\Introduce.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-05T02:09:55.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
+              "Title": "style_tbprice.css",
+              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_tbprice.css",
+              "RelativeDocumentMoniker": "WEB_BMS\\assets\\style_tbprice.css",
+              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_tbprice.css",
+              "RelativeToolTip": "WEB_BMS\\assets\\style_tbprice.css",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-05T02:22:36.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "style_index.css",
+              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_index.css",
+              "RelativeDocumentMoniker": "WEB_BMS\\assets\\style_index.css",
+              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_index.css",
+              "RelativeToolTip": "WEB_BMS\\assets\\style_index.css",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAAAJ0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-05T01:52:48.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "style_product_index.css",
+              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_product_index.css",
+              "RelativeDocumentMoniker": "WEB_BMS\\assets\\style_product_index.css",
+              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_product_index.css",
+              "RelativeToolTip": "WEB_BMS\\assets\\style_product_index.css",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAAAI4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-05T02:10:37.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WEB_BMS\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WEB_BMS\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAA3wCUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T02:04:15.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Product_Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Product_Index.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Product_Index.cshtml",
+              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Product_Index.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\Home\\Product_Index.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAD0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-05T02:08:14.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "New_TT.cshtml",
+              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\New_TT.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\New_TT.cshtml",
+              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\New_TT.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\Home\\New_TT.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-05T02:20:20.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Product.cshtml",
+              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Product.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Product.cshtml",
+              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Product.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\Home\\Product.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAACcAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-05T05:20:03.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-05T01:52:22.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "_LayoutPage1.cshtml",
               "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Shared\\_LayoutPage1.cshtml",
               "RelativeDocumentMoniker": "WEB_BMS\\Views\\Shared\\_LayoutPage1.cshtml",
               "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Shared\\_LayoutPage1.cshtml",
               "RelativeToolTip": "WEB_BMS\\Views\\Shared\\_LayoutPage1.cshtml",
-              "ViewState": "AQIAAHgAAAAAAAAAAAAAAIsAAAAEAAAA",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAAAIkAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-05T02:09:03.418Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
+              "Title": "_LayoutPage_New.cshtml",
+              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Shared\\_LayoutPage_New.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Shared\\_LayoutPage_New.cshtml",
+              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Shared\\_LayoutPage_New.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\Shared\\_LayoutPage_New.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-05T02:08:42.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Table_Price.cshtml",
               "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Table_Price.cshtml",
               "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Table_Price.cshtml",
@@ -153,33 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "style_tbprice.css",
-              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_tbprice.css",
-              "RelativeDocumentMoniker": "WEB_BMS\\assets\\style_tbprice.css",
-              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_tbprice.css",
-              "RelativeToolTip": "WEB_BMS\\assets\\style_tbprice.css",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAAAIgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-05T02:22:36.633Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "style_product_index.css",
-              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_product_index.css",
-              "RelativeDocumentMoniker": "WEB_BMS\\assets\\style_product_index.css",
-              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_product_index.css",
-              "RelativeToolTip": "WEB_BMS\\assets\\style_product_index.css",
-              "ViewState": "AQIAAHkAAAAAAAAAAAAAAIcAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-05T02:10:37.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "JavaScript.js",
               "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\JavaScript.js",
               "RelativeDocumentMoniker": "WEB_BMS\\assets\\JavaScript.js",
@@ -187,89 +278,23 @@
               "RelativeToolTip": "WEB_BMS\\assets\\JavaScript.js",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-08-05T07:04:49.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-05T07:04:49.737Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Product_Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Product_Index.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Product_Index.cshtml",
-              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Product_Index.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\Product_Index.cshtml",
-              "ViewState": "AQIAALUAAAAAAAAAAAAAwNwAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-05T02:08:14.634Z",
-              "EditorCaption": ""
+              "DocumentIndex": 12,
+              "Title": "js-tbprice.js",
+              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\js-tbprice.js",
+              "RelativeDocumentMoniker": "WEB_BMS\\assets\\js-tbprice.js",
+              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\js-tbprice.js",
+              "RelativeToolTip": "WEB_BMS\\assets\\js-tbprice.js",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACMAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-05T16:17:13.88Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_LayoutPage_New.cshtml",
-              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Shared\\_LayoutPage_New.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Shared\\_LayoutPage_New.cshtml",
-              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Shared\\_LayoutPage_New.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Shared\\_LayoutPage_New.cshtml",
-              "ViewState": "AQIAAA0BAAAAAAAAAADwvyIBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-05T02:08:42.52Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAAAHoAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-05T01:52:22.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "style_index.css",
-              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_index.css",
-              "RelativeDocumentMoniker": "WEB_BMS\\assets\\style_index.css",
-              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_index.css",
-              "RelativeToolTip": "WEB_BMS\\assets\\style_index.css",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-05T01:52:48.88Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Introduce.cshtml",
-              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Introduce.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Introduce.cshtml",
-              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Introduce.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\Introduce.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-05T02:09:55.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "WEB_BMS\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "WEB_BMS\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAA3wCcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T02:04:15.889Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Contact.cshtml",
               "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Contact.cshtml",
               "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Contact.cshtml",
@@ -281,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "New_NH.cshtml",
               "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\New_NH.cshtml",
               "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\New_NH.cshtml",
@@ -293,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "QuanLyVatLieuXayDung.dbml",
               "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Models\\QuanLyVatLieuXayDung.dbml",
               "RelativeDocumentMoniker": "WEB_BMS\\Models\\QuanLyVatLieuXayDung.dbml",
@@ -304,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "product_detail.css",
               "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\product_detail.css",
               "RelativeDocumentMoniker": "WEB_BMS\\assets\\product_detail.css",
@@ -316,7 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "QuanLyVatLieuXayDung.designer.cs",
               "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Models\\QuanLyVatLieuXayDung.designer.cs",
               "RelativeDocumentMoniker": "WEB_BMS\\Models\\QuanLyVatLieuXayDung.designer.cs",
@@ -328,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "style_introduce.css",
               "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_introduce.css",
               "RelativeDocumentMoniker": "WEB_BMS\\assets\\style_introduce.css",
@@ -337,30 +362,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-08-05T08:34:36.088Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Product.cshtml",
-              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Product.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Product.cshtml",
-              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Product.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\Product.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-05T05:20:03.961Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "New_TT.cshtml",
-              "DocumentMoniker": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\New_TT.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\New_TT.cshtml",
-              "ToolTip": "C:\\Users\\phamn\\OneDrive\\M\u00E1y t\u00EDnh\\H\u1ECDc K\u1EF3 H\u00E8\\DA\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\New_TT.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\New_TT.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-05T02:20:20.79Z"
             },
             {
               "$type": "Document",
