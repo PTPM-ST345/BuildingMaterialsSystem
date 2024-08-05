@@ -34,6 +34,10 @@ namespace WEB_BMS.Controllers
         {
             return View();
         }
+        public ActionResult Product_Index()
+        {
+            return View();
+        }
         public ActionResult Product()
         {
             return View();

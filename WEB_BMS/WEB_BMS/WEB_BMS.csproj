@@ -83,6 +83,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\img\icon-media\images.png" />
     <Content Include="assets\img\img_index\cong-trinh-xay-dung.jpg" />
     <Content Include="assets\img\icon-media\email.svg" />
     <Content Include="assets\img\icon-media\facebook.svg" />
@@ -99,12 +100,14 @@
     <Content Include="assets\img\items-pay\Mastercard-logo.svg.png" />
     <Content Include="assets\img\items-pay\MoMo_Logo.png" />
     <Content Include="assets\img\items-pay\op-da-thong-bao-bo-cong-thuong-183x60.png" />
+    <Content Include="assets\JavaScript.js" />
+    <Content Include="assets\product_detail.css" />
     <Content Include="assets\Style_contact.css" />
     <Content Include="assets\style_index.css" />
     <Content Include="assets\style_introduce.css" />
     <Content Include="assets\style_layout.css" />
     <Content Include="assets\style_new_NH.css" />
-    <Content Include="assets\style_product.css" />
+    <Content Include="assets\style_product_index.css" />
     <Content Include="assets\style_tbprice.css" />
     <Content Include="assets\themify-icons\demo-files\demo.css" />
     <Content Include="assets\themify-icons\fonts\themify.svg" />
@@ -515,6 +518,7 @@
     <Content Include="Views\Home\New_NH.cshtml" />
     <Content Include="Views\Home\New_TT.cshtml" />
     <Content Include="Views\Home\Table_Price.cshtml" />
+    <Content Include="Views\Home\Product_Index.cshtml" />
     <Content Include="Views\Home\Product.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
