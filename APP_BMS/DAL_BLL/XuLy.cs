@@ -545,5 +545,41 @@ namespace DAL_BLL
 
             return query.ToList();
         }
+
+        public List<QL_PhanQuyen> LoadQLPhanQuyen()
+        {
+            return qlch.QL_PhanQuyens.Select(dnh => dnh).ToList<QL_PhanQuyen>();
+        }
+
+        public bool CheckIfExists(string maNhomNguoiDung, string maManHinh)
+        {
+            return qlch.QL_PhanQuyens.Any(pq => pq.MaNhomNguoiDung == maNhomNguoiDung && pq.MaManHinh == maManHinh);
+        }
+
+        public void UpdatePhanQuyen(string maNhomNguoiDung, string maManHinh, bool coQuyen)
+        {
+            var phanQuyen = qlch.QL_PhanQuyens
+                .FirstOrDefault(pq => pq.MaNhomNguoiDung == maNhomNguoiDung && pq.MaManHinh == maManHinh);
+
+            if (phanQuyen != null)
+            {
+                phanQuyen.CoQuyen = coQuyen;
+                qlch.SubmitChanges();
+            }
+        }
+
+        public void AddPhanQuyen(string maNhomNguoiDung, string maManHinh, bool coQuyen)
+        {
+            QL_PhanQuyen phanQuyen = new QL_PhanQuyen
+            {
+                MaNhomNguoiDung = maNhomNguoiDung,
+                MaManHinh = maManHinh,
+                CoQuyen = coQuyen
+            };
+
+            qlch.QL_PhanQuyens.InsertOnSubmit(phanQuyen);
+            qlch.SubmitChanges();
+        }
+
     }
 }

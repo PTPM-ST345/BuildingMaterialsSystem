@@ -38,11 +38,11 @@
             // phanQuyenNguoiDung_DKDataGridView
             // 
             this.phanQuyenNguoiDung_DKDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.phanQuyenNguoiDung_DKDataGridView.Location = new System.Drawing.Point(402, 61);
+            this.phanQuyenNguoiDung_DKDataGridView.Location = new System.Drawing.Point(402, 82);
             this.phanQuyenNguoiDung_DKDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.phanQuyenNguoiDung_DKDataGridView.Name = "phanQuyenNguoiDung_DKDataGridView";
             this.phanQuyenNguoiDung_DKDataGridView.RowHeadersWidth = 51;
-            this.phanQuyenNguoiDung_DKDataGridView.Size = new System.Drawing.Size(541, 383);
+            this.phanQuyenNguoiDung_DKDataGridView.Size = new System.Drawing.Size(580, 383);
             this.phanQuyenNguoiDung_DKDataGridView.TabIndex = 6;
             // 
             // qL_NhomNguoiDungDataGridView
@@ -71,7 +71,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(989, 562);
+            this.ClientSize = new System.Drawing.Size(1031, 562);
             this.Controls.Add(this.phanQuyenNguoiDung_DKDataGridView);
             this.Controls.Add(this.qL_NhomNguoiDungDataGridView);
             this.Controls.Add(this.btnLuu);

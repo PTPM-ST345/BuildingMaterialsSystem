@@ -51,7 +51,27 @@ namespace GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < phanQuyenNguoiDung_DKDataGridView.RowCount; i++)
+            {
+                string maNhomNguoiDung = qL_NhomNguoiDungDataGridView.CurrentRow.Cells[0].Value.ToString();
+                string maManHinh = phanQuyenNguoiDung_DKDataGridView.Rows[i].Cells[0].Value.ToString();
+                bool coQuyen = Convert.ToBoolean(phanQuyenNguoiDung_DKDataGridView.Rows[i].Cells[4].Value);
 
+                // Check if the record exists
+                bool exists = xl.CheckIfExists(maNhomNguoiDung, maManHinh);
+
+                // Update or add the record based on existence
+                if (exists)
+                {
+                    xl.UpdatePhanQuyen(maNhomNguoiDung, maManHinh, coQuyen);
+                    MessageBox.Show("Cập nhật thành công");
+                }
+                else
+                {
+                    xl.AddPhanQuyen(maNhomNguoiDung, maManHinh, coQuyen);
+                    MessageBox.Show("Thêm thành công");
+                }
+            }
         }
 
         private void qL_NhomNguoiDungDataGridView_SelectionChanged(object sender, EventArgs e)
