@@ -141,7 +141,7 @@
             // 
             // btnDoiMatKhau
             // 
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(563, 6);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(824, 6);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.Size = new System.Drawing.Size(114, 76);
             this.btnDoiMatKhau.TabIndex = 3;
@@ -161,7 +161,7 @@
             // 
             // btnTTTK
             // 
-            this.btnTTTK.Location = new System.Drawing.Point(194, 6);
+            this.btnTTTK.Location = new System.Drawing.Point(704, 6);
             this.btnTTTK.Name = "btnTTTK";
             this.btnTTTK.Size = new System.Drawing.Size(114, 76);
             this.btnTTTK.TabIndex = 1;
@@ -206,7 +206,7 @@
             // 
             // btnNhapHang
             // 
-            this.btnNhapHang.Location = new System.Drawing.Point(484, 3);
+            this.btnNhapHang.Location = new System.Drawing.Point(383, 3);
             this.btnNhapHang.Name = "btnNhapHang";
             this.btnNhapHang.Size = new System.Drawing.Size(114, 76);
             this.btnNhapHang.TabIndex = 8;
@@ -226,7 +226,7 @@
             // 
             // btnLoaiHang
             // 
-            this.btnLoaiHang.Location = new System.Drawing.Point(184, 3);
+            this.btnLoaiHang.Location = new System.Drawing.Point(143, 3);
             this.btnLoaiHang.Name = "btnLoaiHang";
             this.btnLoaiHang.Size = new System.Drawing.Size(114, 76);
             this.btnLoaiHang.TabIndex = 6;
@@ -236,7 +236,7 @@
             // 
             // btnNCC
             // 
-            this.btnNCC.Location = new System.Drawing.Point(304, 3);
+            this.btnNCC.Location = new System.Drawing.Point(263, 0);
             this.btnNCC.Name = "btnNCC";
             this.btnNCC.Size = new System.Drawing.Size(114, 76);
             this.btnNCC.TabIndex = 5;
@@ -289,7 +289,7 @@
             // 
             // btnBaoCaoNCC
             // 
-            this.btnBaoCaoNCC.Location = new System.Drawing.Point(304, 6);
+            this.btnBaoCaoNCC.Location = new System.Drawing.Point(387, 3);
             this.btnBaoCaoNCC.Name = "btnBaoCaoNCC";
             this.btnBaoCaoNCC.Size = new System.Drawing.Size(114, 76);
             this.btnBaoCaoNCC.TabIndex = 6;
@@ -299,7 +299,7 @@
             // 
             // btnBaoCaoLoaiSanPham
             // 
-            this.btnBaoCaoLoaiSanPham.Location = new System.Drawing.Point(170, 6);
+            this.btnBaoCaoLoaiSanPham.Location = new System.Drawing.Point(267, 6);
             this.btnBaoCaoLoaiSanPham.Name = "btnBaoCaoLoaiSanPham";
             this.btnBaoCaoLoaiSanPham.Size = new System.Drawing.Size(114, 76);
             this.btnBaoCaoLoaiSanPham.TabIndex = 5;

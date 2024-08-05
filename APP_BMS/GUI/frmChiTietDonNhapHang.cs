@@ -30,6 +30,34 @@ namespace GUI
 
             this.Load += frmChiTietDonNhapHang_Load;
             dataGridView1.CellClick += dataGridView1_CellClick;
+            textBox3.KeyPress += textBox3_KeyPress;
+            textBox7.KeyPress += textBox7_KeyPress;
+        }
+
+        void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Chặn kí tự nhập vào
+                errorProvider1.SetError(textBox3, "Chỉ được nhập số.");
+            }
+            else
+            {
+                errorProvider1.SetError(textBox7, "");
+            }
+        }
+
+        void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Chặn kí tự nhập vào
+                errorProvider1.SetError(textBox3, "Chỉ được nhập số.");
+            }
+            else
+            {
+                errorProvider1.SetError(textBox3, "");
+            }
         }
 
         void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -55,6 +83,7 @@ namespace GUI
             dateTimePicker1.Value = ngayNhap;
 
             dataGridView1.DataSource = xl.LoadCT_DonNhapHang(maDonNhapHang);
+            dataGridView1.ClearSelection();
             dataGridView1.Columns["HangHoa"].Visible = false;
             dataGridView1.Columns["DonNhapHang"].Visible = false;
 
@@ -62,6 +91,7 @@ namespace GUI
             comboBox1.DisplayMember = "TenHangHoa";
             comboBox1.ValueMember = "MaHH";
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.SelectedIndex = -1;
 
             comboBox1.Enabled = false;
             textBox7.Enabled = false;

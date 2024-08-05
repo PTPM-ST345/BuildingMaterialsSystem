@@ -69,7 +69,7 @@ namespace GUI
             dgvNhapHang.Columns["MaDonNhapHang"].HeaderText = "Mã đơn nhập hàng";
             dgvNhapHang.Columns["NgayNhap"].HeaderText = "Ngày Nhập";
             dgvNhapHang.Columns["MaNV"].HeaderText = "Mã Nhân Viên";
-
+            dgvNhapHang.ClearSelection();
             dgvNhapHang.Columns["NhanVien"].Visible = false;
 
             comboBox1.DataSource = xl.LoadNhanVien();
@@ -211,9 +211,9 @@ namespace GUI
         //ChiTietNhapHang
         private void button7_Click(object sender, EventArgs e)  
         {
-            if (dgvNhapHang.SelectedCells.Count == 0)
+            if (dgvNhapHang.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn một hóa đơn để xem chi tiết.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vui lòng chọn một đơn nhập hàng để xem chi tiết.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -226,5 +226,6 @@ namespace GUI
                 ctForm.Show();
             }
         }
+
     }
 }
