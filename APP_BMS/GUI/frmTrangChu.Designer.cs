@@ -378,9 +378,9 @@
             // 
             // btnTTKH
             // 
-            this.btnTTKH.Location = new System.Drawing.Point(209, 6);
+            this.btnTTKH.Location = new System.Drawing.Point(418, 6);
             this.btnTTKH.Name = "btnTTKH";
-            this.btnTTKH.Size = new System.Drawing.Size(114, 76);
+            this.btnTTKH.Size = new System.Drawing.Size(260, 76);
             this.btnTTKH.TabIndex = 8;
             this.btnTTKH.Text = "Thông tin khách hàng";
             this.btnTTKH.UseVisualStyleBackColor = true;

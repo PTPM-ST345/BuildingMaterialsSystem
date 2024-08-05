@@ -487,7 +487,7 @@ namespace DAL_BLL
             return true;
         }
 
-//DonNhapHang
+//DonNhapHang##########
         public List<DonNhapHang> LoadDonNhapHang()
         {
             return qlch.DonNhapHangs.Select(dnh => dnh).ToList<DonNhapHang>();
@@ -554,7 +554,6 @@ namespace DAL_BLL
                 return false;
             }
 
-            dnh.MaDonNhapHang = maDNH;
             dnh.NgayNhap = ngayNhap;
             dnh.MaNV = maNV;
          
@@ -651,6 +650,79 @@ namespace DAL_BLL
         {
             return qlch.DonBanHangs.Select(dnh => dnh).ToList<DonBanHang>();
         }
+
+        public List<DonBanHang> TimKiemDonBanHang(string keyword, bool timKiemTheoMaDBH)
+        {
+            if (timKiemTheoMaDBH)
+            {
+                return qlch.DonBanHangs.Where(l => l.MaDonBanHang.Contains(keyword)).ToList();
+            }
+            else
+            {
+                return qlch.DonBanHangs.Where(l => l.MaKH.Contains(keyword)).ToList();
+            }
+        }
+
+        public void XoaDBH(string maDBHToDelete)
+        {
+            DonBanHang dnh = qlch.DonBanHangs.Where(l => l.MaDonBanHang == maDBHToDelete).FirstOrDefault();
+            if (dnh != null)
+            {
+                qlch.DonBanHangs.DeleteOnSubmit(dnh);
+                qlch.SubmitChanges();
+            }
+        }
+
+        public int DemSoCTDBHTheoMaDBH(string maDBHToDelete)
+        {
+            int countCTDBH = qlch.ChiTietDonBanHangs.Count(h => h.MaDonBanHang == maDBHToDelete);
+            return countCTDBH;
+        }
+
+        public bool IsMaDBHDuplicated(string maDBH)
+        {
+            return qlch.DonBanHangs.Any(l => l.MaDonBanHang == maDBH);
+        }
+
+        public bool ThemDBH(string maDBH, DateTime ngayDat, DateTime ngayGiao, DateTime ngayThanhToan, string maKH)
+        {
+            if (IsMaDBHDuplicated(maDBH))
+            {
+                return false;
+            }
+
+            DonBanHang dnh = new DonBanHang
+            {
+                MaDonBanHang = maDBH,
+                NgayDat = ngayDat,
+                NgayGiao = ngayGiao,
+                NgayThanhToan = ngayThanhToan,
+                MaKH = maKH
+            };
+
+            qlch.DonBanHangs.InsertOnSubmit(dnh);
+            qlch.SubmitChanges();
+
+            return true;
+        }
+
+        public bool CapNhatDBH(string maDBH, DateTime ngayDat, DateTime ngayGiao, DateTime ngayThanhToan, string maKH)
+        {
+            DonBanHang dnh = qlch.DonBanHangs.Where(l => l.MaDonBanHang == maDBH).FirstOrDefault();
+            if (maDBH == null)
+            {
+                return false;
+            }
+
+            dnh.NgayDat = ngayDat;
+            dnh.NgayGiao = ngayGiao;
+            dnh.NgayThanhToan = ngayThanhToan;
+            dnh.MaKH = maKH;
+            qlch.SubmitChanges();
+            return true;
+        }
+
+//CT_DonBanHang
 
 //Nhom Nguoi Dung
         public List<QL_NhomNguoiDung> LoadNhomNguoiDung()
