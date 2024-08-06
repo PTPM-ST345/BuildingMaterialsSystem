@@ -518,7 +518,6 @@ namespace GUI
                 DateTime currentDate = DateTime.Now;
                 string ngay = "Ngày " + currentDate.Day + " tháng " + currentDate.Month + " năm " + currentDate.Year;
                 pReplacer.Add("%NgayThangNam", ngay);
-                pReplacer.Add("%TongSo", "10");
             }
         }
 

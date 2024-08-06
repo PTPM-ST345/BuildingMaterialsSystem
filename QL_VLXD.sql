@@ -141,33 +141,23 @@ GO
 
 -- Insert into QL_NhomNguoiDung
 INSERT INTO QL_NhomNguoiDung (MaNhom, TenNhom, GhiChu) VALUES
-('ND1', 'Admin', N'Quản trị hệ thống'),
-('ND2', 'Sales', N'Nhân viên bán hàng'),
-('ND3', 'Manager', N'Quản lý'),
-('ND4', 'Warehouse', N'Nhân viên kho'),
-('ND5', 'Supplier', N'Nhà cung cấp'),
-('ND6', 'CustomerService', N'Dịch vụ khách hàng'),
-('ND7', 'Finance', N'Tài chính');
+('ADMIN', 'Admin', N'Quản trị hệ thống'),
+('NVBANHANG', 'Sales', N'Nhân viên bán hàng');
 GO
 -- Insert into DM_ManHinh
 INSERT INTO DM_ManHinh (MaManHinh, TenManHinh) VALUES
-('MH1', N'Trang Chủ'),
-('MH2', N'Quản Lý Người Dùng'),
-('MH3', N'Quản Lý Sản Phẩm'),
-('MH4', N'Quản Lý Đơn Hàng'),
-('MH5', N'Báo Cáo Tài Chính'),
-('MH6', N'Quản Lý Kho'),
-('MH7', N'Hỗ Trợ Khách Hàng');
+('MH_HETHONG', N'Hệ thống'),
+('MH_NVKH', N'Nhân Viên - Khách Hàng'),
+('MH_DM', N'Danh Mục'),
+('MH_NX', N'Nhập - Xuất'),
+('MH_BCTK', N'Báo Cáo Thống Kê'),
+('MH_PQ', N'Phân Quyền'),
+('MH_HT', N'Hỗ Trợ');
 GO
 -- Insert into QL_PhanQuyen
 INSERT INTO QL_PhanQuyen (MaNhomNguoiDung, MaManHinh, CoQuyen) VALUES
-('ND1', 'MH1', 1),
-('ND2', 'MH3', 1),
-('ND3', 'MH4', 1),
-('ND4', 'MH6', 1),
-('ND5', 'MH5', 0),
-('ND6', 'MH7', 1),
-('ND7', 'MH5', 1);
+('ADMIN', 'MH_HETHONG', 1),
+('ADMIN', 'MH_PQ', 1);
 GO
 -- Insert into NhanVien
 INSERT INTO NhanVien (MaNV, TenNV, GioiTinh, NgaySinh, DiaChi, SDT, ChucVu, MatKhau) VALUES
@@ -181,13 +171,9 @@ INSERT INTO NhanVien (MaNV, TenNV, GioiTinh, NgaySinh, DiaChi, SDT, ChucVu, MatK
 GO
 -- Insert into QL_NguoiDungNhomNguoiDung
 INSERT INTO QL_NguoiDungNhomNguoiDung (MaNV, MaNhomNguoiDung, GhiChu) VALUES
-('NV001', 'ND1', N'Quản trị hệ thống'),
-('NV002', 'ND2', N'Nhân viên bán hàng'),
-('NV003', 'ND3', N'Quản lý'),
-('NV004', 'ND4', N'Nhân viên kho'),
-('NV005', 'ND5', N'Nhà cung cấp'),
-('NV006', 'ND6', N'Dịch vụ khách hàng'),
-('NV007', 'ND7', N'Tài chính');
+('NV001', 'ADMIN', N'Quản trị hệ thống'),
+('NV002', 'NVBANHANG', N'Nhân viên bán hàng'),
+('NV003', 'NVBANHANG', N'Nhân viên bán hàng');
 GO
 -- Insert into KhachHang
 INSERT INTO KhachHang (MaKH, HoTen, NgaySinh, GioiTinh, DienThoai, TaiKhoan, MatKhau, Email, DiaChi) VALUES

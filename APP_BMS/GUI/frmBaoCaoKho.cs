@@ -49,6 +49,9 @@ namespace GUI
                 i.STT = item.Cells[0].Value.ToString();
                 i.MaHH = item.Cells[1].Value.ToString();
                 i.TenHangHoa = item.Cells[2].Value.ToString();
+                i.DonVi = item.Cells[3].Value.ToString();
+                i.SoLuongTon = Convert.ToInt32(item.Cells[4].Value.ToString());
+                i.GiaBan = Convert.ToInt32(item.Cells[6].Value.ToString());
                 pListHH.Add(i);
             }
             string path = string.Empty;

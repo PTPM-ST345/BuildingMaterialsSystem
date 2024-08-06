@@ -36,10 +36,16 @@
             this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.btnTTTK = new System.Windows.Forms.Button();
             this.btnTrangChu = new System.Windows.Forms.Button();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.btnTTKH = new System.Windows.Forms.Button();
+            this.btnTTNV = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnHangHoa = new System.Windows.Forms.Button();
             this.btnLoaiHang = new System.Windows.Forms.Button();
             this.btnNCC = new System.Windows.Forms.Button();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.btnXuatHang = new System.Windows.Forms.Button();
+            this.btnNhapHang = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnDanhSachKhachHang = new System.Windows.Forms.Button();
             this.btnBaoCaoNhap = new System.Windows.Forms.Button();
@@ -55,20 +61,15 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btn_myteam = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.btnTTKH = new System.Windows.Forms.Button();
-            this.btnTTNV = new System.Windows.Forms.Button();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.btnXuatHang = new System.Windows.Forms.Button();
-            this.btnNhapHang = new System.Windows.Forms.Button();
+            this.btnXepLich = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -163,6 +164,40 @@
             this.btnTrangChu.UseVisualStyleBackColor = true;
             this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.btnXepLich);
+            this.tabPage6.Controls.Add(this.btnTTKH);
+            this.tabPage6.Controls.Add(this.btnTTNV);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1193, 88);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Tag = "MHNV-KH";
+            this.tabPage6.Text = "Nhân viên - Khách hàng";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // btnTTKH
+            // 
+            this.btnTTKH.Location = new System.Drawing.Point(144, 6);
+            this.btnTTKH.Name = "btnTTKH";
+            this.btnTTKH.Size = new System.Drawing.Size(119, 76);
+            this.btnTTKH.TabIndex = 8;
+            this.btnTTKH.Text = "Thông tin khách hàng";
+            this.btnTTKH.UseVisualStyleBackColor = true;
+            this.btnTTKH.Click += new System.EventHandler(this.btnTTKH_Click_1);
+            // 
+            // btnTTNV
+            // 
+            this.btnTTNV.Location = new System.Drawing.Point(12, 6);
+            this.btnTTNV.Name = "btnTTNV";
+            this.btnTTNV.Size = new System.Drawing.Size(114, 76);
+            this.btnTTNV.TabIndex = 7;
+            this.btnTTNV.Text = "Thông tin nhân viên";
+            this.btnTTNV.UseVisualStyleBackColor = true;
+            this.btnTTNV.Click += new System.EventHandler(this.btnTTNV_Click_1);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.btnHangHoa);
@@ -205,6 +240,38 @@
             this.btnNCC.Text = "Nhà cung cấp";
             this.btnNCC.UseVisualStyleBackColor = true;
             this.btnNCC.Click += new System.EventHandler(this.btnNCC_Click);
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.btnXuatHang);
+            this.tabPage7.Controls.Add(this.btnNhapHang);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(1193, 88);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Nhập - Xuất";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // btnXuatHang
+            // 
+            this.btnXuatHang.Location = new System.Drawing.Point(157, 6);
+            this.btnXuatHang.Name = "btnXuatHang";
+            this.btnXuatHang.Size = new System.Drawing.Size(114, 76);
+            this.btnXuatHang.TabIndex = 11;
+            this.btnXuatHang.Text = "Xuất hàng";
+            this.btnXuatHang.UseVisualStyleBackColor = true;
+            this.btnXuatHang.Click += new System.EventHandler(this.btnXuatHang_Click_1);
+            // 
+            // btnNhapHang
+            // 
+            this.btnNhapHang.Location = new System.Drawing.Point(37, 6);
+            this.btnNhapHang.Name = "btnNhapHang";
+            this.btnNhapHang.Size = new System.Drawing.Size(114, 76);
+            this.btnNhapHang.TabIndex = 10;
+            this.btnNhapHang.Text = "Nhập hàng";
+            this.btnNhapHang.UseVisualStyleBackColor = true;
+            this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click_1);
             // 
             // tabPage3
             // 
@@ -363,70 +430,14 @@
             this.panel1.Size = new System.Drawing.Size(1900, 966);
             this.panel1.TabIndex = 1;
             // 
-            // tabPage6
+            // btnXepLich
             // 
-            this.tabPage6.Controls.Add(this.btnTTKH);
-            this.tabPage6.Controls.Add(this.btnTTNV);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1193, 88);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Tag = "MHNV-KH";
-            this.tabPage6.Text = "Nhân viên - Khách hàng";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // btnTTKH
-            // 
-            this.btnTTKH.Location = new System.Drawing.Point(418, 6);
-            this.btnTTKH.Name = "btnTTKH";
-            this.btnTTKH.Size = new System.Drawing.Size(260, 76);
-            this.btnTTKH.TabIndex = 8;
-            this.btnTTKH.Text = "Thông tin khách hàng";
-            this.btnTTKH.UseVisualStyleBackColor = true;
-            this.btnTTKH.Click += new System.EventHandler(this.btnTTKH_Click_1);
-            // 
-            // btnTTNV
-            // 
-            this.btnTTNV.Location = new System.Drawing.Point(12, 6);
-            this.btnTTNV.Name = "btnTTNV";
-            this.btnTTNV.Size = new System.Drawing.Size(114, 76);
-            this.btnTTNV.TabIndex = 7;
-            this.btnTTNV.Text = "Thông tin nhân viên";
-            this.btnTTNV.UseVisualStyleBackColor = true;
-            this.btnTTNV.Click += new System.EventHandler(this.btnTTNV_Click_1);
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.btnXuatHang);
-            this.tabPage7.Controls.Add(this.btnNhapHang);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1193, 88);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "Nhập - Xuất";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // btnXuatHang
-            // 
-            this.btnXuatHang.Location = new System.Drawing.Point(157, 6);
-            this.btnXuatHang.Name = "btnXuatHang";
-            this.btnXuatHang.Size = new System.Drawing.Size(114, 76);
-            this.btnXuatHang.TabIndex = 11;
-            this.btnXuatHang.Text = "Xuất hàng";
-            this.btnXuatHang.UseVisualStyleBackColor = true;
-            this.btnXuatHang.Click += new System.EventHandler(this.btnXuatHang_Click_1);
-            // 
-            // btnNhapHang
-            // 
-            this.btnNhapHang.Location = new System.Drawing.Point(37, 6);
-            this.btnNhapHang.Name = "btnNhapHang";
-            this.btnNhapHang.Size = new System.Drawing.Size(114, 76);
-            this.btnNhapHang.TabIndex = 10;
-            this.btnNhapHang.Text = "Nhập hàng";
-            this.btnNhapHang.UseVisualStyleBackColor = true;
-            this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click_1);
+            this.btnXepLich.Location = new System.Drawing.Point(376, 6);
+            this.btnXepLich.Name = "btnXepLich";
+            this.btnXepLich.Size = new System.Drawing.Size(260, 76);
+            this.btnXepLich.TabIndex = 9;
+            this.btnXepLich.Text = "Xếp lịch làm việc";
+            this.btnXepLich.UseVisualStyleBackColor = true;
             // 
             // frmTrangChu
             // 
@@ -440,13 +451,13 @@
             this.Text = "frmTrangChu";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -486,5 +497,6 @@
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.Button btnXuatHang;
         private System.Windows.Forms.Button btnNhapHang;
+        private System.Windows.Forms.Button btnXepLich;
     }
 }
