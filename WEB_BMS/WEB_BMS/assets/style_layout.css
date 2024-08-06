@@ -134,3 +134,22 @@
     height: 35px;
     margin-right: 10px;
 }
+.phoneCircle {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    font-size: 18px;
+    border: 1px solid #fff;
+    background-color: #001981;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+}

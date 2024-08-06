@@ -8,6 +8,9 @@
 @model List<HangHoa>
 
 <link href="~/assets/style_index.css" rel="stylesheet" />
+
+
+
 <div class="container">
     <img src="~/assets/img/img_intro/vlxd-ngoc-ha.jpg" style="width: 100%; height: auto ;position: relative;z-index:-1 " />
 </div>
@@ -321,10 +324,17 @@
         </div>
     </div>
 </div>
+
+
 <div id="text-2276895883" class="text" style="color: black;">
     <h2 style="text-align: center;"><span style="font-size: 90%; color: #001981;"><strong>SẢN PHẨM NỔI BẬT</strong></span></h2>
     <p style="width: 65%; margin: 0px auto; text-align: center;"><em>Dưới đây là một số sản phẩm nổi bật của chúng tôi luôn sẵn hàng</em></p>
 </div>
+<img src="~/assets/img/img_product/cat_12.jpg" />
+
+
+
+
 
 
 
@@ -418,4 +428,20 @@
 </div>
 
 <br />
+<script>
+    let mybutton = document.getElementById("myBtn");
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
 
