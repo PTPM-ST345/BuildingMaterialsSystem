@@ -27,10 +27,13 @@
 <div id="header-logo">
     <img width="250" height="55" src="https://vlxdsaigon24h.com/wp-content/uploads/2023/11/logo-ngoc-ha-1.png" class="header_logo header-logo" alt="VLXD NGỌC HÀ" />
     <div class="form-outline" data-mdb-input-init>
-        <input size="30px" type="search" id="form1" placeholder="Tìm Kiếm...." class="form-control" />
-        <button type="button" class="btn btn-primary" data-mdb-ripple-init>
-            <i class="fas fa-search"></i>
-        </button>
+
+        @*Tìm kiếm*@
+        <form action="@Url.Action("Search", "Home")" method="post"  style="display:flex">
+            <input size="30" type="search" name="id" placeholder="Tìm Kiếm...." class="form-control" />
+            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+        </form>
+       
     </div>
 
     <div>

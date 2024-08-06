@@ -194,9 +194,32 @@
                     </div>
                 }
             </div>
-
         }
+        <td colspan="4">
+            <div class="pagination justify-content-center">
+                @if (ViewBag.Page > 1)
+                {
+                    <li class="page-item">
+                        <a  class="page-link uppercase" href="@Url.Action("Product_Index", new { page = ViewBag.Page - 1 })">« Trang trước</a>
+                    </li>
+                }
 
+                @for (int i = 1; i <= ViewBag.NoOfPages; i++)
+                {
+                    <li class="page-item">
+                        <a class="page-link uppercase" href="@Url.Action("Product_Index", new { page = i })" class="@(i == ViewBag.Page ? "active" : "")">@i</a>
+                    </li>
+                }
+
+                @if (ViewBag.Page > 1)
+                {
+                    <li class="page-item">
+                        <a class="page-link uppercase" href="@Url.Action("Product_Index", new { page = ViewBag.Page + 1 })">Trang sau »</a>
+                    </li>
+                }
+            </div>
+        </td>
+        
     </div>
 </div>
 
