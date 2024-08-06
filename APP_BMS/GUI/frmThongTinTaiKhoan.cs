@@ -35,7 +35,6 @@ namespace GUI
             {
                 lb_ten.Text = nhanVien.TenNV;
                 lb_sdth.Text = nhanVien.SDT;
-                lb_chucvu.Text = nhanVien.ChucVu;
                 lb_diachi.Text = nhanVien.DiaChi;
                 lb_gioitinh.Text = nhanVien.GioiTinh;
                 lb_ns.Text = nhanVien.NgaySinh.ToString();

@@ -110,7 +110,7 @@ namespace DAL_BLL
             return qlch.NhanViens.Any(l => l.MaNV == maNV);
         }
 
-        public bool ThemNhanVien(string maNV, string tenNV, string gioiTinh, DateTime ngaySinh, string diaChi, string soDT, string chucVu, string matKhau)
+        public bool ThemNhanVien(string maNV, string tenNV, string gioiTinh, DateTime ngaySinh, string diaChi, string soDT, string matKhau)
         {
             if (IsMaNVDuplicated(maNV))
             {
@@ -125,7 +125,6 @@ namespace DAL_BLL
                 NgaySinh = ngaySinh,
                 DiaChi = diaChi,
                 SDT = soDT,
-                ChucVu = chucVu,
                 MatKhau = matKhau
             };
 
@@ -135,7 +134,7 @@ namespace DAL_BLL
             return true;
         }
 
-        public bool CapNhatNhanVien(string maNV, string tenNV, string gioiTinh, DateTime ngaySinh, string diaChi, string soDT, string chucVu, string matKhau)
+        public bool CapNhatNhanVien(string maNV, string tenNV, string gioiTinh, DateTime ngaySinh, string diaChi, string soDT,  string matKhau)
         {
             NhanVien nv = qlch.NhanViens.Where(l => l.MaNV == maNV).FirstOrDefault();
             if (maNV == null)
@@ -148,7 +147,6 @@ namespace DAL_BLL
             nv.NgaySinh = ngaySinh;
             nv.DiaChi = diaChi;
             nv.SDT = soDT;
-            nv.ChucVu = chucVu;
             nv.MatKhau = matKhau;
 
             qlch.SubmitChanges();
@@ -924,5 +922,43 @@ namespace DAL_BLL
 
             return quyenManHinhDTOs;
         }
+
+//XepLich
+
+        public List<NhanVienWithChucVu> LoadNhanVienWithChucVu()
+        {
+            var result = from nv in qlch.NhanViens
+                         join qlnd in qlch.QL_NguoiDungNhomNguoiDungs
+                         on nv.MaNV equals qlnd.MaNV into nvNhom
+                         from qlnd in nvNhom.DefaultIfEmpty()
+                         join nhom in qlch.QL_NhomNguoiDungs
+                         on qlnd.MaNhomNguoiDung equals nhom.MaNhom into nhomGroup
+                         from nhom in nhomGroup.DefaultIfEmpty()
+                         select new NhanVienWithChucVu
+                         {
+                             MaNV = nv.MaNV,
+                             TenNV = nv.TenNV,
+                             GioiTinh = nv.GioiTinh,
+                             NgaySinh = Convert.ToDateTime(nv.NgaySinh),
+                             DiaChi = nv.DiaChi,
+                             SDT = nv.SDT,
+                             MatKhau = nv.MatKhau,
+                             TenNhom = nhom != null ? nhom.TenNhom : "Chưa phân nhóm"
+                         };
+
+            return result.ToList<NhanVienWithChucVu>();
+        }
+
+        public List<NhanVien> GetNhanVienByNhom(string maNhom)
+        {
+            var result = from nv in qlch.NhanViens
+                         join qlnd in qlch.QL_NguoiDungNhomNguoiDungs
+                         on nv.MaNV equals qlnd.MaNV
+                         where qlnd.MaNhomNguoiDung == maNhom
+                         select nv;
+
+            return result.ToList < NhanVien>();
+        }
+
     }
 }

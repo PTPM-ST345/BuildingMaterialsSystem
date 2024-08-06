@@ -38,7 +38,6 @@ namespace GUI
             dt.Columns.Add("NgaySinh");
             dt.Columns.Add("DiaChi");
             dt.Columns.Add("SDT");
-            dt.Columns.Add("ChucVu");
             dt.Columns.Add("MatKhau");
 
             foreach (var nv in ketQuaTimKiem)
@@ -50,7 +49,6 @@ namespace GUI
                 dr["NgaySinh"] = nv.NgaySinh;
                 dr["DiaChi"] = nv.DiaChi;
                 dr["SDT"] = nv.SDT;
-                dr["ChucVu"] = nv.ChucVu;
                 dr["MatKhau"] = nv.MatKhau;
                 dt.Rows.Add(dr);
             }
@@ -66,7 +64,6 @@ namespace GUI
             textBox2.Enabled = false;
             textBox3.Enabled = false;
             textBox4.Enabled = false;
-            textBox5.Enabled = false;
             textBox7.Enabled = false;
             comboBox1.Enabled = false;
             button5.Enabled = false;
@@ -95,7 +92,6 @@ namespace GUI
                 textBox1.Text = row.Cells["MaNV"].Value.ToString();
                 textBox2.Text = row.Cells["TenNV"].Value.ToString();
                 textBox4.Text = row.Cells["SDT"].Value.ToString();
-                textBox5.Text = row.Cells["ChucVu"].Value.ToString();
                 textBox3.Text = row.Cells["DiaChi"].Value.ToString();
                 comboBox1.Text = row.Cells["GioiTinh"].Value.ToString();
                 dateTimePicker1.Text = row.Cells["NgaySinh"].Value.ToString();
@@ -110,7 +106,7 @@ namespace GUI
             textBox2.Enabled = true;
             textBox3.Enabled = true;
             textBox4.Enabled = true;
-            textBox5.Enabled = true;
+            
             textBox7.Enabled = true;
             dateTimePicker1.Enabled = true;
             comboBox1.Enabled = true;
@@ -119,7 +115,6 @@ namespace GUI
             textBox2.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
-            textBox5.Text = "";
             textBox7.Text = "";
             textBox1.Focus();
             button5.Enabled = true;
@@ -158,7 +153,6 @@ namespace GUI
                         textBox2.Text = "";
                         textBox3.Text = "";
                         textBox4.Text = "";
-                        textBox5.Text = "";
                         textBox7.Text = "";
                         dvgDSNhanVien.DataSource = xl.LoadNhanVien();
                     }
@@ -177,7 +171,6 @@ namespace GUI
             textBox2.Enabled = true;
             textBox3.Enabled = true;
             textBox4.Enabled = true;
-            textBox5.Enabled = true;
             textBox7.Enabled = true;
             dateTimePicker1.Enabled = true;
             comboBox1.Enabled = true;
@@ -195,7 +188,7 @@ namespace GUI
             textBox2.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
-            textBox5.Text = "";
+  
             textBox7.Text = "";
             textBox1.Focus();
         }
@@ -227,12 +220,6 @@ namespace GUI
                 textBox4.Focus();
                 return;
             }
-            if (textBox5.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải nhập chức vụ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBox5.Focus();
-                return;
-            }
             if (textBox7.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -251,11 +238,11 @@ namespace GUI
                     textBox1.Focus();
                     return;
                 }
-                isSuccessful = xl.ThemNhanVien(textBox1.Text, textBox2.Text, comboBox1.SelectedValue.ToString(),Convert.ToDateTime(dateTimePicker1.Text),textBox3.Text,textBox4.Text,textBox5.Text,textBox7.Text);
+                isSuccessful = xl.ThemNhanVien(textBox1.Text, textBox2.Text, comboBox1.SelectedValue.ToString(),Convert.ToDateTime(dateTimePicker1.Text),textBox3.Text,textBox4.Text,textBox7.Text);
             }
             else
             {
-                isSuccessful = xl.CapNhatNhanVien(textBox1.Text, textBox2.Text, comboBox1.SelectedValue.ToString(), Convert.ToDateTime(dateTimePicker1.Text), textBox3.Text, textBox4.Text, textBox5.Text, textBox7.Text);
+                isSuccessful = xl.CapNhatNhanVien(textBox1.Text, textBox2.Text, comboBox1.SelectedValue.ToString(), Convert.ToDateTime(dateTimePicker1.Text), textBox3.Text, textBox4.Text, textBox7.Text);
             }
 
             if (isSuccessful)
@@ -265,7 +252,7 @@ namespace GUI
                 textBox2.Enabled = false;
                 textBox3.Enabled = false;
                 textBox4.Enabled = false;
-                textBox5.Enabled = false;
+               
                 textBox7.Enabled = false;
                 comboBox1.Enabled = false;
                 button5.Enabled = false;

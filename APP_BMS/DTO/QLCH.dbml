@@ -90,7 +90,7 @@
     <Type Name="Loai">
       <Column Name="MaLoai" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="ThongTin" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ThongTin" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Association Name="Loai_HangHoa" Member="HangHoas" ThisKey="MaLoai" OtherKey="MaLoai" Type="HangHoa" />
     </Type>
   </Table>
@@ -111,7 +111,6 @@
       <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
-      <Column Name="ChucVu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="MatKhau" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Association Name="NhanVien_DonNhapHang" Member="DonNhapHangs" ThisKey="MaNV" OtherKey="MaNV" Type="DonNhapHang" />
       <Association Name="NhanVien_QL_NguoiDungNhomNguoiDung" Member="QL_NguoiDungNhomNguoiDungs" ThisKey="MaNV" OtherKey="MaNV" Type="QL_NguoiDungNhomNguoiDung" />

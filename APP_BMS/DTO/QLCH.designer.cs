@@ -2072,7 +2072,7 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTin", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTin", DbType="NVarChar(100)")]
 		public string ThongTin
 		{
 			get
@@ -2318,8 +2318,6 @@ namespace DTO
 		
 		private string _SDT;
 		
-		private string _ChucVu;
-		
 		private string _MatKhau;
 		
 		private EntitySet<DonNhapHang> _DonNhapHangs;
@@ -2342,8 +2340,6 @@ namespace DTO
     partial void OnDiaChiChanged();
     partial void OnSDTChanging(string value);
     partial void OnSDTChanged();
-    partial void OnChucVuChanging(string value);
-    partial void OnChucVuChanged();
     partial void OnMatKhauChanging(string value);
     partial void OnMatKhauChanged();
     #endregion
@@ -2471,26 +2467,6 @@ namespace DTO
 					this._SDT = value;
 					this.SendPropertyChanged("SDT");
 					this.OnSDTChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ChucVu", DbType="NVarChar(50)")]
-		public string ChucVu
-		{
-			get
-			{
-				return this._ChucVu;
-			}
-			set
-			{
-				if ((this._ChucVu != value))
-				{
-					this.OnChucVuChanging(value);
-					this.SendPropertyChanging();
-					this._ChucVu = value;
-					this.SendPropertyChanged("ChucVu");
-					this.OnChucVuChanged();
 				}
 			}
 		}

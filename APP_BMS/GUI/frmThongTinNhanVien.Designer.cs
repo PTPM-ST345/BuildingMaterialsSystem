@@ -44,12 +44,10 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -159,12 +157,10 @@
             this.groupBox3.Controls.Add(this.textBox7);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.dateTimePicker1);
-            this.groupBox3.Controls.Add(this.textBox5);
             this.groupBox3.Controls.Add(this.textBox4);
             this.groupBox3.Controls.Add(this.textBox3);
             this.groupBox3.Controls.Add(this.textBox2);
             this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
@@ -229,7 +225,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(649, 156);
+            this.textBox7.Location = new System.Drawing.Point(649, 100);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(283, 22);
             this.textBox7.TabIndex = 25;
@@ -238,7 +234,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label10.Location = new System.Drawing.Point(505, 158);
+            this.label10.Location = new System.Drawing.Point(505, 102);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 18);
             this.label10.TabIndex = 24;
@@ -250,13 +246,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(257, 22);
             this.dateTimePicker1.TabIndex = 21;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(649, 100);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(283, 22);
-            this.textBox5.TabIndex = 19;
             // 
             // textBox4
             // 
@@ -285,16 +274,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(257, 22);
             this.textBox1.TabIndex = 15;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(505, 102);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 18);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Chức Vụ";
             // 
             // label7
             // 
@@ -413,7 +392,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -427,6 +405,5 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
     }
 }
