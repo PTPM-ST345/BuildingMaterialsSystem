@@ -897,5 +897,32 @@ namespace DAL_BLL
             qlch.SubmitChanges();
         }
 
+        public List<string> GetMaNhomNguoiDung(string pMaNV)
+        {
+                var nhomNguoiDungs = qlch.QL_NguoiDungNhomNguoiDungs
+                                            .Where(nd => nd.MaNV == pMaNV)
+                                            .Select(nd => nd.MaNhomNguoiDung)
+                                            .ToList();
+                return nhomNguoiDungs;
+        }
+
+        public List<QL_PhanQuyen> GetMaManHinh(string pMaNhom)
+        {
+            // Truy vấn dữ liệu từ cơ sở dữ liệu
+            var quyenManHinhEntities = qlch.QL_PhanQuyens
+                                           .Where(pq => pq.MaNhomNguoiDung == pMaNhom)
+                                           .ToList(); // Lấy dữ liệu dưới dạng danh sách thực thể
+
+            // Chuyển đổi danh sách thực thể thành danh sách DTO
+            var quyenManHinhDTOs = quyenManHinhEntities
+                                    .Select(pq => new QL_PhanQuyen
+                                    {
+                                        MaManHinh = pq.MaManHinh,
+                                        CoQuyen = pq.CoQuyen
+                                    })
+                                    .ToList();
+
+            return quyenManHinhDTOs;
+        }
     }
 }
