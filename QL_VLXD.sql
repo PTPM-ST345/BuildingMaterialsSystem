@@ -36,7 +36,6 @@ CREATE TABLE NhanVien (
     NgaySinh DATETIME,
     DiaChi NVARCHAR(50),
     SDT NVARCHAR(15),
-    ChucVu NVARCHAR(50),
     MatKhau NVARCHAR(30),
 );
 GO
@@ -160,14 +159,14 @@ INSERT INTO QL_PhanQuyen (MaNhomNguoiDung, MaManHinh, CoQuyen) VALUES
 ('ADMIN', 'MH_PQ', 1);
 GO
 -- Insert into NhanVien
-INSERT INTO NhanVien (MaNV, TenNV, GioiTinh, NgaySinh, DiaChi, SDT, ChucVu, MatKhau) VALUES
-('NV001', 'Nguyen Van A', 'Nam', '1990-01-01', '123 Le Loi', '0123456789', 'Admin', 'pass1'),
-('NV002', 'Tran Thi B', 'Nu', '1992-02-02', '456 Hai Ba Trung', '0987654321', 'Sales', 'pass2'),
-('NV003', 'Le Van C', 'Nam', '1985-03-03', '789 Nguyen Trai', '0912345678', 'Manager', 'pass3'),
-('NV004', 'Pham Thi D', 'Nu', '1988-04-04', '1011 Tran Hung Dao', '0908765432', 'Warehouse', 'pass4'),
-('NV005', 'Hoang Van E', 'Nam', '1980-05-05', '1213 Vo Thi Sau', '0934567890', 'Supplier', 'pass5'),
-('NV006', 'Nguyen Thi F', 'Nu', '1995-06-06', '1415 Ly Thuong Kiet', '0945678901', 'CustomerService', 'pass6'),
-('NV007', 'Le Thi G', 'Nu', '1982-07-07', '1617 Ba Trieu', '0956789012', 'Finance', 'pass7');
+INSERT INTO NhanVien (MaNV, TenNV, GioiTinh, NgaySinh, DiaChi, SDT, MatKhau) VALUES
+('NV001', 'Nguyen Van A', 'Nam', '1990-01-01', '123 Le Loi', '0123456789',  'pass1'),
+('NV002', 'Tran Thi B', 'Nu', '1992-02-02', '456 Hai Ba Trung', '0987654321',  'pass2'),
+('NV003', 'Le Van C', 'Nam', '1985-03-03', '789 Nguyen Trai', '0912345678',  'pass3'),
+('NV004', 'Pham Thi D', 'Nu', '1988-04-04', '1011 Tran Hung Dao', '0908765432',  'pass4'),
+('NV005', 'Hoang Van E', 'Nam', '1980-05-05', '1213 Vo Thi Sau', '0934567890',  'pass5'),
+('NV006', 'Nguyen Thi F', 'Nu', '1995-06-06', '1415 Ly Thuong Kiet', '0945678901',  'pass6'),
+('NV007', 'Le Thi G', 'Nu', '1982-07-07', '1617 Ba Trieu', '0956789012', 'pass7');
 GO
 -- Insert into QL_NguoiDungNhomNguoiDung
 INSERT INTO QL_NguoiDungNhomNguoiDung (MaNV, MaNhomNguoiDung, GhiChu) VALUES

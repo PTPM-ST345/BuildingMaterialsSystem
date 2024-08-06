@@ -244,7 +244,12 @@ namespace GUI
 
         private void xếpLịchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmXepLichLamViec formlh = new frmXepLichLamViec() { TopLevel = false, TopMost = true };
+            formlh.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formlh);
+            formlh.Show();
         }
 
         
