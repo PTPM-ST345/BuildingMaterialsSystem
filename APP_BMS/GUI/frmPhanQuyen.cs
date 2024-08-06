@@ -64,12 +64,12 @@ namespace GUI
                 if (exists)
                 {
                     xl.UpdatePhanQuyen(maNhomNguoiDung, maManHinh, coQuyen);
-                    MessageBox.Show("Cập nhật thành công");
+                    //MessageBox.Show("Cập nhật thành công");
                 }
                 else
                 {
                     xl.AddPhanQuyen(maNhomNguoiDung, maManHinh, coQuyen);
-                    MessageBox.Show("Thêm thành công");
+                    //MessageBox.Show("Thêm thành công");
                 }
             }
         }
