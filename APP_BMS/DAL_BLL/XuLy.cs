@@ -723,6 +723,75 @@ namespace DAL_BLL
         }
 
 //CT_DonBanHang
+        public List<ChiTietDonBanHang> LoadCT_DonBanHang(string maDNH)
+        {
+            return qlch.ChiTietDonBanHangs.Where(dnh => dnh.MaDonBanHang == maDNH).ToList<ChiTietDonBanHang>();
+        }
+
+        public void XoaCTDBH(string pMaDNHToDelete, string pMaHHToDelete)
+        {
+            ChiTietDonBanHang ctdnh = qlch.ChiTietDonBanHangs.Where(l => l.MaDonBanHang == pMaDNHToDelete && l.MaHH == pMaHHToDelete).FirstOrDefault();
+            if (ctdnh != null)
+            {
+                int? soLuongXoa = ctdnh.SoLuong;
+
+                HangHoa hangHoa = qlch.HangHoas.Where(h => h.MaHH == pMaHHToDelete).FirstOrDefault();
+                if (hangHoa != null)
+                {
+                    hangHoa.SoLuongTon -= soLuongXoa;
+                }
+
+                qlch.ChiTietDonBanHangs.DeleteOnSubmit(ctdnh);
+                qlch.SubmitChanges();
+            }
+        }
+
+        public bool IsCTDBHDuplicated(string maDBH, string maHH)
+        {
+            return qlch.ChiTietDonBanHangs.Any(l => l.MaDonBanHang == maDBH && l.MaHH == maHH);
+        }
+
+        public bool ThemCT_DBH(string maDNH, string maHH, int soLuong, double donGia)
+        {
+            if (IsCTDBHDuplicated(maDNH, maHH))
+            {
+                return false;
+            }
+
+            ChiTietDonBanHang ctdnh = new ChiTietDonBanHang
+            {
+                MaDonBanHang = maDNH,
+                MaHH = maHH,
+                SoLuong = soLuong,
+                DonGia = donGia
+            };
+
+            qlch.ChiTietDonBanHangs.InsertOnSubmit(ctdnh);
+            qlch.SubmitChanges();
+
+            CapNhatSoLuongTrongKho(maHH, LaySoLuongTrongKho(maHH) + soLuong);
+            return true;
+        }
+
+        public bool CapNhatCT_DBH(string maDNH, string maHH, int soLuong, double donGia)
+        {
+            ChiTietDonBanHang ctdnh = qlch.ChiTietDonBanHangs.Where(l => l.MaDonBanHang == maDNH && l.MaHH == maHH).FirstOrDefault();
+            if (maDNH == null || maHH == null)
+            {
+                return false;
+            }
+
+            int? soLuongHienTai = ctdnh.SoLuong;
+            int? chenhLechSoLuong = soLuong - soLuongHienTai;
+
+            ctdnh.SoLuong = soLuong;
+            ctdnh.DonGia = donGia;
+            qlch.SubmitChanges();
+
+            CapNhatSoLuongTrongKho(maHH, LaySoLuongTrongKho(maHH) + chenhLechSoLuong);
+            return true;
+        }
+
 
 //Nhom Nguoi Dung
         public List<QL_NhomNguoiDung> LoadNhomNguoiDung()

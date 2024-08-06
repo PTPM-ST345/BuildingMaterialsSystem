@@ -242,9 +242,8 @@ namespace GUI
                 string tenKhachHang = cboKhachHang.Text;
                 DateTime ngayDat = ngaydat.Value;
 
-                //frmChiTietDonBanHang ctForm = new frmChiTietDonBanHang(maDonBanHang, tenKhachHang, ngayDat);
-                // Hiển thị form CT_HoaDonBan
-                //ctForm.Show();
+                frmChiTietDonBanHang ctForm = new frmChiTietDonBanHang(maDonBanHang, tenKhachHang, ngayDat);
+                ctForm.Show();
             }
         }
     }

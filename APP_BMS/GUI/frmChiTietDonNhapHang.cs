@@ -39,7 +39,7 @@ namespace GUI
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true; // Chặn kí tự nhập vào
-                errorProvider1.SetError(textBox3, "Chỉ được nhập số.");
+                errorProvider1.SetError(textBox7, "Chỉ được nhập số.");
             }
             else
             {
