@@ -9,8 +9,9 @@
 }
 
     .left-body img {
-        width: 35 0px;
-        height: 270px
+        width: 350px;
+        height: 300px;
+        border-radius:20px
     }
 
 .right-body {

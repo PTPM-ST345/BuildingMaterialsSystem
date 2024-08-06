@@ -45,9 +45,16 @@ namespace WEB_BMS.Controllers
             return View(dshh);
            
         }
-        public ActionResult Product()
+        public ActionResult Product(string id)
         {
-            return View();
+            HangHoa hh = data.HangHoas.SingleOrDefault(n => n.MaHH == id);
+            return View(hh);
+        }
+
+        public ActionResult HTDSTheoLoai(string id)
+        {
+            List<HangHoa> dssp = data.HangHoas.Where(n => n.MaLoai == id).ToList();
+            return View("Product_Index", dssp);
         }
     }
 }

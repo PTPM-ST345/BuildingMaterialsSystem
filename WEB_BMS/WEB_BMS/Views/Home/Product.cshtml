@@ -1,28 +1,38 @@
 ﻿
 @{
-    ViewBag.Title = "Product";
+    ViewBag.Title = "Sản phẩm";
     Layout = "~/Views/Shared/_LayoutPage_New.cshtml";
 }
+
+@model  WEB_BMS.Models.HangHoa
 <link href="~/assets/product_detail.css" rel="stylesheet" />
 <div class="wrap">
     <div class="left-body">
-        <img src="~/assets/img/img_intro/gach.jpg" />
+        <img src="~/assets/img/img_product/@Model.HinhAnh" />
     </div>
+
     <div class="right-body">
-        <h3 class="uppercase">CÁT BÊ TÔNG THƯỜNG</h3>
-        <div class="is-divider small"></div>
-        <h4 class="uppercase">350.000 đ</h4>
-        <br />
-        <a href="" class="dat-hang">Đặt hàng ngay !</a>
-        <br />
-        <br />
-        <p>Danh mục:  <a href="#">Cát xây dựng</a></p>
-        <div class="icon">
-            <a href="#"><img src="~/assets/img/icon-media/facebook.svg"></a>
-            <a href="#"><img src="~/assets/img/icon-media/instagram.svg"></a>
-            <a href="#"><img src="~/assets/img/icon-media/youtube.svg"></a>
-            <a href="#"><img src="~/assets/img/icon-media/email.svg"></a>
-        </div>
+        @if (Model != null)
+        {
+
+            <h3 class="uppercase">@Model.TenHangHoa</h3>
+            <div class="is-divider small"></div>
+            <h4 class="uppercase">@String.Format("{0:N0}", Model.GiaBan) VND</h4>
+            <br />
+            <a href="" class="dat-hang">Đặt hàng ngay !</a>
+            <br />
+            <br />
+            <p>Đơn vị:  <a href="#">@Model.DonVi</a></p>
+            <p>Tồn kho:  <a href="#">@Model.SoLuongTon/ @Model.DonVi</a></p>
+
+            <div class="icon">
+                <a href="#"><img src="~/assets/img/icon-media/facebook.svg"></a>
+                <a href="#"><img src="~/assets/img/icon-media/instagram.svg"></a>
+                <a href="#"><img src="~/assets/img/icon-media/youtube.svg"></a>
+                <a href="#"><img src="~/assets/img/icon-media/email.svg"></a>
+            </div>
+
+        }
     </div>
 </div>
 <div style="max-width:100%;height:0.5px;background-color:lightgray;margin: 16px"></div>
@@ -51,27 +61,27 @@
                     <label for="your-phone">Đánh Giá&nbsp;<span class="text-danger">*</span></label>
                     <textarea id="your-phone" name="your-phone" class="form-control" rows="4" placeholder="Nhập đánh giá của bạn ở đây..." required></textarea>
                 </div>
-               
+
                 <div class="form-group">
                     <input type="submit" value="Gửi">
                 </div>
             </form>
         </div>
     </div>
-  
-    <div  class="luotdanhgia right-body" style="position:absolute; right:0">
+
+    <div class="luotdanhgia right-body" style="position:absolute; right:0">
         <div class="comment-box">
             <div class="avt-name">
                 <img src="~/assets/img/icon-media/images.png" />
-               <p style="color:green">GUEST</p>
+                <p style="color:green">GUEST</p>
             </div>
-           
+
             <div class="comment">
                 <h6 class="uppercase">Phi Long</h6>
                 <p>
                     Mạng không rõ dùng ổn không nhưng thấy anh lắp đặt cũng khá nhiệt tình. Cảm ơn đã lắp sớm!
                 </p>
             </div>
-        </div> 
+        </div>
     </div>
 </div>
