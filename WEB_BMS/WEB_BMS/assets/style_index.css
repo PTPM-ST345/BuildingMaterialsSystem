@@ -155,3 +155,41 @@
     display: flex;
     justify-content: space-between
 }
+.card {
+    margin: 0px 10px;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 14px;
+}
+
+.card-text {
+    text-align: center;
+}
+
+    .card-text:nth-child(2) {
+        color: chocolate;
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .card-text:nth-child(3) {
+        color: red;
+        font-size: 12px;
+        height: 20px;
+    }
+
+    .card-text:nth-child(4) {
+        text-align: left;
+    }
+
+.card img {
+    transition: box-shadow 0.4s;
+    
+}
+
+    .card img:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        border: 0.5px solid lightgrey;
+    }

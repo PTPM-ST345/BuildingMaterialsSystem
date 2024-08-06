@@ -331,8 +331,30 @@
     <p style="width: 65%; margin: 0px auto; text-align: center;"><em>Dưới đây là một số sản phẩm nổi bật của chúng tôi luôn sẵn hàng</em></p>
 </div>
 <br />
-<img src="~/assets/img/img_product/cat_12.jpg" />
-
+<div class="row">
+    @foreach (var s in Model)
+    {
+        if (s.GiaBan > 400000)
+        {
+            <div class="col-md-3 mb-3">
+                <!-- 3 columns per row (1/4 of the width) -->
+                <div class="card" style="border: none; background-color: rgb(250, 250, 250);">
+                    <a href="~/Home/Product/@s.MaHH">
+                        <img style="width: 100%; height: 200px; object-fit: cover;" src="~/assets/img/img_product/@s.HinhAnh" class="card-img-top" alt="">
+                    </a>
+                    <div class="card-body">
+                        <a href="~/Home/Product/@s.MaHH">
+                            <h5 class="card-title">@s.TenHangHoa</h5>
+                        </a>
+                        <p class="card-text">@String.Format("{0:N0}", s.GiaBan) VND</p>
+                        <p class="card-text"><small class="text-muted">Đơn Vị: @s.DonVi</small></p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    <a style="text-align:center" class="uppercase" href="/Home/Product_Index">Xem Thêm >></a>
+</div>
 
 
 
