@@ -136,6 +136,7 @@
     <Content Include="assets\style_new_NH.css" />
     <Content Include="assets\style_product_index.css" />
     <Content Include="assets\style_tbprice.css" />
+    <Content Include="assets\style_xacnhantt.css" />
     <Content Include="assets\themify-icons\demo-files\demo.css" />
     <Content Include="assets\themify-icons\fonts\themify.svg" />
     <Content Include="assets\themify-icons\ie7\ie7.css" />
@@ -572,6 +573,7 @@
     <Content Include="Views\Home\DangKy.cshtml" />
     <Content Include="Views\Home\EmptyCart.cshtml" />
     <Content Include="Views\Home\GioHangPartial.cshtml" />
+    <Content Include="Views\Home\PlaceOrder.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

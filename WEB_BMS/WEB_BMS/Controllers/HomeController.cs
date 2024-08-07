@@ -253,73 +253,103 @@ namespace WEB_BMS.Controllers
             return View();
         }
 
+        public string indexMaDBH()
+        {
+            var lastOrder = data.DonBanHangs.OrderByDescending(k => k.MaDonBanHang).FirstOrDefault();
 
+            string newOrderId;
+
+            if (lastOrder != null)
+            {
+                // Extract the numeric part from the last order ID
+                string lastId = lastOrder.MaDonBanHang;
+                int numericPart = int.Parse(lastId.Substring(3)); // Extracting the numeric part
+
+                // Increment the numeric part
+                int newNumericPart = numericPart + 1;
+
+                // Format the new ID as "DBHXXX" where XXX is the incremented number with leading zeros if needed
+                newOrderId = $"DBH{newNumericPart:D3}";
+            }
+            else
+            {
+                // Default to DBH001 if there are no existing orders
+                newOrderId = "DBH001";
+            }
+            return newOrderId;
+        }
 
             // Xử lý đặt hàng sau khi xác nhận
-            [HttpPost]
-        //public ActionResult PlaceOrder(Order order)
-        //{
-
-        //    if (!string.IsNullOrEmpty(col["txtDate"]))
-        //    {
-        //        DateTime ngaygiao;
-        //        if (DateTime.TryParse(col["txtDate"], out ngaygiao))
-        //        {
-        //            DonHang hd = new DonHang();
-        //            hd.MaKH = kh.MaKH;
-        //            hd.NgayDat = DateTime.Now;
-        //            hd.NgayGiao = ngaygiao;
-        //            data.DonHangs.InsertOnSubmit(hd);
-        //            data.SubmitChanges();
-
-        //            foreach (var item in giohang)
-        //            {
-        //                ChiTietDonHang ct = new ChiTietDonHang();
-        //                ct.MaDonHang = hd.MaDonHang;
-        //                ct.MaSP = item.masp;
-        //                ct.SoLuong = item.soluong;
-        //                data.ChiTietDonHangs.InsertOnSubmit(ct);
-        //            }
-
-        //            data.SubmitChanges();
-
-        //            giohang.Clear();
-        //            ViewBag.tb = "Đặt hàng thành công";
-        //            return View();
-        //        }
-        //        else
-        //        {
-        //            ViewBag.tb = "Ngày giao không hợp lệ";
-        //            return View();
-        //        }
-        //    }
-        //    else
-        //    {
-        //        ViewBag.tb = "Ngày giao không được để trống";
-        //        return View();
-        //    }
-        //}
-        //if (ModelState.IsValid)
-        //{
-        //    // Lưu đơn hàng vào cơ sở dữ liệu
-
-        //    //_context.Orders.Add(order);
-        //    //_context.SaveChanges();
-        //    // Xóa giỏ hàng
-        //    Session["Cart"] = null;
-
-        //    // Chuyển hướng đến trang xác nhận hoặc cảm ơn
-        //    return RedirectToAction("OrderConfirmation");
-        //}
-
-        //return View("ConfirmOrder", order);
-
-
-        // Hiển thị trang xác nhận đơn hàng
-        public ActionResult OrderConfirmation()
+        [HttpPost]
+        public ActionResult PlaceOrder(FormCollection col)
         {
-            return View();
+            KhachHang kh = Session["Khachhang"] as KhachHang;
+            ShoppingCart cart = GetCart();
+            var giohang = cart.GetItems();
+            if (!string.IsNullOrEmpty(col["txtDate"]))
+            {
+                DateTime ngaygiao;
+                if (DateTime.TryParse(col["txtDate"], out ngaygiao))
+                {
+                    if (!string.IsNullOrEmpty(col["txtDatePay"]))
+                    {
+                        DateTime ngaythanhtoan;
+                        if (DateTime.TryParse(col["txtDatePay"], out ngaythanhtoan))
+                        {
+                            DonBanHang hd = new DonBanHang();
+                            hd.MaKH = kh.MaKH;
+                            hd.NgayDat = DateTime.Now;
+                            hd.NgayGiao = ngaygiao;
+                            hd.NgayThanhToan = ngaythanhtoan;
+                            hd.MaDonBanHang = indexMaDBH();
+                            data.DonBanHangs.InsertOnSubmit(hd);
+                            data.SubmitChanges();
+
+                            foreach (var item in giohang)
+                            {
+                                ChiTietDonBanHang ct = new ChiTietDonBanHang();
+                                ct.MaDonBanHang = hd.MaDonBanHang;
+                                ct.MaHH = item.MaHH;
+                                ct.SoLuong = item.SoLuongTon;
+                                ct.DonGia = double.Parse(item.GiaBan.ToString());
+                                data.ChiTietDonBanHangs.InsertOnSubmit(ct);
+                            }
+                            data.SubmitChanges();
+                            giohang.Clear();
+                            ViewBag.p1 = "OrderConfirmation";
+                            ViewBag.p = "Thank You for Your Order!";
+                            ViewBag.tb = "Your order has been placed successfully. We will process it shortly.";
+                            return View();
+                        }
+                        else
+                        {
+                            ViewBag.tb = "Ngày thanh toán không hợp lệ";
+                            return View();
+                        }
+                    }
+                    else
+                    {
+                        ViewBag.tb = "Ngày thanh toán không được để trống";
+                        return View();
+                    }
+                }
+                else
+                {
+                    ViewBag.tb = "Ngày giao không hợp lệ";
+                    return View();
+                }
+            }
+            else
+            {
+                ViewBag.tb = "Ngày giao không được để trống";
+                return View();
+            }
         }
+        
+    
+
+    // Hiển thị trang xác nhận đơn hàng
+        
         [HttpGet]
         public ActionResult DangNhap()
         {
@@ -352,7 +382,15 @@ namespace WEB_BMS.Controllers
         [HttpPost]
         public ActionResult DangKyXLThem(KhachHang kh)
         {
-            // Retrieve the latest customer ID
+            // Assign the new ID to the customer's MaKH
+            kh.MaKH = indexMaKH();
+            data.KhachHangs.InsertOnSubmit(kh);
+            data.SubmitChanges();
+            Session["khachhang"] = kh;
+            return RedirectToAction("Index", "Home");
+        }
+        public string indexMaKH()
+        {
             var lastCustomer = data.KhachHangs.OrderByDescending(k => k.MaKH).FirstOrDefault();
 
             // Initialize new ID
@@ -375,13 +413,7 @@ namespace WEB_BMS.Controllers
                 // Default to KH01 if there are no existing customers
                 newCustomerId = "KH001";
             }
-
-            // Assign the new ID to the customer's MaKH
-            kh.MaKH = newCustomerId;
-            data.KhachHangs.InsertOnSubmit(kh);
-            data.SubmitChanges();
-            Session["khachhang"] = kh;
-            return RedirectToAction("Index", "Home");
+            return newCustomerId;
         }
     }
     
