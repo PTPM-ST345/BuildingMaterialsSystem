@@ -45,15 +45,6 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 213);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(558, 216);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // maManHinhLabel
             // 
             maManHinhLabel.AutoSize = true;
@@ -64,14 +55,6 @@
             maManHinhLabel.TabIndex = 6;
             maManHinhLabel.Text = "Ma Man Hinh:";
             // 
-            // maManHinhTextBox
-            // 
-            this.maManHinhTextBox.Location = new System.Drawing.Point(219, 100);
-            this.maManHinhTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.maManHinhTextBox.Name = "maManHinhTextBox";
-            this.maManHinhTextBox.Size = new System.Drawing.Size(291, 22);
-            this.maManHinhTextBox.TabIndex = 7;
-            // 
             // tenManHinhLabel
             // 
             tenManHinhLabel.AutoSize = true;
@@ -81,6 +64,23 @@
             tenManHinhLabel.Size = new System.Drawing.Size(101, 17);
             tenManHinhLabel.TabIndex = 8;
             tenManHinhLabel.Text = "Ten Man Hinh:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(32, 213);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(558, 216);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // maManHinhTextBox
+            // 
+            this.maManHinhTextBox.Location = new System.Drawing.Point(219, 100);
+            this.maManHinhTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.maManHinhTextBox.Name = "maManHinhTextBox";
+            this.maManHinhTextBox.Size = new System.Drawing.Size(291, 22);
+            this.maManHinhTextBox.TabIndex = 7;
             // 
             // tenManHinhTextBox
             // 
@@ -107,6 +107,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button2.Image = global::GUI.Properties.Resources.save;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(21, 331);
             this.button2.Name = "button2";
@@ -118,6 +119,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button3.Image = global::GUI.Properties.Resources.fix;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(26, 146);
             this.button3.Name = "button3";
@@ -129,6 +131,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button4.Image = global::GUI.Properties.Resources.remove;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(26, 88);
             this.button4.Name = "button4";
@@ -140,6 +143,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button5.Image = global::GUI.Properties.Resources.refresh;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(21, 266);
             this.button5.Name = "button5";
@@ -151,6 +155,7 @@
             // button13
             // 
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button13.Image = global::GUI.Properties.Resources.add;
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.Location = new System.Drawing.Point(26, 21);
             this.button13.Name = "button13";

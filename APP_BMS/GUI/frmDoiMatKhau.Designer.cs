@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl_manv = new System.Windows.Forms.Label();
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.txt_retypepass = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbl_manv = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,8 +62,19 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
+            // lbl_manv
+            // 
+            this.lbl_manv.AutoSize = true;
+            this.lbl_manv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_manv.Location = new System.Drawing.Point(271, 102);
+            this.lbl_manv.Name = "lbl_manv";
+            this.lbl_manv.Size = new System.Drawing.Size(71, 25);
+            this.lbl_manv.TabIndex = 21;
+            this.lbl_manv.Text = "MANV";
+            // 
             // btn_logout
             // 
+            this.btn_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_logout.Location = new System.Drawing.Point(392, 334);
@@ -71,12 +82,13 @@
             this.btn_logout.Size = new System.Drawing.Size(153, 51);
             this.btn_logout.TabIndex = 16;
             this.btn_logout.Text = "Hủy";
-            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.UseVisualStyleBackColor = false;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // btn_save
             // 
             this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_save.Image = global::GUI.Properties.Resources.save;
             this.btn_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_save.Location = new System.Drawing.Point(102, 333);
             this.btn_save.Name = "btn_save";
@@ -157,16 +169,6 @@
             this.label1.Size = new System.Drawing.Size(320, 38);
             this.label1.TabIndex = 10;
             this.label1.Text = "Cập Nhật Mật Khẩu";
-            // 
-            // lbl_manv
-            // 
-            this.lbl_manv.AutoSize = true;
-            this.lbl_manv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_manv.Location = new System.Drawing.Point(271, 102);
-            this.lbl_manv.Name = "lbl_manv";
-            this.lbl_manv.Size = new System.Drawing.Size(71, 25);
-            this.lbl_manv.TabIndex = 21;
-            this.lbl_manv.Text = "MANV";
             // 
             // frmDoiMatKhau
             // 

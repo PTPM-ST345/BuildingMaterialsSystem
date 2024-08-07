@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmDSNhaCungCap : Form
+    public partial class frmHoTro : Form
     {
-        public frmDSNhaCungCap()
+        public frmHoTro()
         {
             InitializeComponent();
         }

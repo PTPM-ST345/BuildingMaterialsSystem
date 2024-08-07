@@ -242,11 +242,14 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Location = new System.Drawing.Point(689, 460);
+            this.button1.Image = global::GUI.Properties.Resources.key_chain;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(644, 460);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 65);
+            this.button1.Size = new System.Drawing.Size(199, 65);
             this.button1.TabIndex = 18;
             this.button1.Text = "Đổi Mật Khẩu";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

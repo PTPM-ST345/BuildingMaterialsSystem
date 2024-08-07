@@ -126,17 +126,11 @@
     <Compile Include="frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDSLoaiHang.cs">
+    <Compile Include="frmHoTro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDSLoaiHang.Designer.cs">
-      <DependentUpon>frmDSLoaiHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDSNhaCungCap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDSNhaCungCap.Designer.cs">
-      <DependentUpon>frmDSNhaCungCap.cs</DependentUpon>
+    <Compile Include="frmHoTro.Designer.cs">
+      <DependentUpon>frmHoTro.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNhapHang.cs">
       <SubType>Form</SubType>
@@ -242,11 +236,8 @@
     <EmbeddedResource Include="frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDSLoaiHang.resx">
-      <DependentUpon>frmDSLoaiHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDSNhaCungCap.resx">
-      <DependentUpon>frmDSNhaCungCap.cs</DependentUpon>
+    <EmbeddedResource Include="frmHoTro.resx">
+      <DependentUpon>frmHoTro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhapHang.resx">
       <DependentUpon>frmNhapHang.cs</DependentUpon>

@@ -37,6 +37,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtTK = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -58,8 +60,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTK = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSKH)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -84,7 +84,7 @@
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Location = new System.Drawing.Point(1074, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(196, 345);
+            this.groupBox2.Size = new System.Drawing.Size(196, 378);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức Năng";
@@ -93,8 +93,9 @@
             // 
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button11.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button11.Image = global::GUI.Properties.Resources.refresh;
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(36, 206);
+            this.button11.Location = new System.Drawing.Point(36, 247);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(133, 52);
             this.button11.TabIndex = 5;
@@ -105,8 +106,9 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button5.Image = global::GUI.Properties.Resources.save;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(36, 268);
+            this.button5.Location = new System.Drawing.Point(36, 309);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(133, 52);
             this.button5.TabIndex = 4;
@@ -117,6 +119,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button4.Image = global::GUI.Properties.Resources.fix;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(36, 148);
             this.button4.Name = "button4";
@@ -129,6 +132,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button3.Image = global::GUI.Properties.Resources.remove;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(36, 90);
             this.button3.Name = "button3";
@@ -141,6 +145,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.Image = global::GUI.Properties.Resources.add;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(36, 23);
             this.button1.Name = "button1";
@@ -190,6 +195,23 @@
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cập Nhật Nhân Viên";
+            // 
+            // txtTK
+            // 
+            this.txtTK.Location = new System.Drawing.Point(649, 152);
+            this.txtTK.Name = "txtTK";
+            this.txtTK.Size = new System.Drawing.Size(283, 22);
+            this.txtTK.TabIndex = 32;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label11.Location = new System.Drawing.Point(505, 154);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(82, 18);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Tài khoản";
             // 
             // label9
             // 
@@ -379,23 +401,6 @@
             this.label1.Size = new System.Drawing.Size(427, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông Tin Khách Hàng";
-            // 
-            // txtTK
-            // 
-            this.txtTK.Location = new System.Drawing.Point(649, 152);
-            this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(283, 22);
-            this.txtTK.TabIndex = 32;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label11.Location = new System.Drawing.Point(505, 154);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 18);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "Tài khoản";
             // 
             // frmThongTinKhachHang
             // 

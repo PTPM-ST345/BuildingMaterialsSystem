@@ -32,7 +32,9 @@ namespace GUI
             dataGridView1.CellClick += dataGridView1_CellClick;
             textBox3.KeyPress += textBox3_KeyPress;
             textBox7.KeyPress += textBox7_KeyPress;
+            
         }
+
 
         void textBox7_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -194,8 +196,19 @@ namespace GUI
                 return;
             }
 
-            bool isSuccessful = false;
+           
 
+            int soLuongNhap = Convert.ToInt32(textBox3.Text);
+            string maHangHoa = comboBox1.SelectedValue.ToString();
+            int? soLuongTon = xl.GetSoLuongTon(maHangHoa);
+
+            if (soLuongTon.HasValue && soLuongNhap > soLuongTon.Value)
+            {
+                MessageBox.Show("Số lượng chỉ còn " + soLuongTon.Value + " sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox3.Focus();
+                return;
+            }
+            bool isSuccessful = false;
             if (isAddingNew)
             {
                 if (xl.IsCTDBHDuplicated(textBox1.Text, comboBox1.SelectedValue.ToString()))
