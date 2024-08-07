@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL_BLL;
 using DTO;
+using ClosedXML;
+using ClosedXML.Excel;
 
 namespace GUI
 {
@@ -43,15 +45,46 @@ namespace GUI
 
             ThuatToan tt = new ThuatToan();
             var nhanViens = xl.GetNhanVienByNhom(maNhom);
-
             var schedules = tt.ScheduleTasksForEmployees(nhanViens, batDau, ketThuc);
 
-            dataGridView2.DataSource = schedules.Select(s => new
+            using (var workbook = new XLWorkbook())
             {
-                EmployeeId = s.EmployeeId,
-                Date = s.Date.ToShortDateString() // Hiển thị ngày dưới dạng ngắn
-            }).ToList();
-            MessageBox.Show("Xếp lịch thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var worksheet = workbook.Worksheets.Add("Schedule");
+
+                // Dòng đầu tiên: Ngày
+                int colIndex = 1;
+                for (var date = batDau; date <= ketThuc; date = date.AddDays(1))
+                {
+                    worksheet.Cell(1, colIndex).Value = date.ToShortDateString();
+                    colIndex++;
+                }
+
+                // Dòng thứ hai: Mã nhân viên
+                colIndex = 1;
+                for (var date = batDau; date <= ketThuc; date = date.AddDays(1))
+                {
+                    var schedule = schedules.FirstOrDefault(s => s.Date.Date == date.Date);
+                    if (schedule != null)
+                    {
+                        worksheet.Cell(2, colIndex).Value = schedule.EmployeeId;
+                    }
+                    colIndex++;
+                }
+
+                // Hiển thị hộp thoại lưu tệp
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                {
+                    saveFileDialog.Filter = "Excel Files|*.xlsx";
+                    saveFileDialog.Title = "Save Schedule to Excel";
+                    saveFileDialog.FileName = "Schedule.xlsx";
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        workbook.SaveAs(saveFileDialog.FileName);
+                        MessageBox.Show("File đã được lưu thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
         }
     }
 }

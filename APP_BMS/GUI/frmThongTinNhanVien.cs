@@ -73,7 +73,6 @@ namespace GUI
             dvgDSNhanVien.Columns["MaNV"].HeaderText = "Mã nhân viên";
             dvgDSNhanVien.Columns["TenNV"].HeaderText = "Tên nhân viên";
             dvgDSNhanVien.Columns["SDT"].HeaderText = "Số điện thoại";
-            dvgDSNhanVien.Columns["ChucVu"].HeaderText = "Chức vụ";
             dvgDSNhanVien.Columns["DiaChi"].HeaderText = "Địa chỉ";
             dvgDSNhanVien.Columns["GioiTinh"].HeaderText = "Giới tính";
             dvgDSNhanVien.Columns["NgaySinh"].HeaderText = "Ngày sinh"; 

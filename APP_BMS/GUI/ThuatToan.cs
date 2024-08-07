@@ -89,26 +89,33 @@ namespace GUI
             int soNgay = (ketThuc - batDau).Days + 1;
             var schedules = new List<Schedule>();
 
-            // Tạo lịch trình ban đầu cho từng nhân viên
-            foreach (var nv in nhanViens)
+            if (nhanViens.Count == 0 || soNgay == 0)
             {
-                for (int i = 0; i < soNgay / nhanViens.Count; i++)
-                {
-                    var schedule = new Schedule
-                    {
-                        EmployeeId = nv.MaNV,
-                        Date = batDau.AddDays(new Random().Next(soNgay))
-                    };
-                    schedules.Add(schedule);
-                }
+                // Nếu không có nhân viên hoặc khoảng thời gian không hợp lệ
+                return schedules;
             }
 
-            // Tinh toán lịch trình tối ưu
-            var optimizedSchedules = Optimize(schedules, 1000, 1000, 0.95, batDau, ketThuc);
+            // Tạo danh sách ngày từ batDau đến ketThuc
+            var days = Enumerable.Range(0, soNgay).Select(offset => batDau.AddDays(offset)).ToList();
 
-            // Trả về lịch trình đã sắp xếp
-            return optimizedSchedules;
+            // Phân phối các nhân viên vào các ngày
+            var random = new Random();
+            var dayIndex = 0;
+
+            for (var date = batDau; date <= ketThuc; date = date.AddDays(1))
+            {
+                var nv = nhanViens[dayIndex % nhanViens.Count];
+                schedules.Add(new Schedule
+                {
+                    EmployeeId = nv.MaNV,
+                    Date = date
+                });
+                dayIndex++;
+            }
+
+            return schedules;
         }
+
 
     }
     public class Schedule
