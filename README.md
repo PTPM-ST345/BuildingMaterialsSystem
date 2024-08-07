@@ -45,7 +45,8 @@
 |  5  |  Mua hàng  |  Vũ  |
 |  6 |  Thanh toán |  Vũ  |
 |  7 |  Đánh giá |  Vũ  |
-
+|  8 |  Paging, Sort |  Vũ  |
+|  9 |  Sản Phẩm Tương Tự |  Vũ  |
 
 <p>App: Winform </p>
 <p>Ngôn ngữ: C# </p>
