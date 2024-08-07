@@ -404,6 +404,12 @@ namespace DAL_BLL
             return qlch.HangHoas.Select(hh => hh).ToList<HangHoa>();
         }
 
+        public int? GetSoLuongTon(string maHangHoa)
+        {
+            var hangHoa = qlch.HangHoas.FirstOrDefault(hh => hh.MaHH == maHangHoa);
+            return hangHoa != null ? hangHoa.SoLuongTon : 0;
+        }
+
         public List<HangHoa> TimKiemHangHoa(string keyword, bool timKiemTheoMaHH)
         {
             if (timKiemTheoMaHH)
@@ -767,7 +773,7 @@ namespace DAL_BLL
             qlch.ChiTietDonBanHangs.InsertOnSubmit(ctdnh);
             qlch.SubmitChanges();
 
-            CapNhatSoLuongTrongKho(maHH, LaySoLuongTrongKho(maHH) + soLuong);
+            CapNhatSoLuongTrongKho(maHH, LaySoLuongTrongKho(maHH) - soLuong);
             return true;
         }
 
@@ -786,7 +792,7 @@ namespace DAL_BLL
             ctdnh.DonGia = donGia;
             qlch.SubmitChanges();
 
-            CapNhatSoLuongTrongKho(maHH, LaySoLuongTrongKho(maHH) + chenhLechSoLuong);
+            CapNhatSoLuongTrongKho(maHH, LaySoLuongTrongKho(maHH) - chenhLechSoLuong);
             return true;
         }
 
@@ -797,10 +803,120 @@ namespace DAL_BLL
             return qlch.QL_NhomNguoiDungs.Select(dnh => dnh).ToList<QL_NhomNguoiDung>();
         }
 
+        public void XoaNhomND(string pMaNhom)
+        {
+            QL_NhomNguoiDung loai = qlch.QL_NhomNguoiDungs.Where(l => l.MaNhom == pMaNhom).FirstOrDefault();
+            if (loai != null)
+            {
+                qlch.QL_NhomNguoiDungs.DeleteOnSubmit(loai);
+                qlch.SubmitChanges();
+            }
+        }
+
+        public int DemSoNVTheoMaNhom(string pMaNhom)
+        {
+            return qlch.QL_NguoiDungNhomNguoiDungs.Count(h => h.MaNhomNguoiDung == pMaNhom);
+        }
+
+        public bool IsMaNhomDuplicated(string pMaNhom)
+        {
+            return qlch.QL_NhomNguoiDungs.Any(l => l.MaNhom == pMaNhom);
+        }
+
+        public bool ThemNhomND(string maNhom, string tenNhom, string ghiChu)
+        {
+            if (IsMaNhomDuplicated(maNhom))
+            {
+                return false;
+            }
+
+            QL_NhomNguoiDung loai = new QL_NhomNguoiDung
+            {
+                MaNhom = maNhom,
+                TenNhom = tenNhom,
+                GhiChu = ghiChu,
+            };
+
+            qlch.QL_NhomNguoiDungs.InsertOnSubmit(loai);
+            qlch.SubmitChanges();
+
+            return true;
+        }
+
+        public bool CapNhatNhomND(string maNhom, string tenNhom, string ghiChu)
+        {
+            QL_NhomNguoiDung loai = qlch.QL_NhomNguoiDungs.Where(l => l.MaNhom == maNhom).FirstOrDefault();
+            if (loai == null)
+            {
+                return false;
+            }
+
+            loai.TenNhom = tenNhom;
+            loai.GhiChu = ghiChu;
+
+            qlch.SubmitChanges();
+
+            return true;
+        }
+
 //Man Hinh
         public List<DM_ManHinh> LoadDanhMucManHinh()
         {
             return qlch.DM_ManHinhs.Select(dnh => dnh).ToList<DM_ManHinh>();
+        }
+
+        public void XoaMH(string pMaLoai)
+        {
+            DM_ManHinh loai = qlch.DM_ManHinhs.Where(l => l.MaManHinh == pMaLoai).FirstOrDefault();
+            if (loai != null)
+            {
+                qlch.DM_ManHinhs.DeleteOnSubmit(loai);
+                qlch.SubmitChanges();
+            }
+        }
+
+        public int DemQuyenTheoMaMH(string pMaLoai)
+        {
+            return qlch.QL_PhanQuyens.Count(h => h.MaManHinh == pMaLoai);
+        }
+
+        public bool IsMaMHDuplicated(string maLoai)
+        {
+            return qlch.DM_ManHinhs.Any(l => l.MaManHinh == maLoai);
+        }
+
+        public bool ThemMH(string maLoai, string tenLoai)
+        {
+            if (IsMaMHDuplicated(maLoai))
+            {
+                return false;
+            }
+
+            DM_ManHinh loai = new DM_ManHinh
+            {
+                MaManHinh = maLoai,
+                TenManHinh = tenLoai,
+            };
+
+            qlch.DM_ManHinhs.InsertOnSubmit(loai);
+            qlch.SubmitChanges();
+
+            return true;
+        }
+
+        public bool CapNhatMH(string maLoai, string tenLoai)
+        {
+            DM_ManHinh loai = qlch.DM_ManHinhs.Where(l => l.MaManHinh == maLoai).FirstOrDefault();
+            if (loai == null)
+            {
+                return false;
+            }
+
+            loai.TenManHinh = tenLoai;
+
+            qlch.SubmitChanges();
+
+            return true;
         }
 
 //Nguoi dung nhom nguoi dung

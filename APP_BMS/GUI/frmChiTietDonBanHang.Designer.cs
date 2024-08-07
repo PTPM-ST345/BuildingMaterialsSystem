@@ -297,7 +297,7 @@
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(21, 266);
             this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(136, 52);
             this.button5.TabIndex = 1;
             this.button5.Text = "     Làm Mới";
@@ -312,7 +312,7 @@
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.Location = new System.Drawing.Point(26, 21);
             this.button13.Name = "button13";
-            this.button13.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.button13.Padding = new System.Windows.Forms.Padding(20, 0, 10, 0);
             this.button13.Size = new System.Drawing.Size(131, 52);
             this.button13.TabIndex = 0;
             this.button13.Text = "Thêm";

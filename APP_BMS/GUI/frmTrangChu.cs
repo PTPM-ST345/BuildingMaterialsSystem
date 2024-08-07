@@ -223,31 +223,21 @@ namespace GUI
             formdmmh.Show();
         }
 
-        private void báoCáoNCCToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            panel1.Controls.Clear();
-            panel1.BackgroundImage = null;
-            frmDSNhaCungCap formdsncc = new frmDSNhaCungCap() { TopLevel = false, TopMost = true };
-            formdsncc.FormBorderStyle = FormBorderStyle.None;
-            panel1.Controls.Add(formdsncc);
-            formdsncc.Show();
-        }
-
-        private void báoCáoLaoiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            panel1.Controls.Clear();
-            panel1.BackgroundImage = null;
-            frmDSLoaiHang formlh = new frmDSLoaiHang() { TopLevel = false, TopMost = true };
-            formlh.FormBorderStyle = FormBorderStyle.None;
-            panel1.Controls.Add(formlh);
-            formlh.Show();
-        }
-
         private void xếpLịchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
             panel1.BackgroundImage = null;
             frmXepLichLamViec formlh = new frmXepLichLamViec() { TopLevel = false, TopMost = true };
+            formlh.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(formlh);
+            formlh.Show();
+        }
+
+        private void hỗTrợToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.BackgroundImage = null;
+            frmHoTro formlh = new frmHoTro() { TopLevel = false, TopMost = true };
             formlh.FormBorderStyle = FormBorderStyle.None;
             panel1.Controls.Add(formlh);
             formlh.Show();

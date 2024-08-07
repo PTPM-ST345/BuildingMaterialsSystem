@@ -16,12 +16,6 @@
 	+ Backend: ASP.NET, SQL Server, MVC
 -----------------------------------------------
 
-### Chi tiết
-
-
------------------------------------------------
-# Dự án
-
 ## Hệ thống quản lý vật liệu xây dựng
 
 <h5>Mô tả dự án: Hệ thống quản lý cửa hàng vật liệu xây dụng Ngọc Hà</h5>
@@ -35,7 +29,6 @@
 ### Yêu cầu 
 <p>AI: Xếp Lịch Nhân Viên  </p>
 <p>Chat bot "Nếu có" </p>
-
 <p>Web: MVC ASP, LinQ</p>
 <p>Ngôn ngữ: Javascript, C# </p>
 <p>Framework: Bootstrap</p>
@@ -44,43 +37,44 @@
 
 | STT | Nghiệp vụ | Phân công  |
 |----------------|--------------------|--------------------|
-|  1  |  Tìm kiếm vật liệu xây dựng |     |
-|  2  |  Đăng nhập,đăng ký |    |
-|  3  |  Xem thông tin vật liệu xây dựng [Trang chủ, trang giới thiệu, trang xem sản phẩm VLXD,Xem chi tiết VLXD, bảng Báo Giá, trang tin tức, trang liên hệ]  |   Thi  |
-|  4  |  Quản lý thông tin tài khoản [Thông tin KH, thông tin tài khoản, thông tin đơn hàng đã mua] |  Phát  |
-|  5  |  Mua hàng  |    |
-|  6 |  Thanh toán |    |
-|  7 |  Đánh giá |    |
-|  8 |  Chat bot (Nếu có) |    |
+|  1  |  Tìm kiếm vật liệu xây dựng |  Vũ   |
+|  2  |  Đăng nhập,đăng ký |  Vũ  |
+|  2  |  Đăng ký |  Vũ  |
+|  3  |  Xem thông tin vật liệu xây dựng [Trang chủ, trang giới thiệu, trang xem sản phẩm VLXD,Xem chi tiết VLXD, bảng Báo Giá, trang tin tức, trang liên hệ]  |   Vũ  |
+|  4  |  Quản lý thông tin tài khoản [Thông tin KH, thông tin tài khoản, thông tin đơn hàng đã mua] |  Vũ  |
+|  5  |  Mua hàng  |  Vũ  |
+|  6 |  Thanh toán |  Vũ  |
+|  7 |  Đánh giá |  Vũ  |
+
 
 <p>App: Winform </p>
 <p>Ngôn ngữ: C# </p>
 
 | STT | Nghiệp vụ | Phân công  |
 |----------------|--------------------|--------------------|
-|  1  |  Đăng nhập/đăng xuất |     |
-|  2  |  Phân quyền  |   |
-|  3  |  Quản lý nhân viên +  chức vụ  |     |
-|  4  |  Quản lý sản phẩm  + nhà sản xuất + AI (Xếp lịch)|     |
-|  5  |  Quản lý khách hàng |    |
-|  6  |  Quản lý Kho hàng |    |
-|  7  |  Quản lý Hóa Đơn |    |
-|  8  |   Thống kê |    |
-|  0  |   Báo cáo |    |
-
+|  1  |  Đăng nhập/đăng xuất |   Quân  |
+|  2  |  Phân quyền  |  Quân |
+|  3  |  Quản lý nhân viên +  chức vụ  |  Quân   |
+|  4  |  Quản lý sản phẩm  + nhà sản xuất + AI (Xếp lịch)|   Quân  |
+|  5  |  Quản lý khách hàng |  Quân  |
+|  6  |  Quản lý Kho hàng |  Quân  |
+|  7  |  Quản lý Hóa Đơn |  Quân  |
+|  8  |   Thống kê |  Quân  |
+|  9  |   Báo cáo |  Quân  |
+|  10 |  Đổi mật khẩu |  Quân  |
 
 ## Chức năng
 #### WEBSITE
-<p>Tìm kiếm và hiện thị thông tin sách:</p>
+<p>Tìm kiếm và hiện thị thông tin hàng hóa</p>
 <ul>
-  <li>Tìm kiếm sách theo tên, tác giả, thể loại, từ khóa, v.v.</li>
-  <li>Hiển thị thông tin chi tiết của mỗi cuốn sách, bao gồm mô tả, tác giả, đánh giá, v.v.</li>
+  <li>Tìm kiếm sách theo tên,loại, từ khóa, v.v.</li>
+  <li>Hiển thị thông tin chi tiết của mỗi sản phẩm, bao gồm mô tả, tác giả, đánh giá, v.v.</li>
 </ul>
 <p>
-  Giỏ hàng, Mua sách và thanh toán:
+  Giỏ hàng, Mua hàng và thanh toán:
 </p>
 <ul>
-  <li>Thêm sách vào giỏ hàng </li>
+  <li>Thêm hàng vào giỏ hàng </li>
   <li>Xem lại giỏ hàng trước khi tiến hành thanh toán</li>
    <li>Hỗ trợ nhiều phương thức thanh toán an toàn như ví điện tử, v.v.</li>
 	<li>Hiển thị thông tin chi tiết của giỏ hàng và tổng số tiền.</li>
@@ -93,63 +87,79 @@
     Đăng ký và đăng nhập tài khoản cho người dùng.
   </li>
   <li>Quản lý thông tin cá nhân, mật khẩu</li>
-  <li>Hiển thị danh sách các cuốn sách mà người dùng đã mua hoặc tải về.</li>
+  <li>Hiển thị danh sách các sản phẩm mà người dùng đã mua hoặc tải về.</li>
 <li>Đơn hàng của người dùng</li>
-<li>Hiện thị sách yêu thích</li>
 <li>Thông tin tài khoản</li>
  <li>Đổi mật khẩuh</li>
 <li>Thông tin khách hàng</li>
-<li>Người dùng có thể đánh giá và viết nhận xét về các cuốn sách.</li>
+<li>Người dùng có thể đánh giá và viết nhận xét về các sản phẩm.</li>
 </ul>
 
 #### APP
 
 <p>
-Quản lý sách
+Quản lý hàng hóa
 </p>
 <ul>
-<li>Thêm và cập nhật sách</li>
-<li>Tra cứu thông tin sách</li>
+<li>Thêm, xóa và cập nhật hàng hóa</li>
+<li>Tra cứu thông tin hàng hóa</li>
 </ul>
 <p>
-Quản lý thể loại và nhà xuất bản
+Quản lý loại hàng
 </p>
 <ul>
-<li>Thêm và cập nhật </li>
+<li>Thêm, xóa và cập nhật loại hàng </li>
+<li>Tra cứu thông tin loại hàng</li>	
+</ul>
+<p>
+Quản lý nhà cung cấp
+</p>
+<ul>
+<li>Thêm, xóa và cập nhật nhà cung cấp</li>
+<li>Tra cứu thông tin nhà cung cấp</li>
 </ul>
 <p>
 Quản lý khách hàng
 </p>
 <ul>
-<li>Thêm và cập nhật </li>
+<li>Thêm, xóa và cập nhật khách hàng </li>
 <li>Tra cứu thông tin khách hàng</li>
-</ul>
-<p>
-Quản lý tin tức
-</p>
-<ul>
-<li>Thêm và cập nhật </li>
-<li>Duyệt tin tức </li>
 </ul>
 <p>
 Quản lý nhân viên và chức vụ
 </p>
 <ul>
-<li>Thêm và cập nhật </li>
+<li>Thêm,xóa và cập nhật </li>
 <li> Phân quyền nhân viên tùy theo chức vụ</li>
 <li> Tra cứu thông tin của nhân viên </li></li>
+</ul>
+<p>
+Quản lý đơn nhập hàng và chi tiết đơn nhập hàng
+</p>
+<ul>
+<li>Thêm,xóa và cập nhật </li>
+</ul>
+<p>
+Quản lý đơn bán hàng và chi tiết đơn bán hàng
+</p>
+<ul>
+<li>Thêm,xóa và cập nhật </li>
+</ul>
+<p>
+Xếp lịch 
+</p>
+<ul>
+<li>Xếp lịch làm việc cho nhân viên theo nhóm </li>
 </ul>
 <p>
 Báo cáo
 </p>
 <ul>
-<li>Sách được mau nhiều nhất trong tháng </li>
-<li> Sách đuợc Thêm vào yêu thích nhiều nhất</li></li>
+<li>Báo cáo số lượng hàng hóa ra file excel</li>
 </ul>
 <p>
 Thống kê</p>
 <ul>
-<li>Doanh thu </li>
-<li> Đơn hàng theo ngày theo tháng, theo năm</li></li>
+<li>Thống kê số lượng hàng hóa ra biểu đồ và xuất ra excel</li>
 </ul>
 

@@ -89,11 +89,14 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(101, 226);
+            this.button1.Image = global::GUI.Properties.Resources.notes__1_1;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(82, 228);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 52);
+            this.button1.Size = new System.Drawing.Size(134, 52);
             this.button1.TabIndex = 6;
             this.button1.Text = "Xếp lịch";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
