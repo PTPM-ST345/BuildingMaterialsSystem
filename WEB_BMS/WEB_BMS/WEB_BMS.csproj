@@ -533,6 +533,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CardItems.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\QuanLyVatLieuXayDung.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -563,6 +565,11 @@
     <Content Include="Views\Home\Table_Price.cshtml" />
     <Content Include="Views\Home\Product_Index.cshtml" />
     <Content Include="Views\Home\Product.cshtml" />
+    <Content Include="Views\Home\XemGioHang.cshtml" />
+    <Content Include="Views\Home\XacNhanThongTin.cshtml" />
+    <Content Include="Views\Home\OrderConfirmation.cshtml" />
+    <Content Include="Views\Home\DangNhap.cshtml" />
+    <Content Include="Views\Home\DangKy.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

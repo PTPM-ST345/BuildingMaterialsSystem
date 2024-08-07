@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "XemGioHang";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+@using WEB_BMS.Models;
+@model ShoppingCart
+
+<form method="post" action="@Url.Action("UpdateCart", "Home")">
+
+    <table class="table container">
+        <thead>
+            <tr>
+                <th>Mã Hàng Hóa</th>
+                <th>Tên Hàng Hóa</th>
+                <th>Hình Ảnh</th>
+                <th>Số Lượng </th>
+                <th>Giá</th>
+                <th>Tổng Tiền</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>@item.MaHH</td>
+                    <td>@item.TenHangHoa</td>
+                    <td><img src="~/assets/img/img_product/@item.HinhAnh"/></td>
+                    <td>
+                        <input type="number" name="quantity" value="@item.SoLuongTon" min="1" />
+                        <input type="hidden" name="productId" value="@item.MaHH" />
+                    </td>
+                    <td>@item.GiaBan.ToString("C")</td>
+                    <td>@item.Total.ToString("C")</td>
+                    <td>
+                        @Html.ActionLink("Remove", "RemoveFromCart", new { productId = item.MaHH })
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-primary btn-sm">Update</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total</td>
+                <td>@Model.GetTotal().ToString("C")</td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+    <td colspan="2"><a class="btn btn-success" href="~/Home/XacNhanThongTin">Đặt hàng</a></td>
+</form>
+

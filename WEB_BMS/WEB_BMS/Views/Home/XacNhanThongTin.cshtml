@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "XacNhanThongTin";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    List<CardItems> g = ViewBag.g;
+}
+@using WEB_BMS.Models;
+<h2 class="text-center">Xác Nhận Thông Tin</h2>
+
+@model KhachHang
+
+<form action="/Home/PlaceOrder" method="post">
+
+    <table class="table-info table border border-secondary" border="1" style="padding:10px">
+        <tr>
+            <td><p>Tên: @Model.HoTen</p></td>
+            <td><p>Địa chỉ: @Model.DiaChi</p></td>
+        </tr>
+        <tr>
+            <td><p>Số điện thoại: @Model.DienThoai</p></td>
+            <td><p>Ngày đặt : @DateTime.Now.ToShortDateString()</p></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="text-center"><p>Ngày hẹn giao <input type="date" name="txtDate" /></p></td>
+        </tr>
+    </table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Mã sản phẩm</th>
+                <th>Tên sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+            </tr>
+        </thead>
+        @foreach (var item in g)
+        {
+            <tr>
+                <td>@item.MaHH</td>
+                <td>@item.TenHangHoa</td>
+                <td>@item.SoLuongTon</td>
+                <td>@String.Format("{0:#,##}", @item.GiaBan)</td>
+            </tr>
+        }
+    </table>
+    <div class="text-center">
+        <input class="btn btn-success text-center" type="submit" value="Xác nhận" />
+
+    </div>
+</form>

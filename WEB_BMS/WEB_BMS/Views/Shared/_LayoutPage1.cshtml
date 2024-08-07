@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using WEB_BMS.Models;
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -43,7 +44,25 @@
         <span> Cửa hàng: 833-835 Hưng Phú, Phường 9, Quận 8 , Hồ Chí Minh </span>
 
     </div>
+    @{
+        if (Session["Khachhang"] == null)
+        {
+            <a href="/Home/DangNhap" class="cart-a">Đăng nhập</a>
+        }
+        if (Session["Khachhang"] != null)
+        {
+            var kh = Session["Khachhang"] as KhachHang;
+           
+                <span class="nav-link uppercase">Xin chào, @kh.HoTen</span>
+                <a class=" cart-a" href="/Home/DangXuat">Đăng xuất</a>
+           
+
+        }
+    }
+    <a class="cart-a" href="/Home/XemGioHang"><i class="ti-shopping-cart"></i>Giỏ Hàng </a>
+
 </div>
+
 <div id="header">
     <!-- start nav  -->
     <div style="display: flex; justify-content: center">

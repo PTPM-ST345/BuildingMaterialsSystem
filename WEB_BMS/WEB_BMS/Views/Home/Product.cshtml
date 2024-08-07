@@ -12,19 +12,18 @@
     </div>
 
     <div class="right-body">
-        @if (Model != null)
-        {
+        
 
             <h3 class="uppercase">@Model.TenHangHoa</h3>
             <div class="is-divider small"></div>
             <h4 class="uppercase">@String.Format("{0:N0}", Model.GiaBan) VND</h4>
             <br />
-            <a href="" class="dat-hang">Đặt hàng ngay !</a>
+            <a href="@Url.Action("AddToCart", "Home", new { productId = Model.MaHH })" class="dat-hang">Đặt hàng ngay !</a>
             <br />
             <br />
             <p>Đơn vị:  <a href="#">@Model.DonVi</a></p>
             <p>Tồn kho:  <a href="#">@Model.SoLuongTon/ @Model.DonVi</a></p>
-
+            
             <div class="icon">
                 <a href="#"><img src="~/assets/img/icon-media/facebook.svg"></a>
                 <a href="#"><img src="~/assets/img/icon-media/instagram.svg"></a>
@@ -32,7 +31,7 @@
                 <a href="#"><img src="~/assets/img/icon-media/email.svg"></a>
             </div>
 
-        }
+        
     </div>
     
 
@@ -92,14 +91,16 @@
       <div class="product-same" style="width:60%" >
           <h5 class="uppercase">Sản Phẩm Tương Tự</h5>
           <div class="is-divider small"></div>
-          <div style="display:flex">
+          <div style="display:flex" class="container">
+
               @foreach (var s in ViewBag.lstHH as IEnumerable<WEB_BMS.Models.HangHoa>)
               {
                   if (s.MaLoai == Model.MaLoai)
                   {
+
                       <div class="col-md-4 mb-3">
                           <!-- 4 columns per row (1/3 of the width) -->
-                          <div class="card" style="border: none; background-color: rgb(250, 250, 250);">
+                          <div class="card" style="border: none; background-color: rgb(250, 250, 250); padding:0px 10px 0px 10px">
                               <a href="~/Home/Product/@s.MaHH">
                                   <img style="width: 100%; height: 125px; object-fit: cover;" src="~/assets/img/img_product/@s.HinhAnh" class="card-img-top" alt="">
                               </a>
