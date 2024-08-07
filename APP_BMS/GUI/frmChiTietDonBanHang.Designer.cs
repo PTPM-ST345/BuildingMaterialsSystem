@@ -47,11 +47,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button13 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -64,10 +64,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(53, 426);
+            this.dataGridView1.Location = new System.Drawing.Point(53, 362);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(863, 164);
+            this.dataGridView1.Size = new System.Drawing.Size(863, 220);
             this.dataGridView1.TabIndex = 38;
             // 
             // label1
@@ -84,15 +84,15 @@
             // textBox5
             // 
             this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(232, 79);
+            this.textBox5.Location = new System.Drawing.Point(224, 79);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(216, 22);
+            this.textBox5.Size = new System.Drawing.Size(201, 22);
             this.textBox5.TabIndex = 20;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(583, 42);
+            this.dateTimePicker1.Location = new System.Drawing.Point(571, 44);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(237, 22);
             this.dateTimePicker1.TabIndex = 19;
@@ -111,7 +111,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(485, 46);
+            this.label7.Location = new System.Drawing.Point(466, 47);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 18);
             this.label7.TabIndex = 17;
@@ -120,9 +120,9 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(232, 46);
+            this.textBox1.Location = new System.Drawing.Point(224, 46);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 22);
+            this.textBox1.Size = new System.Drawing.Size(201, 22);
             this.textBox1.TabIndex = 15;
             // 
             // label2
@@ -145,10 +145,10 @@
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Location = new System.Drawing.Point(17, 72);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(840, 155);
+            this.groupBox3.Size = new System.Drawing.Size(840, 131);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Cập Nhật Chi Tiết Hóa Đơn Nhập";
+            this.groupBox3.Text = "Chi Tiết Hóa Đơn Bán";
             // 
             // groupBox4
             // 
@@ -158,7 +158,7 @@
             this.groupBox4.Controls.Add(this.textBox3);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Location = new System.Drawing.Point(17, 260);
+            this.groupBox4.Location = new System.Drawing.Point(17, 209);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(840, 128);
             this.groupBox4.TabIndex = 36;
@@ -174,7 +174,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(597, 35);
+            this.textBox7.Location = new System.Drawing.Point(571, 35);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(201, 22);
             this.textBox7.TabIndex = 20;
@@ -223,61 +223,13 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(53, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(863, 401);
+            this.groupBox1.Size = new System.Drawing.Size(863, 351);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(21, 331);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 52);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Lưu";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(26, 146);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 52);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Sửa";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(26, 88);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(131, 52);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Xóa";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(21, 266);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(136, 52);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "     Làm Mới";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox2
             // 
@@ -293,15 +245,78 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức Năng";
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button2.Image = global::GUI.Properties.Resources.save;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(21, 331);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.button2.Size = new System.Drawing.Size(131, 52);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Lưu";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button3.Image = global::GUI.Properties.Resources.fix;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(26, 146);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.button3.Size = new System.Drawing.Size(131, 52);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Sửa";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button4.Image = global::GUI.Properties.Resources.remove;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(26, 88);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.button4.Size = new System.Drawing.Size(131, 52);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Xóa";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button5.Image = global::GUI.Properties.Resources.refresh;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(21, 266);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(136, 52);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "     Làm Mới";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button13
             // 
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button13.Image = global::GUI.Properties.Resources.add;
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.Location = new System.Drawing.Point(26, 21);
             this.button13.Name = "button13";
+            this.button13.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.button13.Size = new System.Drawing.Size(131, 52);
             this.button13.TabIndex = 0;
             this.button13.Text = "Thêm";
+            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 

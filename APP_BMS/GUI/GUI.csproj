@@ -295,6 +295,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -309,6 +310,37 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Icon\add.png" />
+    <None Include="Resources\Icon\help.png" />
+    <None Include="Resources\Icon\addnd.png" />
+    <Content Include="Resources\Icon\baocaokho.png" />
+    <Content Include="Resources\Icon\company.png" />
+    <Content Include="Resources\Icon\customers.png" />
+    <Content Include="Resources\Icon\export.png" />
+    <Content Include="Resources\Icon\fix.png" />
+    <Content Include="Resources\Icon\hanghoa.png" />
+    <Content Include="Resources\Icon\home-button.png" />
+    <Content Include="Resources\Icon\import.png" />
+    <Content Include="Resources\Icon\key-chain.png" />
+    <Content Include="Resources\Icon\kho.png" />
+    <Content Include="Resources\Icon\loaihang.png" />
+    <Content Include="Resources\Icon\logout.png" />
+    <Content Include="Resources\Icon\notes %281%29.png" />
+    <Content Include="Resources\Icon\notes.png" />
+    <Content Include="Resources\Icon\power-on.png" />
+    <None Include="Resources\Icon\pquyen.png" />
+    <Content Include="Resources\Icon\printer.png" />
+    <Content Include="Resources\Icon\refresh.png" />
+    <Content Include="Resources\Icon\remove.png" />
+    <Content Include="Resources\Icon\reset-password.png" />
+    <Content Include="Resources\Icon\save.png" />
+    <None Include="Resources\Icon\screen1.png" />
+    <Content Include="Resources\Icon\sticky-note.png" />
+    <Content Include="Resources\Icon\team.png" />
+    <Content Include="Resources\Icon\user.png" />
+    <Content Include="Resources\Img\trangchu.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

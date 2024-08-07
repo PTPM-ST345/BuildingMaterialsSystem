@@ -64,6 +64,7 @@ namespace GUI
         private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
+            panel1.Controls.Add(pictureBox1);
         }
 
         private void thôngTinTảiKhoánToolStripMenuItem_Click(object sender, EventArgs e)
