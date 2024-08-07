@@ -865,6 +865,60 @@ namespace DAL_BLL
             return qlch.DM_ManHinhs.Select(dnh => dnh).ToList<DM_ManHinh>();
         }
 
+        public void XoaMH(string pMaLoai)
+        {
+            DM_ManHinh loai = qlch.DM_ManHinhs.Where(l => l.MaManHinh == pMaLoai).FirstOrDefault();
+            if (loai != null)
+            {
+                qlch.DM_ManHinhs.DeleteOnSubmit(loai);
+                qlch.SubmitChanges();
+            }
+        }
+
+        public int DemQuyenTheoMaMH(string pMaLoai)
+        {
+            return qlch.QL_PhanQuyens.Count(h => h.MaManHinh == pMaLoai);
+        }
+
+        public bool IsMaMHDuplicated(string maLoai)
+        {
+            return qlch.DM_ManHinhs.Any(l => l.MaManHinh == maLoai);
+        }
+
+        public bool ThemMH(string maLoai, string tenLoai)
+        {
+            if (IsMaMHDuplicated(maLoai))
+            {
+                return false;
+            }
+
+            DM_ManHinh loai = new DM_ManHinh
+            {
+                MaManHinh = maLoai,
+                TenManHinh = tenLoai,
+            };
+
+            qlch.DM_ManHinhs.InsertOnSubmit(loai);
+            qlch.SubmitChanges();
+
+            return true;
+        }
+
+        public bool CapNhatMH(string maLoai, string tenLoai)
+        {
+            DM_ManHinh loai = qlch.DM_ManHinhs.Where(l => l.MaManHinh == maLoai).FirstOrDefault();
+            if (loai == null)
+            {
+                return false;
+            }
+
+            loai.TenManHinh = tenLoai;
+
+            qlch.SubmitChanges();
+
+            return true;
+        }
+
 //Nguoi dung nhom nguoi dung
         public List<QL_NguoiDungNhomNguoiDung> LoadNDNhomND()
         {

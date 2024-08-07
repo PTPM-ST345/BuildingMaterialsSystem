@@ -79,11 +79,11 @@ namespace GUI
             if (count > 0)
             {
                 // Mã hàng hóa đang tồn tại trong Kho
-                MessageBox.Show("Đang có hàng hóa thuộc loại hàng này. Không thể xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Đang có nguoi dung thuộc nhóm này. Không thể xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin của loại hàng là " + tenLoai + " không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin của nhóm là " + tenLoai + " không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
