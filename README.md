@@ -7,9 +7,13 @@
 |  2  |  Phạm Nguyên Vũ  |   Thành viên  |
 
 -----------------------------------------------
-### Sử dụng 
+### Công nghệ sử dụng 
  - .Net Framework version 4.8
  - Visual studio 2013,2022
+ - Application: Winform C#, SQL Server
+ - Web:
+  	+ Frontend: HTML, CSS, JavaScript
+	+ Backend: ASP.NET, SQL Server, MVC
 -----------------------------------------------
 
 ### Chi tiết
@@ -20,7 +24,7 @@
 
 ## Hệ thống quản lý vật liệu xây dựng
 
-<h5>Mô tả dự án: Ngọc Hà</h5>
+<h5>Mô tả dự án: Hệ thống quản lý cửa hàng vật liệu xây dụng Ngọc Hà</h5>
 <p>Ngọc Hà là một hệ thống ứng dụng đa nền tảng cho phép người dùng mua vật liệu xây dựng. Hệ thống này sẽ mở ra  khả năng mua vật liệu xây dựng trực tuyến qua giao diện web, đồng thời cung cấp một ứng dụng tiện lợi để quản lý vật liệu xây dựng một cách hiệu quả.</p>
 
 <p>Được truy cập thông qua mạng online, người dùng sẽ có cơ hội trải nghiệm đặt hàng, xem thông tin trên một giao diện với đầy đủ chức năng website. Không còn cần phải ra cửa hàng một cách thủ công như trước đây, không gian sách điện tử sẽ tiết kiệm không gian và mang đến trải nghiệm linh hoạt hơn bao giờ hết. </p>
@@ -66,7 +70,7 @@
 
 
 ## Chức năng
-#### WEDSITE
+#### WEBSITE
 <p>Tìm kiếm và hiện thị thông tin sách:</p>
 <ul>
   <li>Tìm kiếm sách theo tên, tác giả, thể loại, từ khóa, v.v.</li>
