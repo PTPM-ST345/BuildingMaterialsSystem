@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
 using WEB_BMS.Models;
 
 namespace WEB_BMS.Controllers
@@ -23,6 +28,99 @@ namespace WEB_BMS.Controllers
         {
             return View();
         }
+
+        public async Task<ActionResult> Product(string id)
+        {
+            // Danh Gia
+            IFirebaseClient client = CreateFirebaseClient();
+
+            // Fetch existing reviews from Firebase
+            List<DanhGia> dsdanhgia = await GetThongTinKhoa("DanhGia");
+
+            // Create a model to hold reviews and form data
+            var model = new DanhGia
+            {
+                Reviews = dsdanhgia
+            };
+
+            // Pass the model to the view
+            ViewBag.Reviews = model;
+
+            // Hang Hoa
+            HangHoa hh = data.HangHoas.SingleOrDefault(n => n.MaHH == id);
+            var currentProduct = data.HangHoas.SingleOrDefault(p => p.MaHH == id);
+
+            if (currentProduct == null)
+            {
+                return HttpNotFound();
+            }
+
+            // Retrieve similar products excluding the current one
+            var similarProducts = data.HangHoas.Where(p => p.MaHH != id).ToList();
+
+            // Pass both the current product and the list of similar products to the view
+            ViewBag.lstHH = similarProducts;
+            return View(hh);
+        }
+        // POST: DanhGia
+        [HttpPost]
+        public async Task<ActionResult> Product(string id, FormCollection col)
+        {
+            string ten = col["HoTen"];
+            string bl = col["BinhLuan"];
+            // Initialize Firebase client
+            IFirebaseClient client = CreateFirebaseClient();
+
+            // Fetch existing reviews from Firebase
+            List<DanhGia> dsdanhgia = await GetThongTinKhoa("DanhGia");
+
+            // Calculate the new entry ID
+            string stt = (dsdanhgia.Count + 1).ToString();
+
+            // Create a new DanhGia object from form data
+            DanhGia themdg = new DanhGia
+            {
+                HoTen = ten,
+                BinhLuan = bl
+            };
+
+            // Insert the new DanhGia into Firebase
+            await FirebaseInsertData(client, themdg, "DanhGia/" + stt + "/");
+
+            // Re-fetch the updated list of reviews
+            dsdanhgia = await GetThongTinKhoa("DanhGia");
+
+            // Create a model to hold reviews and form data
+            var updatedModel = new DanhGia
+            {
+                Reviews = dsdanhgia
+            };
+
+            // Pass the updated model to the view
+
+            ViewBag.Reviews = updatedModel;
+
+            // Hang Hoa
+            HangHoa hh = data.HangHoas.SingleOrDefault(n => n.MaHH == id);
+            var currentProduct = data.HangHoas.SingleOrDefault(p => p.MaHH == id);
+
+            if (currentProduct == null)
+            {
+                return HttpNotFound();
+            }
+
+            // Retrieve similar products excluding the current one
+            var similarProducts = data.HangHoas.Where(p => p.MaHH != id).ToList();
+
+            // Pass both the current product and the list of similar products to the view
+            ViewBag.lstHH = similarProducts;
+            return View(hh);
+        }
+
+       
+
+     
+        
 
         public ActionResult Contact()
         {
@@ -97,23 +195,7 @@ namespace WEB_BMS.Controllers
 
             return View(pagedProducts);
         }
-        public ActionResult Product(string id)
-        {
-            HangHoa hh = data.HangHoas.SingleOrDefault(n => n.MaHH == id);
-            var currentProduct = data.HangHoas.SingleOrDefault(p => p.MaHH == id);
-
-            if (currentProduct == null)
-            {
-                return HttpNotFound();
-            }
-
-            // Retrieve similar products excluding the current one
-            var similarProducts = data.HangHoas.Where(p => p.MaHH != id).ToList();
-
-            // Pass both the current product and the list of similar products to the view
-            ViewBag.lstHH = similarProducts;
-            return View(hh);
-        }
+       
 
         public ActionResult HTDSTheoLoai(string id)
         {
@@ -415,6 +497,122 @@ namespace WEB_BMS.Controllers
             }
             return newCustomerId;
         }
+        public ActionResult HistoryOrder(string id)
+        {
+           
+            KhachHang kh = Session["Khachhang"] as KhachHang;
+            if (kh == null)
+            {
+                return RedirectToAction("DangNhap", "Home");
+            }
+            List<DonBanHang> dh =  data.DonBanHangs.Where(t => t.MaKH == id).ToList();
+            ViewBag.dhang = dh;
+            return View(kh);
+        }
+
+
+
+
+
+
+        public static IFirebaseClient CreateFirebaseClient()
+        {
+            IFirebaseConfig config = new FirebaseConfig
+            {
+                AuthSecret = "EZn5uE1hYD86b7U7Vd8PEeisvvOmOp0TSrYlecjG",
+                BasePath = "https://danhgia-7fcb0-default-rtdb.asia-southeast1.firebasedatabase.app"
+            };
+
+            IFirebaseClient client;
+
+            client = new FireSharp.FirebaseClient(config);
+            return client;
+        }
+        public static async Task<DanhGia> FirebaseGetThongTinKhoa(IFirebaseClient client, string rootName)
+        {
+
+            if (client != null)
+            {
+                FirebaseResponse response = await client.GetAsync(rootName);
+
+
+                return response.ResultAs<DanhGia>();
+            }
+            return null;
+        }
+
+        public static async Task<List<DanhGia>> GetThongTinKhoa(string rootName)
+        {
+            IFirebaseClient client = CreateFirebaseClient();
+
+            List<DanhGia> ds = new List<DanhGia>();
+
+            int dem = 2;
+            int stt = 1;
+            bool co = true;
+            while (co)
+            {
+                try
+                {
+                    DanhGia tk = await FirebaseGetThongTinKhoa(client, rootName + "/" + stt.ToString() + "/");
+                    if (tk == null)
+                    {
+                        co = false;
+                        break;
+                    }
+
+                    stt++;
+                    ds.Add(tk);
+                }
+                catch (Exception ex)
+                {
+                    co = false;
+                }
+            }
+            return ds;
+
+        }
+
+
+        public static async Task FirebaseInsertData(IFirebaseClient client, object data, string rootName)
+        {
+            if (client == null)
+            {
+                throw new ArgumentNullException(nameof(client), "Firebase client cannot be null");
+            }
+
+            try
+            {
+                FirebaseResponse response = await client.SetAsync(rootName, data);
+                //if (response.StatusCode != System.Net.HttpStatusCode.OK)
+                //{
+                //    throw new Exception("Error inserting data into Firebase");
+                //}
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error inserting data: {ex.Message}");
+                throw;
+            }
+        }
+
+        public static async void FirebaseUpdateData(IFirebaseClient client, object data, string rootName)
+        {
+            if (client != null)
+            {
+                await client.UpdateAsync(rootName, data);
+            }
+        }
+        public static async void FirebaseDeleteData(IFirebaseClient client, string rootName)
+        {
+            if (client != null)
+            {
+                await client.DeleteAsync(rootName);
+            }
+        }
+
+
     }
-    
+
 }
+    

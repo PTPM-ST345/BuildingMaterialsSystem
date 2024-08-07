@@ -2,9 +2,11 @@
 @{
     ViewBag.Title = "Sản phẩm";
     Layout = "~/Views/Shared/_LayoutPage_New.cshtml";
+    WEB_BMS.Models.DanhGia g = ViewBag.Reviews;
 }
 
 @model  WEB_BMS.Models.HangHoa
+
 <link href="~/assets/product_detail.css" rel="stylesheet" />
 <div class="wrap">
     <div class="left-body">
@@ -43,47 +45,52 @@
     <div class="left-body">
         <a id="button-danhgia" class="uppercase" style="cursor:pointer">Đánh giá</a>
         <div style="max-width:100%;height:0.5px;background-color:lightgray;margin: 16px"></div>
-        
+
         <a id="button-luotdanhgia" class="uppercase" style="cursor:pointer">Lượt Bình Luận</a>
     </div>
     <div style="visibility: hidden" class="danhgia right-body">
         <div class="form-container">
             <h4 class="uppercase"><span>Gửi đánh giá!</span></h4>
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="your-name">Họ và tên (*)</label>
-                    <input type="text" id="your-name" name="your-name" placeholder="Họ và tên (*)" required>
-                </div>
-                <div class="form-group">
-                    <label for="your-email">Email (*)</label>
-                    <input type="email" id="your-email" name="your-email" placeholder="Email (*)" required>
-                </div>
-                <div class="form-group">
-                    <label for="your-phone">Đánh Giá&nbsp;<span class="text-danger">*</span></label>
-                    <textarea id="your-phone" name="your-phone" class="form-control" rows="4" placeholder="Nhập đánh giá của bạn ở đây..." required></textarea>
-                </div>
 
+            <form action="~/Home/Product/@Model.MaHH" method="post">
+                <div class="form-group">
+                    <label for="ho-ten">Họ và tên (*)</label>
+                    <input type="text" id="ho-ten" name="HoTen" placeholder="Họ và tên (*)" required>
+                </div>
+                <div class="form-group">
+                    <label for="binh-luan">Đánh Giá&nbsp;<span class="text-danger">*</span></label>
+                    <textarea id="binh-luan" name="BinhLuan" class="form-control" rows="4" placeholder="Nhập đánh giá của bạn ở đây..." required></textarea>
+                </div>
                 <div class="form-group">
                     <input type="submit" value="Gửi">
                 </div>
             </form>
+
+           
+
+
         </div>
     </div>
-
+  
     <div class="luotdanhgia right-body" style="position:absolute; right:0">
-        <div class="comment-box">
+        @foreach (var item in g.Reviews)
+        {
+        <div class="comment-box" style="width: 400px; height: 100px">
             <div class="avt-name">
                 <img src="~/assets/img/icon-media/images.png" />
                 <p style="color:green">GUEST</p>
             </div>
 
             <div class="comment">
-                <h6 class="uppercase">Phi Long</h6>
+                <h6 class="uppercase">@item.HoTen</h6>
                 <p>
-                    Mạng không rõ dùng ổn không nhưng thấy anh lắp đặt cũng khá nhiệt tình. Cảm ơn đã lắp sớm!
+                    @item.BinhLuan
                 </p>
             </div>
         </div>
+        }
+       
+        
     </div>
 </div>
 <br /><br />

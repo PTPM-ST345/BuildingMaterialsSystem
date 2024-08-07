@@ -44,6 +44,9 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.8.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>..\packages\Portable.BouncyCastle.1.8.8\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="FireSharp">
+      <HintPath>..\..\..\..\..\FireBase\FireBase\bin\Debug\FireSharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -535,6 +538,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CardItems.cs" />
+    <Compile Include="Models\DanhGia.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\QuanLyVatLieuXayDung.designer.cs">
       <AutoGen>True</AutoGen>
@@ -574,6 +578,7 @@
     <Content Include="Views\Home\EmptyCart.cshtml" />
     <Content Include="Views\Home\GioHangPartial.cshtml" />
     <Content Include="Views\Home\PlaceOrder.cshtml" />
+    <Content Include="Views\Home\HistoryOrder.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

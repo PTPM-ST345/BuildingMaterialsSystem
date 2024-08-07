@@ -32,7 +32,7 @@
 
         @*Tìm kiếm*@
         <form action="@Url.Action("Search", "Home")" method="post" style="display:flex">
-            <input size="30" type="search" name="id" placeholder="Tìm Kiếm...." class="form-control" />
+            <input size="20" type="search" name="id" placeholder="Tìm Kiếm...." class="form-control" />
             <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
         </form>
 
@@ -54,12 +54,12 @@
             var kh = Session["Khachhang"] as KhachHang;
 
             <span class="nav-link " style="font-weight:bold; color: #001981">Xin chào, @kh.HoTen</span>
-            <a class=" cart-a" href="/Home/DangXuat">Đăng xuất</a>
-
+            <a class="cart-a" href="/Home/DangXuat">Đăng xuất</a>
+            <a class="cart-a" href="/Home/HistoryOrder/@kh.MaKH">Lịch sử giao dịch</a>
 
         }
     }
-    <a class="cart-a" href="/Home/XemGioHang"><i class="ti-shopping-cart"> <span class="cart-item-count">@Html.Action("GioHangPartial", "Home")</span></i>Giỏ Hàng </a>
+    <a class="cart-a" href="/Home/XemGioHang"><i class="ti-shopping-cart"> <span class="cart-item-count">@Html.Action("GioHangPartial", "Home")</span></i></a>
 
 </div>
 
