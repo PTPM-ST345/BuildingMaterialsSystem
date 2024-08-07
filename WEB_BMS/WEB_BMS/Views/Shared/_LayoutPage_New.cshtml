@@ -44,19 +44,19 @@
     @{
         if (Session["Khachhang"] == null)
         {
-            <li class="nav-item"><a href="/Home/DangNhap" class="nav-link">Đăng nhập</a></li>
+            <a href="/Home/DangNhap" class="cart-a">Đăng nhập</a>
         }
         if (Session["Khachhang"] != null)
         {
             var kh = Session["Khachhang"] as KhachHang;
-            <li class="nav-item">
-                <span class="nav-link uppercase">Xin chào, @kh.HoTen</span>
-                <a class="nav-link" href="/Home/DangXuat">Đăng xuất</a>
-            </li>
+
+            <span class="nav-link " style="font-weight:bold; color: #001981">Xin chào, @kh.HoTen</span>
+            <a class=" cart-a" href="/Home/DangXuat">Đăng xuất</a>
+
 
         }
     }
-    <a class="cart-a" href="/Home/XemGioHang"><i class="ti-shopping-cart"></i>Giỏ Hàng </a>
+    <a class="cart-a" href="/Home/XemGioHang"><i class="ti-shopping-cart"> <span class="cart-item-count">@Html.Action("GioHangPartial", "Home")</span></i>Giỏ Hàng </a>
 </div>
 <div id="header">
     <!-- start nav  -->

@@ -142,6 +142,14 @@ namespace WEB_BMS.Controllers
                 return View("Product_Index", ds);
             }
         }
+      
+       
+        public ActionResult GioHangPartial()
+        {
+            var cart = GetCart();
+            ViewBag.TongSoLuong = cart.GetItemCount();
+            return PartialView();
+        }
         //Giỏ Hàng
         private ShoppingCart GetCart()
         {
@@ -171,12 +179,18 @@ namespace WEB_BMS.Controllers
                     MaHH = productId,
                     TenHangHoa = product.TenHangHoa,
                     SoLuongTon = 1,
+                    DonVi = product.DonVi,
+                    HinhAnh = product.HinhAnh,
+                    MaLoai = product.MaLoai,
                     GiaBan = (decimal)product.GiaBan // Chuyển đổi kiểu int sang decimal
+
                 };
                 cart.AddItem(cartItem);
             }
             return RedirectToAction("Product_Index");
         }
+
+    
         // Xóa Giỏ Hàng
         public ActionResult RemoveFromCart(string productId)
         {
@@ -205,25 +219,44 @@ namespace WEB_BMS.Controllers
 
             return RedirectToAction("XemGioHang"); // Chuyển hướng đến trang giỏ hàng
         }
+      
 
         public ActionResult XacNhanThongTin()
         {
+            // Retrieve the customer from the session
             KhachHang kh = Session["Khachhang"] as KhachHang;
 
+            // If customer is not logged in, redirect to login page
             if (kh == null)
             {
                 return RedirectToAction("DangNhap", "Home");
             }
-            List<CardItems> gio = Session["gh"] as List<CardItems>;
-            ViewBag.g = gio;
-            return View(kh);
+
+            // Retrieve the shopping cart
+            ShoppingCart cart = GetCart();
+           
+
+            // Check if the cart has items
+            if (cart != null && cart.GetItems().Any()) // Ensure cart is not null and contains items
+            {
+                ViewBag.cart = cart.GetItems();
+                return View(kh); // Pass the customer and cart to the view
+            }
+            else
+            {
+                ViewBag.Notification = "Your shopping cart is empty."; // Set notification for empty cart
+                return View("EmptyCart"); // Redirect to EmptyCart view
+            }
+        }
+        public ActionResult EmptyCart()
+        {
+            return View();
         }
 
 
 
-
-        // Xử lý đặt hàng sau khi xác nhận
-        [HttpPost]
+            // Xử lý đặt hàng sau khi xác nhận
+            [HttpPost]
         //public ActionResult PlaceOrder(Order order)
         //{
 

@@ -1,49 +1,132 @@
 ﻿@{
     ViewBag.Title = "XacNhanThongTin";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
-    List<CardItems> g = ViewBag.g;
 }
 @using WEB_BMS.Models;
 <h2 class="text-center">Xác Nhận Thông Tin</h2>
 
 @model KhachHang
+<style>
+    <style >
+    .table-container {
+        margin: 20px auto;
+        max-width: 1200px;
+    }
 
-<form action="/Home/PlaceOrder" method="post">
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        overflow: hidden;
+    }
 
-    <table class="table-info table border border-secondary" border="1" style="padding:10px">
-        <tr>
-            <td><p>Tên: @Model.HoTen</p></td>
-            <td><p>Địa chỉ: @Model.DiaChi</p></td>
-        </tr>
-        <tr>
-            <td><p>Số điện thoại: @Model.DienThoai</p></td>
-            <td><p>Ngày đặt : @DateTime.Now.ToShortDateString()</p></td>
-        </tr>
-        <tr>
-            <td colspan="2" class="text-center"><p>Ngày hẹn giao <input type="date" name="txtDate" /></p></td>
-        </tr>
-    </table>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Mã sản phẩm</th>
-                <th>Tên sản phẩm</th>
-                <th>Số lượng</th>
-                <th>Đơn giá</th>
-            </tr>
-        </thead>
-        @foreach (var item in g)
-        {
-            <tr>
-                <td>@item.MaHH</td>
-                <td>@item.TenHangHoa</td>
-                <td>@item.SoLuongTon</td>
-                <td>@String.Format("{0:#,##}", @item.GiaBan)</td>
-            </tr>
+        .table thead th {
+            background-color: #001981;
+            color: #fff;
+            padding: 12px;
+            text-align: left;
         }
-    </table>
-    <div class="text-center">
-        <input class="btn btn-success text-center" type="submit" value="Xác nhận" />
 
-    </div>
-</form>
+        .table tbody td {
+            padding: 12px;
+            vertical-align: middle;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .table tfoot td {
+            padding: 12px;
+            font-weight: bold;
+            border-top: 2px solid #007bff;
+        }
+
+        .table img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .table input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        .table button {
+            background-color: #28a745;
+            border: none;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+            .table button:hover {
+                background-color: #218838;
+            }
+
+        .table .btn-link {
+            color: #dc3545;
+        }
+
+            .table .btn-link:hover {
+                color: #c82333;
+                text-decoration: underline;
+            }
+</style>
+
+</style>
+<div class="container">
+    <form action="/Home/PlaceOrder" method="post">
+
+        <table class="table-info table border border-secondary" border="1" style="padding:10px">
+            <tr>
+                <td><p>Tên: @Model.HoTen</p></td>
+                <td><p>Địa chỉ: @Model.DiaChi</p></td>
+            </tr>
+            <tr>
+                <td><p>Số điện thoại: @Model.DienThoai</p></td>
+                <td><p>Ngày đặt : @DateTime.Now.ToShortDateString()</p></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center"><p>Ngày hẹn giao <input type="date" name="txtDate" /></p></td>
+            </tr>
+        </table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Mã Hàng Hóa</th>
+                    <th>Tên Hàng Hóa</th>
+                    <th>Đơn Vị</th>
+                    <th>Hình Ảnh</th>
+                    <th>Số Lượng</th>
+                    <th>Giá</th>
+                    <th>Tổng Tiền</th>
+                </tr>
+            </thead>
+            @foreach (var item in ViewBag.cart)
+            {
+                <tr>
+                    <td>@item.MaHH</td>
+                    <td>@item.TenHangHoa</td>
+                    <td>@item.DonVi</td>
+                    <td><img src="~/assets/img/img_product/@item.HinhAnh" alt="Product Image" /></td>
+                    <td style="text-align:center">
+                        @item.SoLuongTon
+                    </td>
+                    <td>@item.GiaBan.ToString("#,##0 VND")</td>
+                    <td>@item.Total.ToString("#,##0 VND")</td>
+                    
+                </tr>
+            }
+        </table>
+        <div class="text-center">
+            <input class="btn btn-success text-center" type="submit" value="Xác nhận" />
+
+        </div>
+    </form>
+
+</div>

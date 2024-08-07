@@ -20,6 +20,10 @@ namespace WEB_BMS.Models
     public class ShoppingCart
     {
         public List<CardItems> Items { get; set; } = new List<CardItems>();
+        public List<CardItems> GetItems()
+        {
+            return Items;
+        }
 
         public void AddItem(CardItems item)
         {
@@ -33,9 +37,17 @@ namespace WEB_BMS.Models
                 Items.Add(item);
             }
         }
-
-        public void RemoveItem(string productId)
+        public int GetItemCount()
         {
+
+            if (Items != null)
+            {
+                return Items.Count; // Returns the number of items in the list
+            }
+            return 0;
+        }
+            public void RemoveItem(string productId)
+            {
             var item = Items.FirstOrDefault(i => i.MaHH == productId);
             if (item != null)
             {

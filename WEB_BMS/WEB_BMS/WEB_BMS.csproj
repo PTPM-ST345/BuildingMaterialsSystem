@@ -570,6 +570,8 @@
     <Content Include="Views\Home\OrderConfirmation.cshtml" />
     <Content Include="Views\Home\DangNhap.cshtml" />
     <Content Include="Views\Home\DangKy.cshtml" />
+    <Content Include="Views\Home\EmptyCart.cshtml" />
+    <Content Include="Views\Home\GioHangPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
