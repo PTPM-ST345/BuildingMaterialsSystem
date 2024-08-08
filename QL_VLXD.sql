@@ -141,6 +141,7 @@ GO
 -- Insert into QL_NhomNguoiDung
 INSERT INTO QL_NhomNguoiDung (MaNhom, TenNhom, GhiChu) VALUES
 ('ADMIN', 'Admin', N'Quản trị hệ thống'),
+('NVBCTK', 'NhanVienBaoCaoThongKe', N'Báo cáo - thống kê'),
 ('NVBANHANG', 'Sales', N'Nhân viên bán hàng');
 GO
 -- Insert into DM_ManHinh
@@ -172,7 +173,9 @@ GO
 INSERT INTO QL_NguoiDungNhomNguoiDung (MaNV, MaNhomNguoiDung, GhiChu) VALUES
 ('NV001', 'ADMIN', N'Quản trị hệ thống'),
 ('NV002', 'NVBANHANG', N'Nhân viên bán hàng'),
-('NV003', 'NVBANHANG', N'Nhân viên bán hàng');
+('NV003', 'NVBANHANG', N'Nhân viên bán hàng'),
+('NV004', 'NVBANHANG', N'Nhân viên bán hàng'),
+('NV005', 'NVBANHANG', N'Nhân viên bán hàng');
 GO
 -- Insert into KhachHang
 INSERT INTO KhachHang (MaKH, HoTen, NgaySinh, GioiTinh, DienThoai, TaiKhoan, MatKhau, Email, DiaChi) VALUES
@@ -216,10 +219,10 @@ INSERT INTO HangHoa (MaHH, TenHangHoa, DonVi, SoLuongTon, HinhAnh, GiaBan, MaLoa
 ('HH008', N'Gạch Phước Thành', N'Viên', 200, 'gach_8.jpg', 50000, 'DM001', 'NCC001'),
 ('HH009', N'Gạch Thành Tâm', N'Viên', 300, 'gach_9.jpg', 70000, 'DM001', 'NCC001'),
 ('HH0010', N'Gạch Tám Quỳnh', N'Viên', 400, 'gach_10.jpg', 73000, 'DM001', 'NCC001'),
-('HH0011', N'Cát bê tông hạt to ', N'M3', 310000, 'cat_11.jpg', 320000, 'DM003', 'NCC003'),
-('HH0012', N'Cát bê tông trộn', N'M3', 326000, 'cat_12.jpg', 210000, 'DM003', 'NCC003'),
-('HH0013', N'Cát san lấp', N'M3', 223000, 'cat_13.jpg', 140000, 'DM003', 'NCC003'),
-('HH0014', N'Cát xây tô', N'M3', 143900, 'cat_14.jpg', 170000, 'DM003', 'NCC003'),
+('HH0011', N'Cát bê tông hạt to ', N'M3', 310, 'cat_11.jpg', 320000, 'DM003', 'NCC003'),
+('HH0012', N'Cát bê tông trộn', N'M3', 326, 'cat_12.jpg', 210000, 'DM003', 'NCC003'),
+('HH0013', N'Cát san lấp', N'M3', 223, 'cat_13.jpg', 140000, 'DM003', 'NCC003'),
+('HH0014', N'Cát xây tô', N'M3', 143, 'cat_14.jpg', 170000, 'DM003', 'NCC003'),
 ('HH0015', N'Đá 0 X 4 Xanh', N'M3', 200, 'da_15.jpg', 280000, 'DM004', 'NCC004'),
 ('HH0016', N'Đá 0 X 4 Xám Đen', N'M3', 200, 'da_16.jpg', 210000, 'DM004', 'NCC004'),
 ('HH0017', N'Đá 1 X 2 Xanh', N'M3', 200, 'da_17.jpg', 350000, 'DM004', 'NCC004'),
